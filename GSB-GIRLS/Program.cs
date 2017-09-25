@@ -9,7 +9,7 @@ namespace GSB_GIRLS
     static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application.
+        /// Point d'entrée principal de l'application. gdshtfdshd
         /// </summary>
         [STAThread]
         static void Main()
