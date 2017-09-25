@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Connexion : Form
+    public partial class Menu : Form
     {
-        public Connexion()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,12 +27,12 @@ namespace GSB_GIRLS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Connexion_Load(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
