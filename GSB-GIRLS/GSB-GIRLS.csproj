@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRVisite.Designer.cs">
+      <DependentUpon>CRVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CRVisite.resx">
+      <DependentUpon>CRVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
