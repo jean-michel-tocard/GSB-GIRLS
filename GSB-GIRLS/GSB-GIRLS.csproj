@@ -92,6 +92,12 @@
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="FRembourssement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRembourssement.Designer.cs">
+      <DependentUpon>FRembourssement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
