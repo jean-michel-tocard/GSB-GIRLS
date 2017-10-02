@@ -74,14 +74,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Etat.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAMILLE.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fichefrais.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FraisForfait.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratoire.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LigneFraisForfait.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LigneFraisHorsForfait.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlGSBgirls.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlGSBgirls.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlGSBgirls.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlGSBgirls.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MEDECIN.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEDICAMENT.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOTIF.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFFRIR.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAPPORT.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Secteur.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPECIALITE.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visiteur.cs">
+      <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,19 +160,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="mdlgsb.edmx">
+    <EntityDeploy Include="mdlGSBgirls.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>mdlgsb.Designer.cs</LastGenOutput>
+      <LastGenOutput>mdlGSBgirls.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="mdlgsb.edmx.diagram">
-      <DependentUpon>mdlgsb.edmx</DependentUpon>
+    <None Include="mdlGSBgirls.edmx.diagram">
+      <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BGSBgirls.datasource" />
     <None Include="Properties\DataSources\Etat.datasource" />
     <None Include="Properties\DataSources\FAMILLE.datasource" />
     <None Include="Properties\DataSources\fichefrais.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\FraisForfait.datasource" />
     <None Include="Properties\DataSources\Laboratoire.datasource" />
     <None Include="Properties\DataSources\LigneFraisForfait.datasource" />
@@ -118,12 +179,10 @@
     <None Include="Properties\DataSources\MEDICAMENT.datasource" />
     <None Include="Properties\DataSources\MOTIF.datasource" />
     <None Include="Properties\DataSources\OFFRIR.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\RAPPORT.datasource" />
     <None Include="Properties\DataSources\Region.datasource" />
     <None Include="Properties\DataSources\Secteur.datasource" />
     <None Include="Properties\DataSources\SPECIALITE.datasource" />
-    <None Include="Properties\DataSources\sysdiagrams.datasource" />
     <None Include="Properties\DataSources\Visiteur.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,20 +212,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="mdlgsb.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>mdlgsb.Context.cs</LastGenOutput>
-      <DependentUpon>mdlgsb.edmx</DependentUpon>
-    </Content>
-    <Content Include="mdlgsb.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>mdlgsb.cs</LastGenOutput>
-      <DependentUpon>mdlgsb.edmx</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="mdlGSBgirls.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
+      <LastGenOutput>mdlGSBgirls.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="mdlGSBgirls.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
+      <LastGenOutput>mdlGSBgirls.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
