@@ -101,6 +101,12 @@
     <Compile Include="LigneFraisHorsForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListeVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeVisiteur.Designer.cs">
+      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="mdlGSBgirls.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeVisiteur.resx">
+      <DependentUpon>ListeVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
