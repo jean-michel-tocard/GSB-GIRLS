@@ -29,62 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connexion));
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblTitre = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtMDP = new System.Windows.Forms.TextBox();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitre
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(216, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Identifiez vous";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitre.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitre.Location = new System.Drawing.Point(216, 109);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(147, 20);
+            this.lblTitre.TabIndex = 0;
+            this.lblTitre.Text = "Identifiez vous";
+            this.lblTitre.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnOK
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(369, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOK.BackColor = System.Drawing.Color.White;
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(369, 166);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(34, 23);
+            this.btnOK.TabIndex = 1;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtID.Location = new System.Drawing.Point(241, 143);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 2;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
-            // textBox2
+            // txtMDP
             // 
-            this.textBox2.Location = new System.Drawing.Point(241, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtMDP.Location = new System.Drawing.Point(241, 169);
+            this.txtMDP.Name = "txtMDP";
+            this.txtMDP.Size = new System.Drawing.Size(100, 20);
+            this.txtMDP.TabIndex = 3;
             // 
-            // button2
+            // btnQuitter
             // 
-            this.button2.Location = new System.Drawing.Point(490, 414);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Quitter";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnQuitter.Location = new System.Drawing.Point(490, 414);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitter.TabIndex = 4;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // Connexion
             // 
@@ -92,17 +94,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(590, 458);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnQuitter);
+            this.Controls.Add(this.txtMDP);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.lblTitre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Connexion";
             this.Text = "RAPPORT_VISITE";
             this.Load += new System.EventHandler(this.Connexion_Load);
+            this.Controls.SetChildIndex(this.lblTitre, 0);
+            this.Controls.SetChildIndex(this.btnOK, 0);
+            this.Controls.SetChildIndex(this.txtID, 0);
+            this.Controls.SetChildIndex(this.txtMDP, 0);
+            this.Controls.SetChildIndex(this.btnQuitter, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,11 +116,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblTitre;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtMDP;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }
 
