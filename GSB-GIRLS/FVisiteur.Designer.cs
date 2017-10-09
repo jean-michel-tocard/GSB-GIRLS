@@ -43,9 +43,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(386, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 29);
+            this.label1.Size = new System.Drawing.Size(371, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Suivi du rembourssement des frais";
+            this.label1.Text = "Suivi du remboursement des frais";
             // 
             // linkSaisieFrais
             // 
@@ -97,7 +97,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Déconnexion";
             // 
-            // FSuiviV
+            // FVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,8 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkSaisieFrais);
             this.Controls.Add(this.label1);
-            this.Name = "FSuiviV";
-            this.Text = "FRembourssement";
+            this.Name = "FVisiteur";
+            this.Text = "FVisiteur";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
