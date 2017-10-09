@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FRembourssement : Form
+    public partial class FCompta : Form
     {
-        public FRembourssement()
+        public FCompta()
         {
             InitializeComponent();
         }

@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class CRVisite : Accueil
+    public partial class FVisiteur : Form
     {
-        public CRVisite()
+        public FVisiteur()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FSaisie fparSaisieFrais = new FSaisie();
+            fparSaisieFrais.MdiParent = this;
+            fparSaisieFrais.Show();
         }
+
     }
 }

@@ -80,6 +80,7 @@
             this.txtMDP.Name = "txtMDP";
             this.txtMDP.Size = new System.Drawing.Size(100, 20);
             this.txtMDP.TabIndex = 3;
+            this.txtMDP.UseSystemPasswordChar = true;
             // 
             // btnQuitter
             // 
@@ -110,6 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Connexion";
             this.Text = "RAPPORT_VISITE";
+            this.Load += new System.EventHandler(this.Connexion_Load);
             this.Controls.SetChildIndex(this.lblTitre, 0);
             this.Controls.SetChildIndex(this.btnOK, 0);
             this.Controls.SetChildIndex(this.txtID, 0);

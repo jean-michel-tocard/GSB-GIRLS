@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class CRVisite : Accueil
+    public partial class FEditionFiche : Form
     {
-        public CRVisite()
+        public FEditionFiche()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
