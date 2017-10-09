@@ -99,19 +99,19 @@
             this.label1.Text = "Gestion des comptes ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Menu
+            // GestionCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(602, 389);
+            this.ClientSize = new System.Drawing.Size(602, 410);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Name = "Menu";
+            this.Name = "GestionCompte";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.Controls.SetChildIndex(this.checkBox1, 0);
