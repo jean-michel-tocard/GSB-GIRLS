@@ -9,7 +9,7 @@ namespace GSB_GIRLS
     static class Modele
     {
         static GSBgirls maConnexion;
-        static Visiteur unVisiteur;
+        static Visiteur visiteurConnect;
         static Secteur unSecteur;
 
 
@@ -26,16 +26,16 @@ namespace GSB_GIRLS
             }
         }
 
-        public static Visiteur UnVisiteur
+        public static Visiteur VisiteurConnect
         {
             get
             {
-                return unVisiteur;
+                return visiteurConnect;
             }
 
             set
             {
-                unVisiteur = value;
+                visiteurConnect = value;
             }
         }
         public static Secteur UnSecteur
@@ -53,8 +53,6 @@ namespace GSB_GIRLS
         static public void Initialise()
         {
             maConnexion = new GSBgirls();
-            unVisiteur = new Visiteur();
-            unSecteur = new Secteur();
         }
     }
 }

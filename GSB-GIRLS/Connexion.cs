@@ -50,7 +50,7 @@ namespace GSB_GIRLS
                     /*  var FilteredData = Modele.MaConnexion.Region.ToList()
                          .Where(x => x.idRegion == int.Parse(x.idVisiteur));*/
 
-                  /*  if (int.Parse(Modele.UnSecteur.idVisiteur) == int.Parse(Modele.UnVisiteur.idVisiteur))
+                  /*  if (int.Parse(Modele.UnSecteur.idVisiteur) == int.Parse(Modele.visiteurConnect.idVisiteur))
                     {*/
                         MenuVisiteurRegion menu = new MenuVisiteurRegion();
                         //menu.MdiParent = this;
