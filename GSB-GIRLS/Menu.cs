@@ -16,5 +16,12 @@ namespace GSB_GIRLS
         {
             InitializeComponent();
         }
+
+        private void gestionDesComptesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionCompte gc = new GestionCompte();
+            //menu.MdiParent = this;
+            gc.Show();
+        }
     }
 }

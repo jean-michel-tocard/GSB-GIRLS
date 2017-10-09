@@ -38,7 +38,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(349, 184);
+            this.label1.Location = new System.Drawing.Point(374, 334);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 78);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(485, 262);
+            this.ClientSize = new System.Drawing.Size(522, 421);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Accueil";

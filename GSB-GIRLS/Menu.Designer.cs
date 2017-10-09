@@ -43,7 +43,7 @@
             this.gestionDesVisiteursToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(479, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(552, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -52,6 +52,7 @@
             this.gestionDesComptesToolStripMenuItem.Name = "gestionDesComptesToolStripMenuItem";
             this.gestionDesComptesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.gestionDesComptesToolStripMenuItem.Text = "Gestion des Comptes";
+            this.gestionDesComptesToolStripMenuItem.Click += new System.EventHandler(this.gestionDesComptesToolStripMenuItem_Click);
             // 
             // gestionDesVisiteursToolStripMenuItem
             // 
@@ -64,7 +65,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GSB_GIRLS.Properties.Resources.logo;
-            this.ClientSize = new System.Drawing.Size(479, 262);
+            this.ClientSize = new System.Drawing.Size(552, 396);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
