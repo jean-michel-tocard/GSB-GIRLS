@@ -47,12 +47,17 @@ namespace GSB_GIRLS
                 {
                     MessageBox.Show("ok");
 
+                    Menu menu = new Menu();
+                    menu.MdiParent = this;
+                    menu.Show();
+
                 }
                 else
                 {
                     MessageBox.Show("PSWD non valide");
                 }
             }
+
 
         }
         static string GetMd5Hash(MD5 MonMD5, string PasswdSaisi)
