@@ -14,9 +14,12 @@ namespace GSB_GIRLS
 {
     public partial class Connexion : Accueil
     {
+        private GSBgirls maConnexion;
         public Connexion()
         {
             InitializeComponent();
+            maConnexion = new GSBgirls();
+            bsuser.DataSource = maConnexion.Visiteur.ToList();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,8 +29,8 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var filteredData = Modele.MaConnexion.UTILISATEUR.ToList()
-                         .Where(x => x.idUtilisateur.Equals(txtID.Text));
+            var filteredData = maConnexion.Visiteur.ToList()
+                         .Where(x => x.identifiant.Equals(txtID.Text));
             if (filteredData.ToList().Count == 0)
             {
                 MessageBox.Show("Identifiant non valide");
@@ -65,16 +68,6 @@ namespace GSB_GIRLS
                 sb.Append(hash[i].ToString("x2"));
             }
             return sb.ToString();
-        }
-
-
-        private void Connexion_Load(object sender, EventArgs e)
-        {
-
-
-            Menu menu = new Menu();
-            menu.MdiParent = this;
-            menu.Show();
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
