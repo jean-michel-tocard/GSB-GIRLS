@@ -10,6 +10,8 @@ namespace GSB_GIRLS
     {
         static GSBgirls maConnexion;
         static Visiteur unVisiteur;
+        static Secteur unSecteur;
+
 
         public static GSBgirls MaConnexion
         {
@@ -36,10 +38,23 @@ namespace GSB_GIRLS
                 unVisiteur = value;
             }
         }
+        public static Secteur UnSecteur
+        {
+            get
+            {
+                return unSecteur;
+            }
+
+            set
+            {
+                unSecteur = value;
+            }
+        }
         static public void Initialise()
         {
             maConnexion = new GSBgirls();
             unVisiteur = new Visiteur();
+            unSecteur = new Secteur();
         }
     }
 }
