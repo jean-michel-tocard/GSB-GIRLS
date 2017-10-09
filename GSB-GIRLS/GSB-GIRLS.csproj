@@ -182,11 +182,11 @@
     <Compile Include="GestionCompte.Designer.cs">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="MenuVisiteurRegion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="MenuVisiteurRegion.Designer.cs">
+      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
     </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
@@ -245,8 +245,8 @@
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="MenuVisiteurRegion.resx">
+      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

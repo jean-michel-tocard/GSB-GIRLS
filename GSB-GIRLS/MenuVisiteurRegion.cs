@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Menu : Accueil
+    public partial class MenuVisiteurRegion : Accueil
     {
-        public Menu()
+        public MenuVisiteurRegion()
         {
             InitializeComponent();
         }
@@ -23,5 +23,7 @@ namespace GSB_GIRLS
             //menu.MdiParent = this;
             gc.Show();
         }
+
+
     }
 }

@@ -47,7 +47,9 @@ namespace GSB_GIRLS
                 {
                     MessageBox.Show("Connexion établie");
 
-                    Menu menu = new Menu();
+                    var FilteredData = Modele.MaConnexion.Region.ToList()
+                       .Where(x => x.idRegion == int.Parse(x.idVisiteur));
+                    MenuVisiteurRegion menu = new MenuVisiteurRegion();
                     //menu.MdiParent = this;
                     menu.Show();
 
