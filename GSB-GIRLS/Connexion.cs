@@ -48,7 +48,7 @@ namespace GSB_GIRLS
                     MessageBox.Show("Connexion établie");
 
                     Menu menu = new Menu();
-                    menu.MdiParent = this;
+                    //menu.MdiParent = this;
                     menu.Show();
 
                 }

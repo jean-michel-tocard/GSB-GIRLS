@@ -92,6 +92,18 @@
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="FCompta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompta.Designer.cs">
+      <DependentUpon>FCompta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEditionFiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditionFiche.Designer.cs">
+      <DependentUpon>FEditionFiche.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -101,8 +113,32 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMesFrais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMesFrais.Designer.cs">
+      <DependentUpon>FMesFrais.cs</DependentUpon>
+    </Compile>
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FSaisie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSaisie.Designer.cs">
+      <DependentUpon>FSaisie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuiviFiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuiviFiche.Designer.cs">
+      <DependentUpon>FSuiviFiche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVisiteur.Designer.cs">
+      <DependentUpon>FVisiteur.cs</DependentUpon>
     </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
@@ -178,6 +214,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompta.resx">
+      <DependentUpon>FCompta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEditionFiche.resx">
+      <DependentUpon>FEditionFiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMesFrais.resx">
+      <DependentUpon>FMesFrais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSaisie.resx">
+      <DependentUpon>FSaisie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuiviFiche.resx">
+      <DependentUpon>FSuiviFiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVisiteur.resx">
+      <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeVisiteur.resx">
       <DependentUpon>ListeVisiteur.cs</DependentUpon>
