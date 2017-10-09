@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class Menu
+    partial class GestionCompte
     {
         /// <summary>
         /// Required designer variable.
