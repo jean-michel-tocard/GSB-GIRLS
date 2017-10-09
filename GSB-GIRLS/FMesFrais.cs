@@ -23,5 +23,18 @@ namespace GSB_GIRLS
             fparSaisieFrais.MdiParent = this;
             fparSaisieFrais.Show();
         }
+
+        private void FMesFrais_Load(object sender, EventArgs e)
+        {
+            cboMois.ValueMember = "idVisiteur";
+            cboMois.DisplayMember = "mois";
+            bsMois.DataSource = Modele.MaConnexion.LigneFraisForfait.ToList();
+            cboMois.DataSource = bsMois;
+        }
+
+        private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

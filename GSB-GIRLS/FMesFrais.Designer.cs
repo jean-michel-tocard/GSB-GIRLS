@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboMois = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvElementForfaitise = new System.Windows.Forms.DataGridView();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
+            this.bsMois = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,13 +79,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Mois : ";
             // 
-            // comboBox1
+            // cboMois
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(464, 286);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cboMois.FormattingEnabled = true;
+            this.cboMois.Location = new System.Drawing.Point(464, 286);
+            this.cboMois.Name = "cboMois";
+            this.cboMois.Size = new System.Drawing.Size(164, 21);
+            this.cboMois.TabIndex = 3;
+            this.cboMois.SelectedIndexChanged += new System.EventHandler(this.cboMois_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -141,13 +145,13 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Elements forfaitisés";
             // 
-            // dataGridView1
+            // dgvElementForfaitise
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(412, 560);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 265);
-            this.dataGridView1.TabIndex = 32;
+            this.dgvElementForfaitise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvElementForfaitise.Location = new System.Drawing.Point(412, 560);
+            this.dgvElementForfaitise.Name = "dgvElementForfaitise";
+            this.dgvElementForfaitise.Size = new System.Drawing.Size(547, 265);
+            this.dgvElementForfaitise.TabIndex = 32;
             // 
             // linkLabel1
             // 
@@ -198,21 +202,23 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.linkSaisieFrais);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvElementForfaitise);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboMois);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FMesFrais";
             this.Text = "FMesFrais";
+            this.Load += new System.EventHandler(this.FMesFrais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,17 +229,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboMois;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvElementForfaitise;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource bsMois;
     }
 }
