@@ -37,36 +37,39 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDesComptesToolStripMenuItem,
             this.gestionDesVisiteursToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(479, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gestionDesComptesToolStripMenuItem
             // 
             this.gestionDesComptesToolStripMenuItem.Name = "gestionDesComptesToolStripMenuItem";
-            this.gestionDesComptesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.gestionDesComptesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.gestionDesComptesToolStripMenuItem.Text = "Gestion des Comptes";
             // 
             // gestionDesVisiteursToolStripMenuItem
             // 
             this.gestionDesVisiteursToolStripMenuItem.Name = "gestionDesVisiteursToolStripMenuItem";
-            this.gestionDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.gestionDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.gestionDesVisiteursToolStripMenuItem.Text = "Gestion des visiteurs";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 383);
+            this.BackgroundImage = global::GSB_GIRLS.Properties.Resources.logo;
+            this.ClientSize = new System.Drawing.Size(479, 262);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

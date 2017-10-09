@@ -38,7 +38,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(349, -5);
+            this.label1.Location = new System.Drawing.Point(349, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 78);
             this.label1.TabIndex = 0;
