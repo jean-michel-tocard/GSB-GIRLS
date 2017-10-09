@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,16 +78,6 @@
             this.linkSaisieFrais.TabStop = true;
             this.linkSaisieFrais.Text = "Edition fiches du mois";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(406, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 29);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Suivi du rembourssement des frais";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GSB_GIRLS.Properties.Resources.logo;
@@ -106,18 +96,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(733, 428);
             this.dataGridView1.TabIndex = 18;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(431, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(371, 29);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Suivi du remboursement des frais";
+            // 
             // FSuiviFiche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 494);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkSaisieFrais);
-            this.Controls.Add(this.label1);
             this.Name = "FSuiviFiche";
             this.Text = "FSuiviFiche";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -134,7 +134,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
     }
 }
