@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Menu : Accueil
+    public partial class GestionCompte : Accueil
     {
-        public Menu()
+        public GestionCompte()
         {
             InitializeComponent();
         }

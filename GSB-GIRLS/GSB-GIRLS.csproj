@@ -176,11 +176,11 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="GestionCompte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="GestionCompte.Designer.cs">
+      <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
@@ -236,8 +236,8 @@
     <EmbeddedResource Include="ListeVisiteur.resx">
       <DependentUpon>ListeVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="GestionCompte.resx">
+      <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
