@@ -30,8 +30,8 @@
         {
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
+            this.linkSuiviFiche = new System.Windows.Forms.LinkLabel();
+            this.linkEdition = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,25 +56,27 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Comptable : ";
             // 
-            // linkLabel2
+            // linkSuiviFiche
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(21, 234);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(98, 13);
-            this.linkLabel2.TabIndex = 8;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Suivi fiches de frais";
+            this.linkSuiviFiche.AutoSize = true;
+            this.linkSuiviFiche.Location = new System.Drawing.Point(21, 234);
+            this.linkSuiviFiche.Name = "linkSuiviFiche";
+            this.linkSuiviFiche.Size = new System.Drawing.Size(98, 13);
+            this.linkSuiviFiche.TabIndex = 8;
+            this.linkSuiviFiche.TabStop = true;
+            this.linkSuiviFiche.Text = "Suivi fiches de frais";
+            this.linkSuiviFiche.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSuiviFiche_LinkClicked);
             // 
-            // linkSaisieFrais
+            // linkEdition
             // 
-            this.linkSaisieFrais.AutoSize = true;
-            this.linkSaisieFrais.Location = new System.Drawing.Point(18, 209);
-            this.linkSaisieFrais.Name = "linkSaisieFrais";
-            this.linkSaisieFrais.Size = new System.Drawing.Size(109, 13);
-            this.linkSaisieFrais.TabIndex = 7;
-            this.linkSaisieFrais.TabStop = true;
-            this.linkSaisieFrais.Text = "Edition fiches du mois";
+            this.linkEdition.AutoSize = true;
+            this.linkEdition.Location = new System.Drawing.Point(18, 209);
+            this.linkEdition.Name = "linkEdition";
+            this.linkEdition.Size = new System.Drawing.Size(109, 13);
+            this.linkEdition.TabIndex = 7;
+            this.linkEdition.TabStop = true;
+            this.linkEdition.Text = "Edition fiches du mois";
+            this.linkEdition.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEdition_LinkClicked);
             // 
             // label1
             // 
@@ -96,7 +98,7 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // FSuiviC
+            // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,10 +106,10 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkSaisieFrais);
+            this.Controls.Add(this.linkSuiviFiche);
+            this.Controls.Add(this.linkEdition);
             this.Controls.Add(this.label1);
-            this.Name = "FSuiviC";
+            this.Name = "FCompta";
             this.Text = "FSuiviC";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -120,8 +122,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkSaisieFrais;
+        private System.Windows.Forms.LinkLabel linkSuiviFiche;
+        private System.Windows.Forms.LinkLabel linkEdition;
         private System.Windows.Forms.Label label1;
     }
 }

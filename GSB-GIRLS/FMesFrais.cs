@@ -17,6 +17,11 @@ namespace GSB_GIRLS
             InitializeComponent();
         }
 
-
+        private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FSaisie fparSaisieFrais = new FSaisie();
+            fparSaisieFrais.MdiParent = this;
+            fparSaisieFrais.Show();
+        }
     }
 }
