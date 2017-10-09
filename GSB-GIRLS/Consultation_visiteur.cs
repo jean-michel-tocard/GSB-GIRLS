@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Menu : Accueil
+    public partial class Consultation_visiteur : Accueil
     {
-        public Menu()
+        public Consultation_visiteur()
         {
             InitializeComponent();
-        }
-
-        private void gestionDesComptesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestionCompte gc = new GestionCompte();
-            //menu.MdiParent = this;
-            gc.Show();
         }
     }
 }

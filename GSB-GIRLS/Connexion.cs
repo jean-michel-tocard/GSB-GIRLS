@@ -47,10 +47,22 @@ namespace GSB_GIRLS
                 {
                     MessageBox.Show("Connexion établie");
 
-                    Menu menu = new Menu();
-                    //menu.MdiParent = this;
-                    menu.Show();
+                    /*  var FilteredData = Modele.MaConnexion.Region.ToList()
+                         .Where(x => x.idRegion == int.Parse(x.idVisiteur));*/
 
+                  /*  if (int.Parse(Modele.UnSecteur.idVisiteur) == int.Parse(Modele.visiteurConnect.idVisiteur))
+                    {*/
+                        MenuVisiteurRegion menu = new MenuVisiteurRegion();
+                        //menu.MdiParent = this;
+                        menu.Show();
+                  /*  }
+
+                    else
+                    {
+                        MenuSimple menuS = new MenuSimple();
+                        //menu.MdiParent = this;
+                        menuS.Show();
+                    }*/
                 }
                 else
                 {

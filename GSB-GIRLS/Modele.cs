@@ -8,27 +8,52 @@ namespace GSB_GIRLS
 {
     static class Modele
     {
-            static GSBgirls maConnexion;
+        static GSBgirls maConnexion;
+        static Visiteur visiteurConnect;
+        static Secteur unSecteur;
 
-            public static GSBgirls MaConnexion
+
+        public static GSBgirls MaConnexion
+        {
+            get
             {
-                get
-                {
-                    return maConnexion;
-                }
-
-                set
-                {
-                    maConnexion = value;
-                }
+                return maConnexion;
             }
 
-            static public void Initialise()
+            set
             {
+                maConnexion = value;
+            }
+        }
 
-                maConnexion = new GSBgirls();
+        public static Visiteur VisiteurConnect
+        {
+            get
+            {
+                return visiteurConnect;
             }
 
+            set
+            {
+                visiteurConnect = value;
+            }
+        }
+        public static Secteur UnSecteur
+        {
+            get
+            {
+                return unSecteur;
+            }
+
+            set
+            {
+                unSecteur = value;
+            }
+        }
+        static public void Initialise()
+        {
+            maConnexion = new GSBgirls();
         }
     }
+}
 
