@@ -110,7 +110,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Connexion";
             this.Text = "RAPPORT_VISITE";
-            this.Load += new System.EventHandler(this.Connexion_Load);
             this.Controls.SetChildIndex(this.lblTitre, 0);
             this.Controls.SetChildIndex(this.btnOK, 0);
             this.Controls.SetChildIndex(this.txtID, 0);
