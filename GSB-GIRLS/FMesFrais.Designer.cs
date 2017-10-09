@@ -41,7 +41,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,7 +152,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 276);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 246);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 36;
@@ -169,25 +168,16 @@
             this.label9.TabIndex = 35;
             this.label9.Text = "Visiteur : ";
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(15, 229);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(95, 13);
-            this.linkLabel2.TabIndex = 34;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Mes fiches de frais";
-            // 
             // linkSaisieFrais
             // 
             this.linkSaisieFrais.AutoSize = true;
-            this.linkSaisieFrais.Location = new System.Drawing.Point(12, 204);
+            this.linkSaisieFrais.Location = new System.Drawing.Point(9, 221);
             this.linkSaisieFrais.Name = "linkSaisieFrais";
             this.linkSaisieFrais.Size = new System.Drawing.Size(98, 13);
             this.linkSaisieFrais.TabIndex = 33;
             this.linkSaisieFrais.TabStop = true;
             this.linkSaisieFrais.Text = "Saisie fiche de frais";
+            this.linkSaisieFrais.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSaisieFrais_LinkClicked);
             // 
             // label5
             // 
@@ -207,7 +197,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkSaisieFrais);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
@@ -244,7 +233,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
         private System.Windows.Forms.Label label5;
     }

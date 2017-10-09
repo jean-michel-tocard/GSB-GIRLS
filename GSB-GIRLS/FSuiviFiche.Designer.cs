@@ -77,6 +77,7 @@
             this.linkSaisieFrais.TabIndex = 13;
             this.linkSaisieFrais.TabStop = true;
             this.linkSaisieFrais.Text = "Edition fiches du mois";
+            this.linkSaisieFrais.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSaisieFrais_LinkClicked);
             // 
             // pictureBox1
             // 
