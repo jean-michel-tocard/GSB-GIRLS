@@ -80,8 +80,20 @@
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="FEditionFiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditionFiche.Designer.cs">
+      <DependentUpon>FEditionFiche.cs</DependentUpon>
+    </Compile>
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FMesFrais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMesFrais.Designer.cs">
+      <DependentUpon>FMesFrais.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -92,11 +104,29 @@
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="FRembourssement.cs">
+    <Compile Include="FSaisie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRembourssement.Designer.cs">
-      <DependentUpon>FRembourssement.cs</DependentUpon>
+    <Compile Include="FSaisie.Designer.cs">
+      <DependentUpon>FSaisie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompta.Designer.cs">
+      <DependentUpon>FCompta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuiviFiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuiviFiche.Designer.cs">
+      <DependentUpon>FSuiviFiche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVisiteur.Designer.cs">
+      <DependentUpon>FVisiteur.cs</DependentUpon>
     </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
@@ -163,8 +193,26 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FEditionFiche.resx">
+      <DependentUpon>FEditionFiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMesFrais.resx">
+      <DependentUpon>FMesFrais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSaisie.resx">
+      <DependentUpon>FSaisie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompta.resx">
+      <DependentUpon>FCompta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuiviFiche.resx">
+      <DependentUpon>FSuiviFiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVisiteur.resx">
+      <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeVisiteur.resx">
       <DependentUpon>ListeVisiteur.cs</DependentUpon>
@@ -180,6 +228,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="mdlGSBgirls.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -246,6 +295,7 @@
       <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
       <LastGenOutput>mdlGSBgirls.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo.gif" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
