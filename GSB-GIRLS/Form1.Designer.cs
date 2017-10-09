@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connexion));
             this.lblTitre = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtMDP = new System.Windows.Forms.TextBox();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.bsuser = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsuser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitre
@@ -88,6 +91,10 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // bsuser
+            // 
+            this.bsuser.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
             // Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +116,7 @@
             this.Controls.SetChildIndex(this.txtID, 0);
             this.Controls.SetChildIndex(this.txtMDP, 0);
             this.Controls.SetChildIndex(this.btnQuitter, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.bsuser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +129,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtMDP;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.BindingSource bsuser;
     }
 }
 

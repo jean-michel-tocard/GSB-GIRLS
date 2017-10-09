@@ -152,6 +152,7 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
