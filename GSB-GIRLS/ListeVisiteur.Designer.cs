@@ -82,6 +82,7 @@
             this.bsecteur.TabIndex = 3;
             this.bsecteur.Text = "Secteur";
             this.bsecteur.UseVisualStyleBackColor = false;
+            this.bsecteur.Click += new System.EventHandler(this.bsecteur_Click);
             // 
             // bregion
             // 

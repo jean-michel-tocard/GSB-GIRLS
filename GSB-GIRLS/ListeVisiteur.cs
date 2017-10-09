@@ -34,5 +34,12 @@ namespace GSB_GIRLS
             dgvVisiteur.Columns[0].HeaderText = "cp";
 
         }
+
+        private void bsecteur_Click(object sender, EventArgs e)
+        {
+            
+        
+
+        }
     }
 }

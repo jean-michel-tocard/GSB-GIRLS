@@ -31,6 +31,10 @@ namespace GSB_GIRLS
         private void Connexion_Load(object sender, EventArgs e)
         {
 
+
+            Menu menu = new Menu();
+            menu.MdiParent = this;
+            menu.Show();
         }
     }
 }
