@@ -45,12 +45,12 @@ namespace GSB_GIRLS
                 string pswdc = monuser.password.Substring(2); // Pbs de l'hexa 0x sur sqlserver
                 if (pswdc.Equals(passwdCrypte) || monuser.password.Equals(passwdCrypte))
                 {
-                    MessageBox.Show("ok");
+                    MessageBox.Show("Connexion établie");
 
                 }
                 else
                 {
-                    MessageBox.Show("PSWD non valide");
+                    MessageBox.Show("Mot de passe invalide");
                 }
             }
 
@@ -81,6 +81,11 @@ namespace GSB_GIRLS
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Connexion_Load(object sender, EventArgs e)
         {
 
         }

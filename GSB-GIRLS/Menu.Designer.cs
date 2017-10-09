@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -90,23 +87,12 @@
             this.checkBox5.Text = "Quitter";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 120);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(177, 46);
+            this.label1.Location = new System.Drawing.Point(63, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 31);
             this.label1.TabIndex = 6;
@@ -120,7 +106,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(602, 389);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
@@ -129,7 +114,12 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.SetChildIndex(this.checkBox1, 0);
+            this.Controls.SetChildIndex(this.checkBox2, 0);
+            this.Controls.SetChildIndex(this.checkBox3, 0);
+            this.Controls.SetChildIndex(this.checkBox4, 0);
+            this.Controls.SetChildIndex(this.checkBox5, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +132,6 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }
 }

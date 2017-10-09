@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Menu : Form
+    public partial class Menu : Accueil
     {
         public Menu()
         {
