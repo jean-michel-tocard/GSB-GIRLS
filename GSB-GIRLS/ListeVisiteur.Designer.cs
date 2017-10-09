@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVisiteur = new System.Windows.Forms.DataGridView();
             this.bLabo = new System.Windows.Forms.Button();
             this.bsecteur = new System.Windows.Forms.Button();
             this.bregion = new System.Windows.Forms.Button();
+            this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +69,7 @@
             this.bLabo.TabIndex = 2;
             this.bLabo.Text = "Laboratoire";
             this.bLabo.UseVisualStyleBackColor = false;
+            this.bLabo.Click += new System.EventHandler(this.bLabo_Click);
             // 
             // bsecteur
             // 
@@ -78,6 +82,7 @@
             this.bsecteur.TabIndex = 3;
             this.bsecteur.Text = "Secteur";
             this.bsecteur.UseVisualStyleBackColor = false;
+            this.bsecteur.Click += new System.EventHandler(this.bsecteur_Click);
             // 
             // bregion
             // 
@@ -105,6 +110,7 @@
             this.Name = "ListeVisiteur";
             this.Text = "Liste des visiteurs";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +123,6 @@
         private System.Windows.Forms.Button bLabo;
         private System.Windows.Forms.Button bsecteur;
         private System.Windows.Forms.Button bregion;
+        private System.Windows.Forms.BindingSource bsVisiteur;
     }
 }

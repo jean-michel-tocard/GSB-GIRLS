@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class Menu : Form
+    public partial class Accueil : Form
     {
-        public Menu()
+        public Accueil()
         {
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void Accueil_Load(object sender, EventArgs e)
         {
 
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
