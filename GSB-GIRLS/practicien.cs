@@ -8,14 +8,7 @@ namespace GSB_GIRLS
 {
     public partial class practicien
     {
-        public string NP()
-
-        {
-            get
-            {
-                return this.nom + "" + this.prenom;
-            }
-        }
+       
 
     }
 }

@@ -26,8 +26,8 @@ namespace GSB_GIRLS
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (fermeture) return;
-            var LQuery = Modele.MaConnexion.MEDECIN.ToList()
-                           .Where(x => x.idStyle == int.Parse(cboPracticien.SelectedValue.ToString()))
+           // var LQuery = Modele.MaConnexion.MEDECIN.ToList()
+           //                .Where(x => x.idStyle == int.Parse(cboPracticien.SelectedValue.ToString()));
 
         }
 
