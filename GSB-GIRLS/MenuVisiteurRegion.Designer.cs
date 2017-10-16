@@ -38,34 +38,34 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDesComptesToolStripMenuItem,
             this.gestionDesVisiteursToolStripMenuItem,
             this.informationsRégionsEtSecteursToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(674, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(992, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gestionDesComptesToolStripMenuItem
             // 
             this.gestionDesComptesToolStripMenuItem.Name = "gestionDesComptesToolStripMenuItem";
-            this.gestionDesComptesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.gestionDesComptesToolStripMenuItem.Size = new System.Drawing.Size(197, 27);
             this.gestionDesComptesToolStripMenuItem.Text = "Gestion des Comptes";
             this.gestionDesComptesToolStripMenuItem.Click += new System.EventHandler(this.gestionDesComptesToolStripMenuItem_Click);
             // 
             // gestionDesVisiteursToolStripMenuItem
             // 
             this.gestionDesVisiteursToolStripMenuItem.Name = "gestionDesVisiteursToolStripMenuItem";
-            this.gestionDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.gestionDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(192, 27);
             this.gestionDesVisiteursToolStripMenuItem.Text = "Gestion des visiteurs";
             // 
             // informationsRégionsEtSecteursToolStripMenuItem
             // 
             this.informationsRégionsEtSecteursToolStripMenuItem.Name = "informationsRégionsEtSecteursToolStripMenuItem";
-            this.informationsRégionsEtSecteursToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.informationsRégionsEtSecteursToolStripMenuItem.Size = new System.Drawing.Size(300, 27);
             this.informationsRégionsEtSecteursToolStripMenuItem.Text = "Informations Régions et Secteurs";
             this.informationsRégionsEtSecteursToolStripMenuItem.Click += new System.EventHandler(this.informationsRégionsEtSecteursToolStripMenuItem_Click);
             // 
@@ -74,7 +74,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GSB_GIRLS.Properties.Resources.logo;
-            this.ClientSize = new System.Drawing.Size(674, 396);
+            this.ClientSize = new System.Drawing.Size(992, 573);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuVisiteurRegion";

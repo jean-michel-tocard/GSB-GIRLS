@@ -43,11 +43,11 @@
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitre.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitre.Location = new System.Drawing.Point(216, 109);
+            this.lblTitre.Location = new System.Drawing.Point(294, 140);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(147, 20);
+            this.lblTitre.Size = new System.Drawing.Size(203, 29);
             this.lblTitre.TabIndex = 0;
             this.lblTitre.Text = "Identifiez vous";
             this.lblTitre.Click += new System.EventHandler(this.label1_Click);
@@ -58,9 +58,9 @@
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(369, 166);
+            this.btnOK.Location = new System.Drawing.Point(315, 423);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(34, 23);
+            this.btnOK.Size = new System.Drawing.Size(94, 32);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -68,28 +68,29 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(241, 143);
+            this.txtID.Location = new System.Drawing.Point(290, 207);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(268, 20);
             this.txtID.TabIndex = 2;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtMDP
             // 
-            this.txtMDP.Location = new System.Drawing.Point(241, 169);
+            this.txtMDP.Location = new System.Drawing.Point(290, 277);
             this.txtMDP.Name = "txtMDP";
-            this.txtMDP.Size = new System.Drawing.Size(100, 20);
+            this.txtMDP.Size = new System.Drawing.Size(268, 20);
             this.txtMDP.TabIndex = 3;
             this.txtMDP.UseSystemPasswordChar = true;
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(490, 414);
+            this.btnQuitter.BackColor = System.Drawing.Color.LightBlue;
+            this.btnQuitter.Location = new System.Drawing.Point(439, 423);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitter.Size = new System.Drawing.Size(94, 32);
             this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.UseVisualStyleBackColor = false;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // bsuser
@@ -102,7 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(590, 458);
+            this.ClientSize = new System.Drawing.Size(990, 571);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.txtMDP);
             this.Controls.Add(this.txtID);

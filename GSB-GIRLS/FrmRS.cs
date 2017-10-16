@@ -21,25 +21,30 @@ namespace GSB_GIRLS
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
             maConnexion = new GSBgirls();
             /* le  bindingSourcebsVisiteur est connecté à la table Visiteur de la BDD  via la chaîne de connexion */
-            bsVisiteur.DataSource = maConnexion.Visiteur.ToList();
-        }
-
-        private void bLabo_Click(object sender, EventArgs e)
-        {
-
-            var LQuery = maConnexion.Visiteur.ToList();
-
-            bsVisiteur.DataSource = LQuery;
-            dgvVisiteur.DataSource = bsVisiteur;
-            dgvVisiteur.Columns[0].HeaderText = "cp";
-
+            bsSecteur.DataSource = maConnexion.Visiteur.ToList();
         }
 
         private void bsecteur_Click(object sender, EventArgs e)
         {
-            
-        
+            var LQuery = Modele.MaConnexion.Secteur.ToList();
 
+            bsSecteur.DataSource = LQuery;
+            dgvSecteur.DataSource = bsSecteur;
+            dgvSecteur.Columns[0].HeaderText = "NOM";
+            dgvSecteur.Columns[1].HeaderText = "PRENOM";
+            dgvSecteur.Columns[2].HeaderText = "STYLE";
+            dgvSecteur.Columns[3].HeaderText = "Né le";
+            dgvSecteur.Columns[4].HeaderText = "Mort le";
+            dgvSecteur.Columns[5].HeaderText = "Informations";
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuVisiteurRegion menuv = new MenuVisiteurRegion();
+            menuv.Show();
+            this.Hide();
         }
     }
 }
