@@ -18,26 +18,15 @@ namespace GSB_GIRLS
         public FrmRS()
         {
             InitializeComponent();
-            /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
-            maConnexion = new GSBgirls();
-            /* le  bindingSourcebsVisiteur est connecté à la table Visiteur de la BDD  via la chaîne de connexion */
-            bsSecteur.DataSource = maConnexion.Visiteur.ToList();
+
+
         }
-
-        private void bsecteur_Click(object sender, EventArgs e)
+        private void FrmRS_Load(object sender, EventArgs e)
         {
-            var LQuery = Modele.MaConnexion.Secteur.ToList();
-
-            bsSecteur.DataSource = LQuery;
-            dgvSecteur.DataSource = bsSecteur;
-            dgvSecteur.Columns[0].HeaderText = "NOM";
-            dgvSecteur.Columns[1].HeaderText = "PRENOM";
-            dgvSecteur.Columns[2].HeaderText = "STYLE";
-            dgvSecteur.Columns[3].HeaderText = "Né le";
-            dgvSecteur.Columns[4].HeaderText = "Mort le";
-            dgvSecteur.Columns[5].HeaderText = "Informations";
-
-
+            cbSecteur.ValueMember = "idSecteur";//permet de stocker l'identifiant
+            cbSecteur.DisplayMember = "libSecteur";
+            bsSecteur.DataSource = Modele.MaConnexion.Secteur.ToList();
+            cbSecteur.DataSource = bsSecteur;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,5 +35,20 @@ namespace GSB_GIRLS
             menuv.Show();
             this.Hide();
         }
+        
+        private void cbSecteur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var LQuery = Modele.MaConnexion.Secteur.ToList()
+                        .Where(x => x.idSecteur == int.Parse(cbSecteur.SelectedValue.ToString()))
+                        .Select(x => new { x.Visiteur.nom, x.Visiteur.prenom });
+
+            bsSecteur.DataSource = LQuery;
+            dgvSecteur.DataSource = bsSecteur;
+            dgvSecteur.Columns[0].HeaderText = "Nom du visiteur";
+            dgvSecteur.Columns[1].HeaderText = "Prénom du visiteur";
+
+        }
+
+
     }
 }

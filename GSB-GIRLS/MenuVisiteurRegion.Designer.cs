@@ -32,6 +32,7 @@
             this.gestionDesComptesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesVisiteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationsRégionsEtSecteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vosInformationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDesComptesToolStripMenuItem,
             this.gestionDesVisiteursToolStripMenuItem,
-            this.informationsRégionsEtSecteursToolStripMenuItem});
+            this.informationsRégionsEtSecteursToolStripMenuItem,
+            this.vosInformationsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(992, 31);
@@ -69,6 +71,13 @@
             this.informationsRégionsEtSecteursToolStripMenuItem.Text = "Informations Régions et Secteurs";
             this.informationsRégionsEtSecteursToolStripMenuItem.Click += new System.EventHandler(this.informationsRégionsEtSecteursToolStripMenuItem_Click);
             // 
+            // vosInformationsToolStripMenuItem
+            // 
+            this.vosInformationsToolStripMenuItem.Name = "vosInformationsToolStripMenuItem";
+            this.vosInformationsToolStripMenuItem.Size = new System.Drawing.Size(160, 27);
+            this.vosInformationsToolStripMenuItem.Text = "Vos informations";
+            this.vosInformationsToolStripMenuItem.Click += new System.EventHandler(this.vosInformationsToolStripMenuItem_Click);
+            // 
             // MenuVisiteurRegion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,5 +102,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDesComptesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDesVisiteursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationsRégionsEtSecteursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vosInformationsToolStripMenuItem;
     }
 }

@@ -119,6 +119,12 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FInfoVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfoVisiteur.Designer.cs">
+      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMesFrais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEditionFiche.resx">
       <DependentUpon>FEditionFiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInfoVisiteur.resx">
+      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMesFrais.resx">
       <DependentUpon>FMesFrais.cs</DependentUpon>
