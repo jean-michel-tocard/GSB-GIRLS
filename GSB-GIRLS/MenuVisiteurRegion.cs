@@ -24,6 +24,10 @@ namespace GSB_GIRLS
             gc.Show();
         }
 
-
+        private void informationsRégionsEtSecteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRS rs = new FrmRS();
+            rs.Show();
+        }
     }
 }

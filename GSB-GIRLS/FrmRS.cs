@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class ListeVisiteur : Form
+    public partial class FrmRS : Accueil
     {
 
         private GSBgirls maConnexion;
 
-        public ListeVisiteur()
+        public FrmRS()
         {
             InitializeComponent();
             /* Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */

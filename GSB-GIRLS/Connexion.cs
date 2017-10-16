@@ -45,7 +45,7 @@ namespace GSB_GIRLS
                 string pswdc = monuser.password.Substring(2); // Pbs de l'hexa 0x sur sqlserver
                 if (pswdc.Equals(passwdCrypte) || monuser.password.Equals(passwdCrypte))
                 {
-                    MessageBox.Show("Connexion établie");
+                   // MessageBox.Show("Connexion établie");
 
                     /*  var FilteredData = Modele.MaConnexion.Region.ToList()
                          .Where(x => x.idRegion == int.Parse(x.idVisiteur));*/
@@ -55,14 +55,16 @@ namespace GSB_GIRLS
                         MenuVisiteurRegion menu = new MenuVisiteurRegion();
                         //menu.MdiParent = this;
                         menu.Show();
-                  /*  }
+                        this.Hide();
 
-                    else
-                    {
-                        MenuSimple menuS = new MenuSimple();
-                        //menu.MdiParent = this;
-                        menuS.Show();
-                    }*/
+                    /*  }
+
+                      else
+                      {
+                          MenuSimple menuS = new MenuSimple();
+                          //menu.MdiParent = this;
+                          menuS.Show();
+                      }*/
                 }
                 else
                 {

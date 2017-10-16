@@ -155,11 +155,11 @@
     <Compile Include="LigneFraisHorsForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListeVisiteur.cs">
+    <Compile Include="FrmRS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeVisiteur.Designer.cs">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <Compile Include="FrmRS.Designer.cs">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </Compile>
     <Compile Include="mdlGSBgirls.Context.cs">
       <AutoGen>True</AutoGen>
@@ -254,8 +254,8 @@
     <EmbeddedResource Include="FVisiteur.resx">
       <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeVisiteur.resx">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRS.resx">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
