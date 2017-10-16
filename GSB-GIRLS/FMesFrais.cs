@@ -17,6 +17,24 @@ namespace GSB_GIRLS
             InitializeComponent();
         }
 
+        private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FSaisie fparSaisieFrais = new FSaisie();
+            fparSaisieFrais.MdiParent = this;
+            fparSaisieFrais.Show();
+        }
 
+        private void FMesFrais_Load(object sender, EventArgs e)
+        {
+            cboMois.ValueMember = "idVisiteur";
+            cboMois.DisplayMember = "mois";
+            bsMois.DataSource = Modele.MaConnexion.LigneFraisForfait.ToList();
+            cboMois.DataSource = bsMois;
+        }
+
+        private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

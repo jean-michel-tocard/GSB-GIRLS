@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="mdlGSBgirls.fichefrais" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlGSBgirls.FraisForfait" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlGSBgirls.Laboratoire" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="mdlGSBgirls.LigneFraisForfait" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mdlGSBgirls.LigneFraisForfait" Width="1.75" PointX="7.5" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlGSBgirls.LigneFraisHorsForfait" Width="1.5" PointX="7.5" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlGSBgirls.MEDECIN" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlGSBgirls.MEDICAMENT" Width="1.5" PointX="8.25" PointY="23.875" IsExpanded="true" />

@@ -30,8 +30,7 @@
         {
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
+            this.linkEdition = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(35, 281);
+            this.linkLabel1.Location = new System.Drawing.Point(32, 246);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 17;
@@ -58,25 +57,16 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Comptable : ";
             // 
-            // linkLabel2
+            // linkEdition
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(35, 234);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(98, 13);
-            this.linkLabel2.TabIndex = 14;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Suivi fiches de frais";
-            // 
-            // linkSaisieFrais
-            // 
-            this.linkSaisieFrais.AutoSize = true;
-            this.linkSaisieFrais.Location = new System.Drawing.Point(32, 209);
-            this.linkSaisieFrais.Name = "linkSaisieFrais";
-            this.linkSaisieFrais.Size = new System.Drawing.Size(109, 13);
-            this.linkSaisieFrais.TabIndex = 13;
-            this.linkSaisieFrais.TabStop = true;
-            this.linkSaisieFrais.Text = "Edition fiches du mois";
+            this.linkEdition.AutoSize = true;
+            this.linkEdition.Location = new System.Drawing.Point(32, 209);
+            this.linkEdition.Name = "linkEdition";
+            this.linkEdition.Size = new System.Drawing.Size(109, 13);
+            this.linkEdition.TabIndex = 13;
+            this.linkEdition.TabStop = true;
+            this.linkEdition.Text = "Edition fiches du mois";
+            this.linkEdition.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEdition_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -116,8 +106,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkSaisieFrais);
+            this.Controls.Add(this.linkEdition);
             this.Name = "FSuiviFiche";
             this.Text = "FSuiviFiche";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -132,8 +121,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkSaisieFrais;
+        private System.Windows.Forms.LinkLabel linkEdition;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
     }

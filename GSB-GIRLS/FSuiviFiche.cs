@@ -16,5 +16,12 @@ namespace GSB_GIRLS
         {
             InitializeComponent();
         }
+
+        private void linkEdition_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FEditionFiche fparEditionFiche = new FEditionFiche();
+            fparEditionFiche.MdiParent = this;
+            fparEditionFiche.Show();
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkMesFiches = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -58,15 +58,16 @@
             this.linkSaisieFrais.Text = "Saisie fiche de frais";
             this.linkSaisieFrais.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSaisieFrais_LinkClicked);
             // 
-            // linkLabel2
+            // linkMesFiches
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(15, 225);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(95, 13);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Mes fiches de frais";
+            this.linkMesFiches.AutoSize = true;
+            this.linkMesFiches.Location = new System.Drawing.Point(15, 225);
+            this.linkMesFiches.Name = "linkMesFiches";
+            this.linkMesFiches.Size = new System.Drawing.Size(95, 13);
+            this.linkMesFiches.TabIndex = 2;
+            this.linkMesFiches.TabStop = true;
+            this.linkMesFiches.Text = "Mes fiches de frais";
+            this.linkMesFiches.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkMesFiches_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -105,7 +106,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkMesFiches);
             this.Controls.Add(this.linkSaisieFrais);
             this.Controls.Add(this.label1);
             this.Name = "FVisiteur";
@@ -120,7 +121,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkMesFiches;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;

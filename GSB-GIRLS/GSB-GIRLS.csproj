@@ -80,6 +80,12 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultation_visiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultation_visiteur.Designer.cs">
+      <DependentUpon>Consultation_visiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRVisite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +155,11 @@
     <Compile Include="LigneFraisHorsForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListeVisiteur.cs">
+    <Compile Include="FrmRS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeVisiteur.Designer.cs">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <Compile Include="FrmRS.Designer.cs">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </Compile>
     <Compile Include="mdlGSBgirls.Context.cs">
       <AutoGen>True</AutoGen>
@@ -182,11 +188,17 @@
     <Compile Include="GestionCompte.Designer.cs">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="MenuSimple.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="MenuSimple.Designer.cs">
+      <DependentUpon>MenuSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVisiteurRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVisiteurRegion.Designer.cs">
+      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
     </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
@@ -216,6 +228,9 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultation_visiteur.resx">
+      <DependentUpon>Consultation_visiteur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRVisite.resx">
       <DependentUpon>CRVisite.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,14 +255,17 @@
     <EmbeddedResource Include="FVisiteur.resx">
       <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeVisiteur.resx">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRS.resx">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="MenuSimple.resx">
+      <DependentUpon>MenuSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVisiteurRegion.resx">
+      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
