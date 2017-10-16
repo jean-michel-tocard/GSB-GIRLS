@@ -212,7 +212,6 @@
     <Compile Include="OFFRIR.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="practicien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RAPPORT.cs">
@@ -299,7 +298,9 @@
     <None Include="mdlGSBgirls.edmx.diagram">
       <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\Etat.datasource" />
     <None Include="Properties\DataSources\FAMILLE.datasource" />
     <None Include="Properties\DataSources\fichefrais.datasource" />

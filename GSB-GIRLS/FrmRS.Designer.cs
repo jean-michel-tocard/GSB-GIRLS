@@ -35,6 +35,7 @@
             this.bregion = new System.Windows.Forms.Button();
             this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +61,7 @@
             // 
             // bsecteur
             // 
-            this.bsecteur.BackColor = System.Drawing.SystemColors.Desktop;
+            this.bsecteur.BackColor = System.Drawing.Color.LightSkyBlue;
             this.bsecteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bsecteur.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bsecteur.Location = new System.Drawing.Point(29, 75);
@@ -73,10 +74,10 @@
             // 
             // bregion
             // 
-            this.bregion.BackColor = System.Drawing.SystemColors.Desktop;
+            this.bregion.BackColor = System.Drawing.Color.LightSkyBlue;
             this.bregion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bregion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bregion.Location = new System.Drawing.Point(29, 230);
+            this.bregion.Location = new System.Drawing.Point(29, 215);
             this.bregion.Name = "bregion";
             this.bregion.Size = new System.Drawing.Size(110, 38);
             this.bregion.TabIndex = 4;
@@ -91,12 +92,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(587, 116);
             this.dataGridView1.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(773, 440);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Retour";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmRS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(874, 450);
+            this.ClientSize = new System.Drawing.Size(874, 485);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bregion);
             this.Controls.Add(this.bsecteur);
@@ -109,6 +122,7 @@
             this.Controls.SetChildIndex(this.bsecteur, 0);
             this.Controls.SetChildIndex(this.bregion, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -125,5 +139,6 @@
         private System.Windows.Forms.Button bregion;
         private System.Windows.Forms.BindingSource bsVisiteur;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
