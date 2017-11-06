@@ -28,97 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connexion));
-            this.lblTitre = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtMDP = new System.Windows.Forms.TextBox();
-            this.btnQuitter = new System.Windows.Forms.Button();
-            this.bsuser = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bsuser)).BeginInit();
+            this.txtIdent = new System.Windows.Forms.TextBox();
+            this.textMPD = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblTitre
+            // txtIdent
             // 
-            this.lblTitre.AutoSize = true;
-            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitre.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitre.Location = new System.Drawing.Point(294, 140);
-            this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(203, 29);
-            this.lblTitre.TabIndex = 0;
-            this.lblTitre.Text = "Identifiez vous";
-            this.lblTitre.Click += new System.EventHandler(this.label1_Click);
+            this.txtIdent.Location = new System.Drawing.Point(316, 193);
+            this.txtIdent.Name = "txtIdent";
+            this.txtIdent.Size = new System.Drawing.Size(307, 20);
+            this.txtIdent.TabIndex = 1;
             // 
-            // btnOK
+            // textMPD
             // 
-            this.btnOK.BackColor = System.Drawing.Color.White;
-            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(315, 423);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(94, 32);
-            this.btnOK.TabIndex = 1;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(290, 207);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(268, 20);
-            this.txtID.TabIndex = 2;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            // 
-            // txtMDP
-            // 
-            this.txtMDP.Location = new System.Drawing.Point(290, 277);
-            this.txtMDP.Name = "txtMDP";
-            this.txtMDP.Size = new System.Drawing.Size(268, 20);
-            this.txtMDP.TabIndex = 3;
-            this.txtMDP.UseSystemPasswordChar = true;
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.BackColor = System.Drawing.Color.LightBlue;
-            this.btnQuitter.Location = new System.Drawing.Point(439, 423);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(94, 32);
-            this.btnQuitter.TabIndex = 4;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = false;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
-            // 
-            // bsuser
-            // 
-            this.bsuser.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            this.textMPD.Location = new System.Drawing.Point(316, 280);
+            this.textMPD.Name = "textMPD";
+            this.textMPD.Size = new System.Drawing.Size(307, 20);
+            this.textMPD.TabIndex = 2;
             // 
             // Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(990, 571);
-            this.Controls.Add(this.btnQuitter);
-            this.Controls.Add(this.txtMDP);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.lblTitre);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(992, 573);
+            this.Controls.Add(this.textMPD);
+            this.Controls.Add(this.txtIdent);
             this.Name = "Connexion";
-            this.Text = "RAPPORT_VISITE";
-            this.Load += new System.EventHandler(this.Connexion_Load);
-            this.Controls.SetChildIndex(this.lblTitre, 0);
-            this.Controls.SetChildIndex(this.btnOK, 0);
-            this.Controls.SetChildIndex(this.txtID, 0);
-            this.Controls.SetChildIndex(this.txtMDP, 0);
-            this.Controls.SetChildIndex(this.btnQuitter, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.bsuser)).EndInit();
+            this.Controls.SetChildIndex(this.txtIdent, 0);
+            this.Controls.SetChildIndex(this.textMPD, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,7 +67,9 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtMDP;
         private System.Windows.Forms.Button btnQuitter;
-        private System.Windows.Forms.BindingSource bsuser;
+        private System.Windows.Forms.BindingSource bsvisiteur;
+        private System.Windows.Forms.TextBox txtIdent;
+        private System.Windows.Forms.TextBox textMPD;
     }
 }
 
