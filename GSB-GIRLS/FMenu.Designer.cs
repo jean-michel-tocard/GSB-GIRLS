@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class MenuVisiteurRegion
+    partial class FMenu
     {
         /// <summary>
         /// Required designer variable.

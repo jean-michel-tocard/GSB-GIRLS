@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class MenuVisiteurRegion : Accueil
+    public partial class FMenu : Accueil
     {
-        public MenuVisiteurRegion()
+        public FMenu()
         {
             InitializeComponent();
         }

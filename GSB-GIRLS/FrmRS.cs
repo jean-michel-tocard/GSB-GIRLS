@@ -31,7 +31,7 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuVisiteurRegion menuv = new MenuVisiteurRegion();
+            FMenu menuv = new FMenu();
             menuv.Show();
             this.Hide();
         }

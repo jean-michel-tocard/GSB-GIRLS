@@ -205,11 +205,11 @@
     <Compile Include="MenuSimple.Designer.cs">
       <DependentUpon>MenuSimple.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuVisiteurRegion.cs">
+    <Compile Include="FMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuVisiteurRegion.Designer.cs">
-      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
+    <Compile Include="FMenu.Designer.cs">
+      <DependentUpon>FMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
@@ -277,8 +277,8 @@
     <EmbeddedResource Include="MenuSimple.resx">
       <DependentUpon>MenuSimple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuVisiteurRegion.resx">
-      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
+    <EmbeddedResource Include="FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
