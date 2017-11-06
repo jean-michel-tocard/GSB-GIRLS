@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class MenuSimple : Accueil
+    public partial class FLabo : Accueil
     {
-        public MenuSimple()
+        public FLabo()
         {
             InitializeComponent();
         }
+
+
     }
 }

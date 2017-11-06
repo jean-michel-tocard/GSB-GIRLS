@@ -15,63 +15,48 @@ namespace GSB_GIRLS
     public partial class Connexion : Accueil
     {
         private GSBgirls maConnexion;
+        
         public Connexion()
         {
             InitializeComponent();
             maConnexion = new GSBgirls();
-            bsvisiteur.DataSource = maConnexion.Visiteur.ToList();
+            bsvisiteurs.DataSource = maConnexion.Visiteur.ToList();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public static void ThreadProc()
         {
-
+            Application.Run(new FMenu());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var filteredData = maConnexion.Visiteur.ToList()
-                         .Where(x => x.identifiant.Equals(txtIdent.Text));
+                           .Where(x => x.identifiant.Equals(txtIdent.Text));
             if (filteredData.ToList().Count == 0)
             {
                 MessageBox.Show("Identifiant non valide");
             }
             else
             {
-                bsvisiteur.DataSource = filteredData; // application du filtre
-                bsvisiteur.MoveFirst();
-                Visiteur monuser = (Visiteur)bsvisiteur.Current;
+                
+                bsvisiteurs.DataSource = filteredData; // application du filtre
+                bsvisiteurs.MoveFirst();
+                Visiteur monuser = (Visiteur)bsvisiteurs.Current;
                 MD5 monMD5 = MD5.Create();
                 string passwdCrypte = GetMd5Hash(monMD5, textMPD.Text);
                 string pswdc = monuser.password.Substring(2); // Pbs de l'hexa 0x sur sqlserver
                 if (pswdc.Equals(passwdCrypte) || monuser.password.Equals(passwdCrypte))
                 {
-                   // MessageBox.Show("Connexion établie");
-
-                    /*  var FilteredData = Modele.MaConnexion.Region.ToList()
-                         .Where(x => x.idRegion == int.Parse(x.idVisiteur));*/
-
-                  /*  if (int.Parse(Modele.UnSecteur.idVisiteur) == int.Parse(Modele.visiteurConnect.idVisiteur))
-                    {*/
-                        MenuVisiteurRegion menu = new MenuVisiteurRegion();
-                        //menu.MdiParent = this;
-                        menu.Show();
-                        this.Hide();
-
-                    /*  }
-
-                      else
-                      {
-                          MenuSimple menuS = new MenuSimple();
-                          //menu.MdiParent = this;
-                          menuS.Show();
-                      }*/
+                    MessageBox.Show("Vous êtes bien connecté !");
+                    System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+                    t.Start();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Mot de passe invalide");
+                    MessageBox.Show("Mot de passe non valide");
                 }
             }
-
 
         }
         static string GetMd5Hash(MD5 MonMD5, string PasswdSaisi)
@@ -89,24 +74,9 @@ namespace GSB_GIRLS
             return sb.ToString();
         }
 
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Connexion_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

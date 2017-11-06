@@ -146,6 +146,12 @@
     <Compile Include="FVisiteur.Designer.cs">
       <DependentUpon>FVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLabo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLabo.Designer.cs">
+      <DependentUpon>FLabo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GSB_girlsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,17 +199,11 @@
     <Compile Include="GestionCompte.Designer.cs">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuSimple.cs">
+    <Compile Include="FMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuSimple.Designer.cs">
-      <DependentUpon>MenuSimple.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuVisiteurRegion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuVisiteurRegion.Designer.cs">
-      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
+    <Compile Include="FMenu.Designer.cs">
+      <DependentUpon>FMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="MOTIF.cs">
@@ -265,11 +265,11 @@
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuSimple.resx">
-      <DependentUpon>MenuSimple.cs</DependentUpon>
+    <EmbeddedResource Include="FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuVisiteurRegion.resx">
-      <DependentUpon>MenuVisiteurRegion.cs</DependentUpon>
+    <EmbeddedResource Include="FLabo.resx">
+      <DependentUpon>FLabo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
