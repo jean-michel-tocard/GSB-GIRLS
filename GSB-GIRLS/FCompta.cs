@@ -24,18 +24,6 @@ namespace GSB_GIRLS
             fparEditionFiche.Show();
         }
 
-        private void linkSuiviFiche_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FSuiviFiche fparSuiviFiche = new FSuiviFiche();
-            fparSuiviFiche.MdiParent = this;
-            fparSuiviFiche.Show();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FCompta_Load(object sender, EventArgs e)
         {
             cboChoixV.ValueMember = "idVisiteur";

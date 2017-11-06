@@ -17,11 +17,11 @@ namespace GSB_GIRLS
             InitializeComponent();
         }
 
-        private void linkSuiviFiche_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkAccCompt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FSuiviFiche fparSuiviFiche = new FSuiviFiche();
-            fparSuiviFiche.MdiParent = this;
-            fparSuiviFiche.Show();
+            FCompta fparCompta = new FCompta();
+            fparCompta.MdiParent = this;
+            fparCompta.Show();
         }
     }
 }
