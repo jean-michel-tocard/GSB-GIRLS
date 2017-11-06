@@ -44,5 +44,15 @@ namespace GSB_GIRLS
             labo.Show();
             this.Hide();
         }
+
+        private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
