@@ -17,14 +17,6 @@ namespace GSB_GIRLS
             InitializeComponent();
         }
 
-        private void gestionDesComptesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestionCompte gc = new GestionCompte();
-            //menu.MdiParent = this;
-            gc.Show();
-            this.Hide();
-        }
-
         private void informationsRégionsEtSecteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRS rs = new FrmRS();
@@ -32,10 +24,24 @@ namespace GSB_GIRLS
             this.Hide();
         }
 
-        private void vosInformationsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gestionCompte_Click(object sender, EventArgs e)
         {
-            FInfoVisiteur visiteur = new FInfoVisiteur();
-            visiteur.Show();
+            GestionCompte gc = new GestionCompte();
+            //menu.MdiParent = this;
+            gc.Show();
+            this.Hide();
+        }
+
+        private void gestionVisiteur_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void laboratoireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FLabo labo = new FLabo();
+            //menu.MdiParent = this;
+            labo.Show();
             this.Hide();
         }
     }

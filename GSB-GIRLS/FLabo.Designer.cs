@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class MenuSimple
+    partial class FLabo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // MenuSimple
+            // FLabo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 404);
-            this.Name = "MenuSimple";
-            this.Text = "MenuSimple";
+            this.ClientSize = new System.Drawing.Size(782, 405);
+            this.Name = "FLabo";
+            this.Text = "Laboratoire";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

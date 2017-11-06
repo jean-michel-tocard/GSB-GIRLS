@@ -44,7 +44,7 @@
             // 
             this.txtIdent.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIdent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdent.Location = new System.Drawing.Point(345, 205);
+            this.txtIdent.Location = new System.Drawing.Point(216, 135);
             this.txtIdent.Name = "txtIdent";
             this.txtIdent.Size = new System.Drawing.Size(307, 26);
             this.txtIdent.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             this.textMPD.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textMPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMPD.Location = new System.Drawing.Point(345, 269);
+            this.textMPD.Location = new System.Drawing.Point(216, 199);
             this.textMPD.Name = "textMPD";
             this.textMPD.PasswordChar = '♦';
             this.textMPD.Size = new System.Drawing.Size(307, 26);
@@ -64,8 +64,8 @@
             this.identiTitre.AutoSize = true;
             this.identiTitre.BackColor = System.Drawing.Color.Transparent;
             this.identiTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.identiTitre.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.identiTitre.Location = new System.Drawing.Point(372, 111);
+            this.identiTitre.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.identiTitre.Location = new System.Drawing.Point(239, 41);
             this.identiTitre.Name = "identiTitre";
             this.identiTitre.Size = new System.Drawing.Size(210, 37);
             this.identiTitre.TabIndex = 3;
@@ -76,7 +76,7 @@
             this.bvalid.BackColor = System.Drawing.SystemColors.Highlight;
             this.bvalid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bvalid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bvalid.Location = new System.Drawing.Point(316, 394);
+            this.bvalid.Location = new System.Drawing.Point(183, 324);
             this.bvalid.Name = "bvalid";
             this.bvalid.Size = new System.Drawing.Size(114, 33);
             this.bvalid.TabIndex = 4;
@@ -89,7 +89,7 @@
             this.bquitter.BackColor = System.Drawing.SystemColors.Highlight;
             this.bquitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bquitter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bquitter.Location = new System.Drawing.Point(497, 394);
+            this.bquitter.Location = new System.Drawing.Point(364, 324);
             this.bquitter.Name = "bquitter";
             this.bquitter.Size = new System.Drawing.Size(114, 33);
             this.bquitter.TabIndex = 5;
@@ -102,8 +102,8 @@
             this.identifiant.AutoSize = true;
             this.identifiant.BackColor = System.Drawing.Color.Transparent;
             this.identifiant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.identifiant.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.identifiant.Location = new System.Drawing.Point(180, 204);
+            this.identifiant.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.identifiant.Location = new System.Drawing.Point(47, 134);
             this.identifiant.Name = "identifiant";
             this.identifiant.Size = new System.Drawing.Size(130, 25);
             this.identifiant.TabIndex = 6;
@@ -114,8 +114,8 @@
             this.mdp.AutoSize = true;
             this.mdp.BackColor = System.Drawing.Color.Transparent;
             this.mdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mdp.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.mdp.Location = new System.Drawing.Point(180, 270);
+            this.mdp.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.mdp.Location = new System.Drawing.Point(47, 200);
             this.mdp.Name = "mdp";
             this.mdp.Size = new System.Drawing.Size(168, 25);
             this.mdp.TabIndex = 7;
@@ -124,7 +124,7 @@
             // Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(992, 573);
+            this.ClientSize = new System.Drawing.Size(784, 410);
             this.Controls.Add(this.mdp);
             this.Controls.Add(this.identifiant);
             this.Controls.Add(this.bquitter);
