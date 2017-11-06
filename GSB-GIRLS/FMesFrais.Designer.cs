@@ -45,9 +45,13 @@
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.bsMois = new System.Windows.Forms.BindingSource(this.components);
+            this.txtEtat = new System.Windows.Forms.TextBox();
+            this.txtMontant = new System.Windows.Forms.TextBox();
+            this.dgvFMois = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -193,11 +197,35 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Suivi du remboursement des frais";
             // 
+            // txtEtat
+            // 
+            this.txtEtat.Location = new System.Drawing.Point(495, 416);
+            this.txtEtat.Name = "txtEtat";
+            this.txtEtat.Size = new System.Drawing.Size(100, 20);
+            this.txtEtat.TabIndex = 38;
+            // 
+            // txtMontant
+            // 
+            this.txtMontant.Location = new System.Drawing.Point(495, 445);
+            this.txtMontant.Name = "txtMontant";
+            this.txtMontant.Size = new System.Drawing.Size(100, 20);
+            this.txtMontant.TabIndex = 39;
+            // 
+            // dgvFMois
+            // 
+            this.dgvFMois.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFMois.Location = new System.Drawing.Point(393, 405);
+            this.dgvFMois.Name = "dgvFMois";
+            this.dgvFMois.Size = new System.Drawing.Size(218, 83);
+            this.dgvFMois.TabIndex = 40;
+            // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 857);
+            this.Controls.Add(this.txtMontant);
+            this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
@@ -213,12 +241,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvFMois);
             this.Name = "FMesFrais";
             this.Text = "FMesFrais";
             this.Load += new System.EventHandler(this.FMesFrais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +272,8 @@
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource bsMois;
+        private System.Windows.Forms.TextBox txtEtat;
+        private System.Windows.Forms.TextBox txtMontant;
+        private System.Windows.Forms.DataGridView dgvFMois;
     }
 }

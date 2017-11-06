@@ -28,7 +28,7 @@ namespace GSB_GIRLS
         {
             cboMois.ValueMember = "idVisiteur";
             cboMois.DisplayMember = "mois";
-            bsMois.DataSource = Modele.MaConnexion.LigneFraisForfait.ToList();
+            bsMois.DataSource = Modele.MaConnexion.FraisForfait.ToList();
             cboMois.DataSource = bsMois;
         }
 
@@ -36,5 +36,7 @@ namespace GSB_GIRLS
         {
             
         }
+
+
     }
 }

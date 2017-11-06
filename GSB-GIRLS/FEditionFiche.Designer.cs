@@ -30,7 +30,6 @@
         {
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkSuiviFiche = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,7 +41,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(18, 249);
+            this.linkLabel1.Location = new System.Drawing.Point(18, 234);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 17;
@@ -57,17 +56,6 @@
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Comptable : ";
-            // 
-            // linkSuiviFiche
-            // 
-            this.linkSuiviFiche.AutoSize = true;
-            this.linkSuiviFiche.Location = new System.Drawing.Point(18, 216);
-            this.linkSuiviFiche.Name = "linkSuiviFiche";
-            this.linkSuiviFiche.Size = new System.Drawing.Size(98, 13);
-            this.linkSuiviFiche.TabIndex = 14;
-            this.linkSuiviFiche.TabStop = true;
-            this.linkSuiviFiche.Text = "Suivi fiches de frais";
-            this.linkSuiviFiche.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSuiviFiche_LinkClicked);
             // 
             // label3
             // 
@@ -111,14 +99,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 499);
+            this.ClientSize = new System.Drawing.Size(952, 807);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkSuiviFiche);
             this.Name = "FEditionFiche";
             this.Text = "FEditionFiche";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -133,7 +120,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkSuiviFiche;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;

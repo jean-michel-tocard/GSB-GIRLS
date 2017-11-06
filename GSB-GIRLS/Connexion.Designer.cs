@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtIdent = new System.Windows.Forms.TextBox();
             this.textMPD = new System.Windows.Forms.TextBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdent
@@ -55,6 +58,7 @@
             this.Name = "Connexion";
             this.Controls.SetChildIndex(this.txtIdent, 0);
             this.Controls.SetChildIndex(this.textMPD, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +74,7 @@
         private System.Windows.Forms.BindingSource bsvisiteur;
         private System.Windows.Forms.TextBox txtIdent;
         private System.Windows.Forms.TextBox textMPD;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 
