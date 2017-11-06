@@ -34,6 +34,8 @@
             this.regionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCompte = new System.Windows.Forms.ToolStripMenuItem();
             this.informationsRégionsEtSecteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +57,9 @@
             // 
             this.gestionVisiteur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.laboratoireToolStripMenuItem,
-            this.regionsToolStripMenuItem});
+            this.regionsToolStripMenuItem,
+            this.parSecteurToolStripMenuItem,
+            this.modificationToolStripMenuItem});
             this.gestionVisiteur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gestionVisiteur.Name = "gestionVisiteur";
             this.gestionVisiteur.Size = new System.Drawing.Size(91, 27);
@@ -65,15 +69,16 @@
             // laboratoireToolStripMenuItem
             // 
             this.laboratoireToolStripMenuItem.Name = "laboratoireToolStripMenuItem";
-            this.laboratoireToolStripMenuItem.Size = new System.Drawing.Size(174, 28);
-            this.laboratoireToolStripMenuItem.Text = "Laboratoire";
+            this.laboratoireToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.laboratoireToolStripMenuItem.Text = "Par laboratoire";
             this.laboratoireToolStripMenuItem.Click += new System.EventHandler(this.laboratoireToolStripMenuItem_Click);
             // 
             // regionsToolStripMenuItem
             // 
             this.regionsToolStripMenuItem.Name = "regionsToolStripMenuItem";
-            this.regionsToolStripMenuItem.Size = new System.Drawing.Size(174, 28);
-            this.regionsToolStripMenuItem.Text = "Régions";
+            this.regionsToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.regionsToolStripMenuItem.Text = "Par régions";
+            this.regionsToolStripMenuItem.Click += new System.EventHandler(this.regionsToolStripMenuItem_Click);
             // 
             // gestionCompte
             // 
@@ -90,6 +95,19 @@
             this.informationsRégionsEtSecteursToolStripMenuItem.Size = new System.Drawing.Size(300, 27);
             this.informationsRégionsEtSecteursToolStripMenuItem.Text = "Informations Régions et Secteurs";
             this.informationsRégionsEtSecteursToolStripMenuItem.Click += new System.EventHandler(this.informationsRégionsEtSecteursToolStripMenuItem_Click);
+            // 
+            // parSecteurToolStripMenuItem
+            // 
+            this.parSecteurToolStripMenuItem.Name = "parSecteurToolStripMenuItem";
+            this.parSecteurToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.parSecteurToolStripMenuItem.Text = "Par secteur";
+            // 
+            // modificationToolStripMenuItem
+            // 
+            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // FMenu
             // 
@@ -116,5 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem informationsRégionsEtSecteursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laboratoireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parSecteurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
     }
 }
