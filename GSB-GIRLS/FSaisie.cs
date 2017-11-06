@@ -23,5 +23,11 @@ namespace GSB_GIRLS
             fparMesFrais.MdiParent = this;
             fparMesFrais.Show();
         }
+
+        private void btnAjouter1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
+    
 }

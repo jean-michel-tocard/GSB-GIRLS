@@ -15,6 +15,7 @@ namespace GSB_GIRLS
         public FVisiteur()
         {
             InitializeComponent();
+
         }
 
         private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -22,6 +23,7 @@ namespace GSB_GIRLS
             FSaisie fparSaisieFrais = new FSaisie();
             fparSaisieFrais.MdiParent = this;
             fparSaisieFrais.Show();
+
         }
 
         private void linkMesFiches_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -30,5 +32,7 @@ namespace GSB_GIRLS
             fparMesFrais.MdiParent = this;
             fparMesFrais.Show();
         }
+
+
     }
 }

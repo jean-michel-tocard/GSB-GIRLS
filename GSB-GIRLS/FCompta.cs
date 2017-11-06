@@ -30,5 +30,10 @@ namespace GSB_GIRLS
             fparSuiviFiche.MdiParent = this;
             fparSuiviFiche.Show();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
