@@ -140,12 +140,6 @@
     <Compile Include="FSaisie.Designer.cs">
       <DependentUpon>FSaisie.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSuiviFiche.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSuiviFiche.Designer.cs">
-      <DependentUpon>FSuiviFiche.cs</DependentUpon>
-    </Compile>
     <Compile Include="FVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSaisie.resx">
       <DependentUpon>FSaisie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSuiviFiche.resx">
-      <DependentUpon>FSuiviFiche.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FVisiteur.resx">
       <DependentUpon>FVisiteur.cs</DependentUpon>

@@ -35,5 +35,25 @@ namespace GSB_GIRLS
         {
 
         }
+
+        private void FCompta_Load(object sender, EventArgs e)
+        {
+            cboChoixV.ValueMember = "idVisiteur";
+            cboChoixV.DisplayMember = "nom"+"prenom";
+            bsChoixV.DataSource = Modele.MaConnexion.Visiteur.ToList();
+            cboChoixV.DataSource = bsChoixV;
+        }
+
+        private void cboChoixV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var LQuery = Modele.MaConnexion.fichefrais.ToList()
+                           .Where(x => x.idVisiteur == int.Parse(cboChoixV.SelectedValue.ToString()));
+            BindingSource bs = new BindingSource();
+            bs.DataSource = LQuery;
+            bs.MoveFirst();
+            fichefrais ffrais = (fichefrais)bs.Current;
+            cboMois.DataSource = fichefrais.mois.ToString();
+
+        }
     }
 }

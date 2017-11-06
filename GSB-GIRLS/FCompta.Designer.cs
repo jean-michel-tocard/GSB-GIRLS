@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkSuiviFiche = new System.Windows.Forms.LinkLabel();
             this.linkEdition = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboChoixV = new System.Windows.Forms.ComboBox();
+            this.cboMois = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,9 +45,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -68,17 +71,6 @@
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Comptable : ";
-            // 
-            // linkSuiviFiche
-            // 
-            this.linkSuiviFiche.AutoSize = true;
-            this.linkSuiviFiche.Location = new System.Drawing.Point(21, 234);
-            this.linkSuiviFiche.Name = "linkSuiviFiche";
-            this.linkSuiviFiche.Size = new System.Drawing.Size(98, 13);
-            this.linkSuiviFiche.TabIndex = 8;
-            this.linkSuiviFiche.TabStop = true;
-            this.linkSuiviFiche.Text = "Suivi fiches de frais";
-            this.linkSuiviFiche.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSuiviFiche_LinkClicked);
             // 
             // linkEdition
             // 
@@ -123,27 +115,28 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(303, 223);
+            this.label4.Location = new System.Drawing.Point(303, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Mois :";
             // 
-            // comboBox1
+            // cboChoixV
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(429, 168);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cboChoixV.FormattingEnabled = true;
+            this.cboChoixV.Location = new System.Drawing.Point(429, 168);
+            this.cboChoixV.Name = "cboChoixV";
+            this.cboChoixV.Size = new System.Drawing.Size(121, 21);
+            this.cboChoixV.TabIndex = 14;
+            this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cboMois
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(429, 231);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 15;
+            this.cboMois.FormattingEnabled = true;
+            this.cboMois.Location = new System.Drawing.Point(429, 231);
+            this.cboMois.Name = "cboMois";
+            this.cboMois.Size = new System.Drawing.Size(121, 21);
+            this.cboMois.TabIndex = 15;
             // 
             // label5
             // 
@@ -193,7 +186,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 531);
+            this.button1.Location = new System.Drawing.Point(162, 528);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 21;
@@ -209,11 +202,19 @@
             this.button2.Text = "Valider cette fiche";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(146, 487);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 23;
+            // 
             // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 836);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -221,21 +222,22 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboMois);
+            this.Controls.Add(this.cboChoixV);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkSuiviFiche);
             this.Controls.Add(this.linkEdition);
             this.Controls.Add(this.label1);
             this.Name = "FCompta";
-            this.Text = "FSuiviC";
+            this.Text = "FCompta";
+            this.Load += new System.EventHandler(this.FCompta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,13 +248,12 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkSuiviFiche;
         private System.Windows.Forms.LinkLabel linkEdition;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboChoixV;
+        private System.Windows.Forms.ComboBox cboMois;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -260,5 +261,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource bsChoixV;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
