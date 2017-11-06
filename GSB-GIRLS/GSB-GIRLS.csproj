@@ -119,6 +119,12 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FInfoVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfoVisiteur.Designer.cs">
+      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMesFrais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,11 @@
     <Compile Include="FVisiteur.Designer.cs">
       <DependentUpon>FVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="GSB_girlsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -155,11 +166,11 @@
     <Compile Include="LigneFraisHorsForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="ListeVisiteur.cs">
+    <Compile Include="FrmRS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeVisiteur.Designer.cs">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <Compile Include="FrmRS.Designer.cs">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </Compile>
     <Compile Include="mdlGSBgirls.Context.cs">
       <AutoGen>True</AutoGen>
@@ -242,6 +253,9 @@
     <EmbeddedResource Include="FEditionFiche.resx">
       <DependentUpon>FEditionFiche.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FInfoVisiteur.resx">
+      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMesFrais.resx">
       <DependentUpon>FMesFrais.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,8 +268,8 @@
     <EmbeddedResource Include="FVisiteur.resx">
       <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeVisiteur.resx">
-      <DependentUpon>ListeVisiteur.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRS.resx">
+      <DependentUpon>FrmRS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
@@ -279,10 +293,23 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>mdlGSBgirls.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="GSB_girlsDataSet.xsc">
+      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_girlsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSB_girlsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSB_girlsDataSet.xss">
+      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="mdlGSBgirls.edmx.diagram">
       <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\Etat.datasource" />
     <None Include="Properties\DataSources\FAMILLE.datasource" />
     <None Include="Properties\DataSources\fichefrais.datasource" />

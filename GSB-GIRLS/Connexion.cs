@@ -19,7 +19,7 @@ namespace GSB_GIRLS
         {
             InitializeComponent();
             maConnexion = new GSBgirls();
-            bsuser.DataSource = maConnexion.Visiteur.ToList();
+            bsvisiteur.DataSource = maConnexion.Visiteur.ToList();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,22 +30,22 @@ namespace GSB_GIRLS
         private void button1_Click(object sender, EventArgs e)
         {
             var filteredData = maConnexion.Visiteur.ToList()
-                         .Where(x => x.identifiant.Equals(txtID.Text));
+                         .Where(x => x.identifiant.Equals(txtIdent.Text));
             if (filteredData.ToList().Count == 0)
             {
                 MessageBox.Show("Identifiant non valide");
             }
             else
             {
-                bsuser.DataSource = filteredData; // application du filtre
-                bsuser.MoveFirst();
-                Visiteur monuser = (Visiteur)bsuser.Current;
+                bsvisiteur.DataSource = filteredData; // application du filtre
+                bsvisiteur.MoveFirst();
+                Visiteur monuser = (Visiteur)bsvisiteur.Current;
                 MD5 monMD5 = MD5.Create();
-                string passwdCrypte = GetMd5Hash(monMD5, txtMDP.Text);
+                string passwdCrypte = GetMd5Hash(monMD5, textMPD.Text);
                 string pswdc = monuser.password.Substring(2); // Pbs de l'hexa 0x sur sqlserver
                 if (pswdc.Equals(passwdCrypte) || monuser.password.Equals(passwdCrypte))
                 {
-                    MessageBox.Show("Connexion établie");
+                   // MessageBox.Show("Connexion établie");
 
                     /*  var FilteredData = Modele.MaConnexion.Region.ToList()
                          .Where(x => x.idRegion == int.Parse(x.idVisiteur));*/
@@ -55,14 +55,16 @@ namespace GSB_GIRLS
                         MenuVisiteurRegion menu = new MenuVisiteurRegion();
                         //menu.MdiParent = this;
                         menu.Show();
-                  /*  }
+                        this.Hide();
 
-                    else
-                    {
-                        MenuSimple menuS = new MenuSimple();
-                        //menu.MdiParent = this;
-                        menuS.Show();
-                    }*/
+                    /*  }
+
+                      else
+                      {
+                          MenuSimple menuS = new MenuSimple();
+                          //menu.MdiParent = this;
+                          menuS.Show();
+                      }*/
                 }
                 else
                 {
