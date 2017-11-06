@@ -19,9 +19,9 @@ namespace GSB_GIRLS
 
         private void linkSuiviFiche_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FSuiviFiche fparSuiviFiche = new FSuiviFiche();
+         /*   FSuiviFiche fparSuiviFiche = new FSuiviFiche();
             fparSuiviFiche.MdiParent = this;
-            fparSuiviFiche.Show();
+            fparSuiviFiche.Show();*/
         }
     }
 }

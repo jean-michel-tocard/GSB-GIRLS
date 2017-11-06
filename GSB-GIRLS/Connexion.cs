@@ -30,6 +30,26 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+        static string GetMd5Hash(MD5 MonMD5, string PasswdSaisi)
+        {
+            // step 1, calculate MD5 hash from input
+
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
+            byte[] hash = MonMD5.ComputeHash(inputBytes);
+            // step 2, convert byte array to hex string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2"));
+            }
+            return sb.ToString();
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             var filteredData = maConnexion.Visiteur.ToList()
                            .Where(x => x.identifiant.Equals(txtIdent.Text));
             if (filteredData.ToList().Count == 0)
@@ -38,7 +58,7 @@ namespace GSB_GIRLS
             }
             else
             {
-                
+
                 bsvisiteurs.DataSource = filteredData; // application du filtre
                 bsvisiteurs.MoveFirst();
                 Visiteur monuser = (Visiteur)bsvisiteurs.Current;
@@ -59,22 +79,8 @@ namespace GSB_GIRLS
             }
 
         }
-        static string GetMd5Hash(MD5 MonMD5, string PasswdSaisi)
-        {
-            // step 1, calculate MD5 hash from input
 
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
-            byte[] hash = MonMD5.ComputeHash(inputBytes);
-            // step 2, convert byte array to hex string
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
-            {
-                sb.Append(hash[i].ToString("x2"));
-            }
-            return sb.ToString();
-        }
-
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void quitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
