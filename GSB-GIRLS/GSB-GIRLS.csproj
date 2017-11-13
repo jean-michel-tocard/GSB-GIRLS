@@ -153,11 +153,6 @@
     <Compile Include="FLabo.Designer.cs">
       <DependentUpon>FLabo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GSB_girlsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -285,17 +280,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>mdlGSBgirls.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="GSB_girlsDataSet.xsc">
-      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GSB_girlsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GSB_girlsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GSB_girlsDataSet.xss">
-      <DependentUpon>GSB_girlsDataSet.xsd</DependentUpon>
-    </None>
     <None Include="mdlGSBgirls.edmx.diagram">
       <DependentUpon>mdlGSBgirls.edmx</DependentUpon>
     </None>

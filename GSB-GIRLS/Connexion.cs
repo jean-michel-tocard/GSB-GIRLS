@@ -12,10 +12,11 @@ using System.Security.Cryptography;
 
 namespace GSB_GIRLS
 {
-    public partial class Connexion : Accueil
+    public partial class Connexion : Form
     {
         private GSBgirls maConnexion;
-        
+        private Visiteur levisiteur;
+
         public Connexion()
         {
             InitializeComponent();
@@ -25,13 +26,14 @@ namespace GSB_GIRLS
 
         public static void ThreadProc()
         {
-            Application.Run(new FMenu());
+            //Application.Run(new FMenu());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
         }
+
         static string GetMd5Hash(MD5 MonMD5, string PasswdSaisi)
         {
             // step 1, calculate MD5 hash from input
@@ -50,31 +52,54 @@ namespace GSB_GIRLS
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var filteredData = maConnexion.Visiteur.ToList()
-                           .Where(x => x.identifiant.Equals(txtIdent.Text));
-            if (filteredData.ToList().Count == 0)
-            {
-                MessageBox.Show("Identifiant non valide");
-            }
-            else
-            {
+            string identifiant = txtIdent.Text;
+            string mdp = txtmdp.Text;
 
-                bsvisiteurs.DataSource = filteredData; // application du filtre
-                bsvisiteurs.MoveFirst();
-                Visiteur monuser = (Visiteur)bsvisiteurs.Current;
-                MD5 monMD5 = MD5.Create();
-                string passwdCrypte = GetMd5Hash(monMD5, textMPD.Text);
-                string pswdc = monuser.password.Substring(2); // Pbs de l'hexa 0x sur sqlserver
-                if (pswdc.Equals(passwdCrypte) || monuser.password.Equals(passwdCrypte))
+            string leIdentifiant = Convert.ToString(txtIdent.Text);
+            string lePasswd = Convert.ToString(txtmdp.Text);
+
+            using (MD5 md5Hash = MD5.Create())
+            {
+                string motCrypte2 = GetMd5Hash(md5Hash, mdp);
+                try
                 {
-                    MessageBox.Show("Vous êtes bien connecté !");
-                    System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
-                    t.Start();
-                    this.Close();
+                    var reqConnexion = from v in maConnexion.Visiteur
+                                       where v.identifiant == identifiant && v.password == motCrypte2
+                                       select v;
+
+
+                    Visiteur unVisiteur = reqConnexion.FirstOrDefault();
+                    if (unVisiteur != null)
+                    {
+                        this.levisiteur = unVisiteur;
+                        //lblConnexion.Visible = true;
+                        //btnValider.Visible = false;
+                        //btnOK.Visible = true;
+
+                        this.Hide();
+                        FMenu fMenu = new FMenu(maConnexion, levisiteur);
+                        fMenu.ShowDialog();
+
+                    }
+                    else
+                    {
+                        string message = "Erreur de saisie. Recommencez !";
+                        string caption = "Vous n'êtes pas autorisé à vous connecter";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
+                        DialogResult result;
+                        result = MessageBox.Show(message, caption, buttons);
+                        if (result == System.Windows.Forms.DialogResult.OK)
+                        {
+                            txtIdent.Clear();
+                            txtmdp.Clear();
+
+                        }
+                    }
                 }
-                else
+
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Mot de passe non valide");
+                    MessageBox.Show(ex.Message);
                 }
             }
 

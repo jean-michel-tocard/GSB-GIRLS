@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtIdent = new System.Windows.Forms.TextBox();
-            this.textMPD = new System.Windows.Forms.TextBox();
+            this.txtmdp = new System.Windows.Forms.TextBox();
             this.bsvisiteurs = new System.Windows.Forms.BindingSource(this.components);
             this.valider = new System.Windows.Forms.Button();
             this.quitter = new System.Windows.Forms.Button();
@@ -47,12 +47,12 @@
             this.txtIdent.Size = new System.Drawing.Size(300, 20);
             this.txtIdent.TabIndex = 1;
             // 
-            // textMPD
+            // txtmdp
             // 
-            this.textMPD.Location = new System.Drawing.Point(288, 184);
-            this.textMPD.Name = "textMPD";
-            this.textMPD.Size = new System.Drawing.Size(300, 20);
-            this.textMPD.TabIndex = 2;
+            this.txtmdp.Location = new System.Drawing.Point(288, 184);
+            this.txtmdp.Name = "txtmdp";
+            this.txtmdp.Size = new System.Drawing.Size(300, 20);
+            this.txtmdp.TabIndex = 2;
             // 
             // valider
             // 
@@ -112,23 +112,15 @@
             // 
             // Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(823, 413);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.quitter);
             this.Controls.Add(this.valider);
-            this.Controls.Add(this.textMPD);
+            this.Controls.Add(this.txtmdp);
             this.Controls.Add(this.txtIdent);
             this.Name = "Connexion";
-            this.Controls.SetChildIndex(this.txtIdent, 0);
-            this.Controls.SetChildIndex(this.textMPD, 0);
-            this.Controls.SetChildIndex(this.valider, 0);
-            this.Controls.SetChildIndex(this.quitter, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteurs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,7 +129,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtIdent;
-        private System.Windows.Forms.TextBox textMPD;
+        private System.Windows.Forms.TextBox txtmdp;
         private System.Windows.Forms.BindingSource bsvisiteurs;
         private System.Windows.Forms.Button valider;
         private System.Windows.Forms.Button quitter;

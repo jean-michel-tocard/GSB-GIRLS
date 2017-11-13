@@ -12,7 +12,7 @@ using System.Data.Objects;
 
 namespace GSB_GIRLS
 {
-    public partial class FMenu : Accueil
+    public partial class FMenu : Form
     {
         private Visiteur levisiteur;
         private GSBgirls maConnexion;
