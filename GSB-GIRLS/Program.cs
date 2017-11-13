@@ -19,7 +19,7 @@ namespace GSB_GIRLS
             Application.SetCompatibleTextRenderingDefault(false);
             //  Application.Run(new Connexion());
             Modele.Initialise();
-            Application.Run(new FCompta());
+            Application.Run(new Connexion());
         }
     }
 }
