@@ -58,11 +58,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(354, 171);
+            this.label1.Location = new System.Drawing.Point(449, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 26);
+            this.label1.Size = new System.Drawing.Size(293, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mes fiches de frais";
+            this.label1.Text = "Consulter mes fiches de frais";
             // 
             // label2
             // 
@@ -105,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(395, 378);
+            this.label4.Location = new System.Drawing.Point(389, 378);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 24);
             this.label4.TabIndex = 6;
@@ -126,9 +126,10 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(399, 423);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(152, 13);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Etat : ";
+            this.label6.Text = "Etat : Saisie clôturée depuis le ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -143,7 +144,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(395, 507);
+            this.label8.Location = new System.Drawing.Point(389, 532);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 24);
             this.label8.TabIndex = 31;
@@ -152,7 +153,7 @@
             // dgvElementForfaitise
             // 
             this.dgvElementForfaitise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvElementForfaitise.Location = new System.Drawing.Point(412, 560);
+            this.dgvElementForfaitise.Location = new System.Drawing.Point(393, 559);
             this.dgvElementForfaitise.Name = "dgvElementForfaitise";
             this.dgvElementForfaitise.Size = new System.Drawing.Size(547, 265);
             this.dgvElementForfaitise.TabIndex = 32;
@@ -199,31 +200,32 @@
             // 
             // txtEtat
             // 
-            this.txtEtat.Location = new System.Drawing.Point(495, 416);
+            this.txtEtat.Location = new System.Drawing.Point(566, 419);
             this.txtEtat.Name = "txtEtat";
             this.txtEtat.Size = new System.Drawing.Size(100, 20);
             this.txtEtat.TabIndex = 38;
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(495, 445);
+            this.txtMontant.Location = new System.Drawing.Point(566, 445);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
             this.txtMontant.TabIndex = 39;
             // 
             // dgvFMois
             // 
+            this.dgvFMois.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvFMois.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFMois.Location = new System.Drawing.Point(393, 405);
             this.dgvFMois.Name = "dgvFMois";
-            this.dgvFMois.Size = new System.Drawing.Size(218, 83);
+            this.dgvFMois.Size = new System.Drawing.Size(342, 83);
             this.dgvFMois.TabIndex = 40;
             // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 857);
+            this.ClientSize = new System.Drawing.Size(971, 882);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label5);

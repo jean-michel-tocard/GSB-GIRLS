@@ -12,9 +12,11 @@ namespace GSB_GIRLS
 {
     public partial class FCompta : Form
     {
+        private bool bLoad = true;
         public FCompta()
         {
             InitializeComponent();
+
         }
 
         private void linkEdition_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -24,36 +26,28 @@ namespace GSB_GIRLS
             fparEditionFiche.Show();
         }
 
-        private void linkSuiviFiche_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            /*FSuiviFiche fparSuiviFiche = new FSuiviFiche();
-            fparSuiviFiche.MdiParent = this;
-            fparSuiviFiche.Show();*/
-        }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     /*   private void FCompta_Load(object sender, EventArgs e)
+       private void FCompta_Load(object sender, EventArgs e)
         {
             cboChoixV.ValueMember = "idVisiteur";
-            cboChoixV.DisplayMember = "nom"+"prenom";
-            bsChoixV.DataSource = Modele.MaConnexion.Visiteur.ToList();
+            cboChoixV.DisplayMember = "np";
+             bsChoixV.DataSource = Modele.MaConnexion.Visiteur.OrderBy(x => x.nom).ThenBy(x=>x.prenom).ToList();
+
             cboChoixV.DataSource = bsChoixV;
+            bLoad = false;
         }
 
         private void cboChoixV_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (bLoad) return;
             var LQuery = Modele.MaConnexion.fichefrais.ToList()
-                           .Where(x => x.idVisiteur == int.Parse(cboChoixV.SelectedValue.ToString()));
+                           .Where(x => x.idVisiteur == cboChoixV.SelectedValue.ToString());
             BindingSource bs = new BindingSource();
             bs.DataSource = LQuery;
             bs.MoveFirst();
             fichefrais ffrais = (fichefrais)bs.Current;
-            cboMois.DataSource = fichefrais.mois.ToString();
+            cboMois.DataSource =ffrais.mois;
 
-        }*/
+        }
     }
 }
