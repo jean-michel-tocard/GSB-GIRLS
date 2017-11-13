@@ -59,7 +59,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(21, 281);
+            this.linkLabel1.Location = new System.Drawing.Point(18, 246);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 11;
@@ -98,8 +98,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::GSB_GIRLS.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::GSB_GIRLS.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 139);
@@ -132,6 +131,7 @@
             this.cboChoixV.Name = "cboChoixV";
             this.cboChoixV.Size = new System.Drawing.Size(121, 21);
             this.cboChoixV.TabIndex = 14;
+            this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
             // 
             // cboMois
             // 
@@ -147,9 +147,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(302, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "fraits au forfait";
+            this.label5.Text = "frais au forfait";
             // 
             // label6
             // 
@@ -160,7 +160,6 @@
             this.label6.Size = new System.Drawing.Size(119, 20);
             this.label6.TabIndex = 17;
             this.label6.Text = "frais hors forfait";
-          
             // 
             // dataGridView1
             // 
@@ -267,6 +266,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FCompta";
             this.Text = "FCompta";
+            this.Load += new System.EventHandler(this.FCompta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
