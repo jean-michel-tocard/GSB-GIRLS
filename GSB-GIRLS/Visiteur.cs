@@ -23,13 +23,7 @@ namespace GSB_GIRLS
             this.Secteur = new HashSet<Secteur>();
             this.Region1 = new HashSet<Region>();
         }
-        public string np
-        {
-            get
-            {
-                return this.nom + " " + this.prenom;
-            }
-        }
+    
         public string idVisiteur { get; set; }
         public int idLabo { get; set; }
         public string nom { get; set; }
