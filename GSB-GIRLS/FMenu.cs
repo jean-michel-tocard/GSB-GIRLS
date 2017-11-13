@@ -121,14 +121,14 @@ namespace GSB_GIRLS
             // information utilisateur 
             lbInformations.Text = "Utilisateur Connecté  : " + levisiteur.nom + "  " + levisiteur.prenom;
             // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
-            if (levisiteur.droit == 1)
+            if (levisiteur.droit == 0)
             {
                 msGestionUser.Visible = false;
             }
 
             dgv_util.Hide();
             //msRapportVisite.Visible = false;
-            msProfil.Visible = false;
+            //msProfil.Visible = false;
         }
 
         private void gestionDesUtilisateursToolStripMenuItem_Click(object sender, EventArgs e)
