@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Objects;
+
 
 namespace GSB_GIRLS
 {
     public partial class FMenu : Accueil
     {
-        public FMenu()
+        private Visiteur levisiteur;
+        private GSBgirls maConnexion;
+        public FMenu(GSBgirls MaConnexion, Visiteur Levisiteur)
         {
             InitializeComponent();
+            maConnexion = MaConnexion;
+            levisiteur = Levisiteur;
         }
 
         private void informationsRégionsEtSecteursToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,6 +59,64 @@ namespace GSB_GIRLS
         private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void msDonnées_Click(object sender, EventArgs e)
+        {
+            var req = from v in maConnexion.Visiteur
+
+                      select v;
+            this.dgv_util.DataSource = ((ObjectQuery)(req));
+
+            // les ajouts et suppressions sont interdits
+            dgv_util.AllowUserToAddRows = false;
+            dgv_util.AllowUserToDeleteRows = false;
+        
+            // L'entête de colonne des autres champs sont modifiés
+            if (levisiteur.droit == 1)
+            {
+                dgv_util.Columns[0].HeaderText = "CodeVisiteur";
+                dgv_util.Columns[1].HeaderText = "CodeLabo";
+                dgv_util.Columns[2].HeaderText = "Nom";
+                dgv_util.Columns[3].HeaderText = "Prenom";
+                dgv_util.Columns[4].HeaderText = "Rue";
+                dgv_util.Columns[5].HeaderText = "Code Postal";
+
+                dgv_util.Show();
+            }
+            if (levisiteur.droit == 0 || levisiteur.droit == null)
+            {
+                var requete = from v in maConnexion.Visiteur
+                              orderby v.nom
+                              where v.idVisiteur == levisiteur.idVisiteur
+                              select v;
+                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+
+                dgv_util.Columns[0].HeaderText = "CodeVisiteur";
+                dgv_util.Columns[1].HeaderText = "CodeLabo";
+                dgv_util.Columns[2].HeaderText = "Nom";
+                dgv_util.Columns[3].HeaderText = "Prenom";
+                dgv_util.Columns[4].HeaderText = "Rue";
+                dgv_util.Columns[5].HeaderText = "Code Postal";
+                dgv_util.Show();
+            }
+
+            if (levisiteur.droit == 2)
+            {
+                var requete = from v in maConnexion.Visiteur
+                              orderby v.nom
+                              where v.droit <= 2
+                              select v;
+                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+
+                dgv_util.Columns[0].HeaderText = "CodeVisiteur";
+                dgv_util.Columns[1].HeaderText = "CodeLabo";
+                dgv_util.Columns[2].HeaderText = "Nom";
+                dgv_util.Columns[3].HeaderText = "Prenom";
+                dgv_util.Columns[4].HeaderText = "Rue";
+                dgv_util.Columns[5].HeaderText = "Code Postal";
+                dgv_util.Show();
+            }
         }
     }
 }

@@ -95,7 +95,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GSB_GIRLS.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImage = global::GSB_GIRLS.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 139);
@@ -128,7 +129,6 @@
             this.cboChoixV.Name = "cboChoixV";
             this.cboChoixV.Size = new System.Drawing.Size(121, 21);
             this.cboChoixV.TabIndex = 14;
-            //this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
             // 
             // cboMois
             // 
@@ -233,7 +233,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FCompta";
             this.Text = "FCompta";
-           // this.Load += new System.EventHandler(this.FCompta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
