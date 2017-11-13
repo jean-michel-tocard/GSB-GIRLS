@@ -32,10 +32,7 @@ namespace GSB_GIRLS
 
         private void gestionCompte_Click(object sender, EventArgs e)
         {
-            GestionCompte gc = new GestionCompte();
-            //menu.MdiParent = this;
-            gc.Show();
-            this.Hide();
+
         }
 
         private void gestionVisiteur_Click(object sender, EventArgs e)
@@ -117,6 +114,34 @@ namespace GSB_GIRLS
                 dgv_util.Columns[5].HeaderText = "Code Postal";
                 dgv_util.Show();
             }
+        }
+
+        private void FMenu_Load(object sender, EventArgs e)
+        {
+            // information utilisateur 
+            lbInformations.Text = "Utilisateur Connecté  : " + levisiteur.nom + "  " + levisiteur.prenom;
+            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
+            if (levisiteur.droit == 1)
+            {
+                msGestionUser.Visible = false;
+            }
+
+            dgv_util.Hide();
+            //msRapportVisite.Visible = false;
+            msProfil.Visible = false;
+        }
+
+        private void gestionDesUtilisateursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionCompte gc = new GestionCompte();
+            //menu.MdiParent = this;
+            gc.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
