@@ -131,7 +131,7 @@
             this.cboChoixV.Name = "cboChoixV";
             this.cboChoixV.Size = new System.Drawing.Size(121, 21);
             this.cboChoixV.TabIndex = 14;
-            this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
+            //this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
             // 
             // cboMois
             // 
@@ -267,7 +267,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FCompta";
             this.Text = "FCompta";
-            this.Load += new System.EventHandler(this.FCompta_Load);
+           // this.Load += new System.EventHandler(this.FCompta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

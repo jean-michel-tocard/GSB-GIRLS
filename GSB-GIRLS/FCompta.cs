@@ -24,7 +24,19 @@ namespace GSB_GIRLS
             fparEditionFiche.Show();
         }
 
-        private void FCompta_Load(object sender, EventArgs e)
+        private void linkSuiviFiche_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            /*FSuiviFiche fparSuiviFiche = new FSuiviFiche();
+            fparSuiviFiche.MdiParent = this;
+            fparSuiviFiche.Show();*/
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     /*   private void FCompta_Load(object sender, EventArgs e)
         {
             cboChoixV.ValueMember = "idVisiteur";
             cboChoixV.DisplayMember = "nom"+"prenom";
@@ -42,6 +54,6 @@ namespace GSB_GIRLS
             fichefrais ffrais = (fichefrais)bs.Current;
             cboMois.DataSource = fichefrais.mois.ToString();
 
-        }
+        }*/
     }
 }

@@ -12,7 +12,7 @@ namespace GSB_GIRLS
 {
     public partial class CRVisite : Accueil
     {
-        private bool fermeture = false;
+       
         public CRVisite()
         {
             InitializeComponent();

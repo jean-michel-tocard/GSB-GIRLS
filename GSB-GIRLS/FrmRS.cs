@@ -13,7 +13,7 @@ namespace GSB_GIRLS
     public partial class FrmRS : Accueil
     {
 
-        private GSBgirls maConnexion;
+        /*private GSBgirls maConnexion;*/
 
         public FrmRS()
         {
