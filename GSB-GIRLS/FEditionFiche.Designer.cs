@@ -34,6 +34,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkAccCompt = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,11 +96,23 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Suivi du remboursement des frais";
             // 
+            // linkAccCompt
+            // 
+            this.linkAccCompt.AutoSize = true;
+            this.linkAccCompt.Location = new System.Drawing.Point(12, 209);
+            this.linkAccCompt.Name = "linkAccCompt";
+            this.linkAccCompt.Size = new System.Drawing.Size(95, 13);
+            this.linkAccCompt.TabIndex = 21;
+            this.linkAccCompt.TabStop = true;
+            this.linkAccCompt.Text = "Accueil Comptable";
+            this.linkAccCompt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAccCompt_LinkClicked);
+            // 
             // FEditionFiche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 807);
+            this.Controls.Add(this.linkAccCompt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkAccCompt;
     }
 }
