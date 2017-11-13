@@ -93,6 +93,7 @@
     <Compile Include="CRVisite.Designer.cs">
       <DependentUpon>CRVisite.cs</DependentUpon>
     </Compile>
+    <Compile Include="CryptageMD5.cs" />
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -125,6 +126,12 @@
     </Compile>
     <Compile Include="FInfoVisiteur.Designer.cs">
       <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInscription.Designer.cs">
+      <DependentUpon>FInscription.cs</DependentUpon>
     </Compile>
     <Compile Include="FMesFrais.cs">
       <SubType>Form</SubType>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FInfoVisiteur.resx">
       <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInscription.resx">
+      <DependentUpon>FInscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMesFrais.resx">
       <DependentUpon>FMesFrais.cs</DependentUpon>

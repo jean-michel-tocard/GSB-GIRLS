@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Objects;
+using System.Data.Objects.DataClasses;
 
 
 namespace GSB_GIRLS
@@ -120,7 +121,7 @@ namespace GSB_GIRLS
         {
             // information utilisateur 
             lbInformations.Text = "Utilisateur Connecté  : " + levisiteur.nom + "  " + levisiteur.prenom;
-            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
+            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 0
             if (levisiteur.droit == 0)
             {
                 msGestionUser.Visible = false;
@@ -142,6 +143,22 @@ namespace GSB_GIRLS
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void msDeconnexion_Click(object sender, EventArgs e)
+        {
+            string message = "Voulez-vous vraiment quitter ?";
+            string caption = "Fermeture de l'application";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            // Affichage de la boîte de dialogue 
+            result = MessageBox.Show(message, caption, buttons);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                maConnexion.Dispose();  // Pour libérer la connexion à la base de données */
+                Application.Exit();     // Pour quitter l'application           }
+            }
         }
     }
 }

@@ -41,6 +41,7 @@
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
+            this.msDeconnexion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionVisiteur,
             this.msProfil,
-            this.informationsRégionsEtSecteursToolStripMenuItem});
+            this.informationsRégionsEtSecteursToolStripMenuItem,
+            this.msDeconnexion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(777, 31);
@@ -161,6 +163,14 @@
             this.lbInformations.TabIndex = 4;
             this.lbInformations.Text = "Informations";
             // 
+            // msDeconnexion
+            // 
+            this.msDeconnexion.ForeColor = System.Drawing.Color.White;
+            this.msDeconnexion.Name = "msDeconnexion";
+            this.msDeconnexion.Size = new System.Drawing.Size(130, 27);
+            this.msDeconnexion.Text = "Deconnexion";
+            this.msDeconnexion.Click += new System.EventHandler(this.msDeconnexion_Click);
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +184,10 @@
             this.Name = "FMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FMenu_Load);
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
+            this.Controls.SetChildIndex(this.dgv_util, 0);
+            this.Controls.SetChildIndex(this.lbTitre, 0);
+            this.Controls.SetChildIndex(this.lbInformations, 0);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).EndInit();
@@ -197,5 +211,6 @@
         private System.Windows.Forms.ToolStripMenuItem msDonnées;
         private System.Windows.Forms.Label lbTitre;
         private System.Windows.Forms.Label lbInformations;
+        private System.Windows.Forms.ToolStripMenuItem msDeconnexion;
     }
 }
