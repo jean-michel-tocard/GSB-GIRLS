@@ -13,7 +13,8 @@ namespace GSB_GIRLS
     using System.Collections.Generic;
     
     public partial class Visiteur
-    {
+    {   
+       
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Visiteur()
         {
@@ -23,13 +24,7 @@ namespace GSB_GIRLS
             this.Secteur = new HashSet<Secteur>();
             this.Region1 = new HashSet<Region>();
         }
-        public string np
-        {
-            get
-            {
-                return this.nom + " " + this.prenom;
-            }
-        }
+    
         public string idVisiteur { get; set; }
         public int idLabo { get; set; }
         public string nom { get; set; }
