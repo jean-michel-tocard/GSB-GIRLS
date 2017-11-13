@@ -140,6 +140,7 @@
             this.cboMois.Name = "cboMois";
             this.cboMois.Size = new System.Drawing.Size(121, 21);
             this.cboMois.TabIndex = 15;
+            this.cboMois.SelectedIndexChanged += new System.EventHandler(this.cboMois_SelectedIndexChanged);
             // 
             // label5
             // 

@@ -24,6 +24,7 @@ namespace GSB_GIRLS
             FEditionFiche fparEditionFiche = new FEditionFiche();
             fparEditionFiche.MdiParent = this;
             fparEditionFiche.Show();
+
         }
 
 
@@ -48,6 +49,21 @@ namespace GSB_GIRLS
             fichefrais ffrais = (fichefrais)bs.Current;
             cboMois.DataSource =ffrais.mois;
 
+        }
+
+        private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (fermeture) return;
+            var LQuery = Modele.MaConnexion.COMPOSITEUR.ToList()
+                           .Where(x => x.idStyle == int.Parse(cboStyle.SelectedValue.ToString()))
+                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.idCompositeur })
+                           .OrderBy(x => x.nomCompositeur);
+
+            bsCompositeur.DataSource = LQuery;
+            dgvCompoStyle.DataSource = bsCompositeur;
+            dgvCompoStyle.Columns[0].HeaderText = "NOM";
+            dgvCompoStyle.Columns[1].HeaderText = "PRENOM";
+            dgvCompoStyle.Columns[2].Visible = false;
         }
     }
 }
