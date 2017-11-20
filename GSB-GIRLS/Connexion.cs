@@ -12,7 +12,7 @@ using System.Security.Cryptography;
 
 namespace GSB_GIRLS
 {
-    public partial class Connexion : Accueil
+    public partial class Connexion : Form
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;

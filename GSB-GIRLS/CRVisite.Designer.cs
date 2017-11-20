@@ -28,66 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRVisite));
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.cboPracticien = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.dgvRapport = new System.Windows.Forms.DataGridView();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.rtxtBilan = new System.Windows.Forms.RichTextBox();
+            this.txtPrenom = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Modification = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Modif = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.cbMotif = new System.Windows.Forms.ComboBox();
+            this.cbNom = new System.Windows.Forms.ComboBox();
+            this.cbCloturer = new System.Windows.Forms.CheckBox();
+            this.bsRapport = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // dgvRapport
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(304, 175);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(227, 150);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvRapport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRapport.Location = new System.Drawing.Point(304, 175);
+            this.dgvRapport.Name = "dgvRapport";
+            this.dgvRapport.Size = new System.Drawing.Size(227, 150);
+            this.dgvRapport.TabIndex = 1;
+            this.dgvRapport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapport_CellContentClick);
             // 
-            // textBox1
+            // txtNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtNum.Location = new System.Drawing.Point(105, 85);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(68, 20);
+            this.txtNum.TabIndex = 2;
             // 
-            // richTextBox1
+            // rtxtBilan
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(105, 190);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(170, 135);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rtxtBilan.Location = new System.Drawing.Point(105, 190);
+            this.rtxtBilan.Name = "rtxtBilan";
+            this.rtxtBilan.Size = new System.Drawing.Size(170, 135);
+            this.rtxtBilan.TabIndex = 3;
+            this.rtxtBilan.Text = "";
             // 
-            // cboPracticien
+            // txtPrenom
             // 
-            this.cboPracticien.FormattingEnabled = true;
-            this.cboPracticien.Location = new System.Drawing.Point(105, 111);
-            this.cboPracticien.Name = "cboPracticien";
-            this.cboPracticien.Size = new System.Drawing.Size(156, 21);
-            this.cboPracticien.TabIndex = 4;
-            this.cboPracticien.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(105, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtPrenom.Location = new System.Drawing.Point(105, 138);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(156, 20);
+            this.txtPrenom.TabIndex = 5;
             // 
             // textBox3
             // 
@@ -100,33 +92,26 @@
             this.textBox3.Text = "RAPPORTS DE VISITE";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(105, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 20);
-            this.textBox4.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(41, 114);
+            this.label1.Location = new System.Drawing.Point(20, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Practicien";
+            this.label1.Text = "Nom Practicien";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(28, 141);
+            this.label2.Location = new System.Drawing.Point(6, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Date Rapport";
+            this.label2.Text = "Prenom Practicien";
             // 
             // label3
             // 
@@ -148,25 +133,15 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "BILAN";
             // 
-            // label5
+            // Modification
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(301, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Offre d\'échantillons";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(276, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Details";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Modification.AutoSize = true;
+            this.Modification.BackColor = System.Drawing.Color.Transparent;
+            this.Modification.Location = new System.Drawing.Point(327, 75);
+            this.Modification.Name = "Modification";
+            this.Modification.Size = new System.Drawing.Size(115, 13);
+            this.Modification.TabIndex = 12;
+            this.Modification.Text = "Modification de rapport";
             // 
             // button2
             // 
@@ -177,32 +152,15 @@
             this.button2.Text = "Fermer";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Modif
             // 
-            this.button3.Location = new System.Drawing.Point(162, 359);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Suivant";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(86, 359);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Précédent";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(226, 359);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(59, 23);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Nouveau";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Modif.Location = new System.Drawing.Point(158, 365);
+            this.Modif.Name = "Modif";
+            this.Modif.Size = new System.Drawing.Size(70, 23);
+            this.Modif.TabIndex = 16;
+            this.Modif.Text = "Modifier";
+            this.Modif.UseVisualStyleBackColor = true;
+            this.Modif.Click += new System.EventHandler(this.Modif_Click);
             // 
             // label6
             // 
@@ -214,52 +172,60 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Numéro Rapport";
             // 
+            // cbMotif
+            // 
+            this.cbMotif.FormattingEnabled = true;
+            this.cbMotif.Location = new System.Drawing.Point(105, 164);
+            this.cbMotif.Name = "cbMotif";
+            this.cbMotif.Size = new System.Drawing.Size(156, 21);
+            this.cbMotif.TabIndex = 19;
+            this.cbMotif.SelectedIndexChanged += new System.EventHandler(this.cbMotif_SelectedIndexChanged);
+            // 
+            // cbNom
+            // 
+            this.cbNom.FormattingEnabled = true;
+            this.cbNom.Location = new System.Drawing.Point(105, 111);
+            this.cbNom.Name = "cbNom";
+            this.cbNom.Size = new System.Drawing.Size(156, 21);
+            this.cbNom.TabIndex = 20;
+            this.cbNom.SelectedIndexChanged += new System.EventHandler(this.cbNom_SelectedIndexChanged);
+            // 
+            // cbCloturer
+            // 
+            this.cbCloturer.AutoSize = true;
+            this.cbCloturer.Location = new System.Drawing.Point(105, 331);
+            this.cbCloturer.Name = "cbCloturer";
+            this.cbCloturer.Size = new System.Drawing.Size(62, 17);
+            this.cbCloturer.TabIndex = 21;
+            this.cbCloturer.Text = "Clôturer";
+            this.cbCloturer.UseVisualStyleBackColor = true;
+            // 
             // CRVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(547, 429);
+            this.Controls.Add(this.cbCloturer);
+            this.Controls.Add(this.cbNom);
+            this.Controls.Add(this.cbMotif);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Modif);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Modification);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cboPracticien);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.txtPrenom);
+            this.Controls.Add(this.rtxtBilan);
+            this.Controls.Add(this.txtNum);
+            this.Controls.Add(this.dgvRapport);
             this.Name = "CRVisite";
             this.Text = "CRVisite";
             this.Load += new System.EventHandler(this.CRVisite_Load);
-            this.Controls.SetChildIndex(this.dataGridView2, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
-            this.Controls.SetChildIndex(this.cboPracticien, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
-            this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.button5, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,23 +233,22 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox cboPracticien;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dgvRapport;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.RichTextBox rtxtBilan;
+        private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Modification;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Modif;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbMotif;
+        private System.Windows.Forms.ComboBox cbNom;
+        private System.Windows.Forms.CheckBox cbCloturer;
+        private System.Windows.Forms.BindingSource bsRapport;
     }
 }

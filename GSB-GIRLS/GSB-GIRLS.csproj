@@ -87,6 +87,12 @@
     <Compile Include="Consultation_visiteur.Designer.cs">
       <DependentUpon>Consultation_visiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreationRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreationRapport.Designer.cs">
+      <DependentUpon>CreationRapport.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRVisite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     <Compile Include="RAPPORT.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="RapportVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RapportVisite.Designer.cs">
+      <DependentUpon>RapportVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Region.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -238,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultation_visiteur.resx">
       <DependentUpon>Consultation_visiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreationRapport.resx">
+      <DependentUpon>CreationRapport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRVisite.resx">
       <DependentUpon>CRVisite.cs</DependentUpon>
@@ -287,6 +302,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RapportVisite.resx">
+      <DependentUpon>RapportVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="mdlGSBgirls.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>mdlGSBgirls.Designer.cs</LastGenOutput>

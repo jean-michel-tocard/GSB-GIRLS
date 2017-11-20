@@ -38,10 +38,14 @@
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
             this.informationsRégionsEtSecteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rapportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msVisualiser = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAjouter = new System.Windows.Forms.ToolStripMenuItem();
+            this.msModifier = new System.Windows.Forms.ToolStripMenuItem();
+            this.msDeconnexion = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
-            this.msDeconnexion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +58,7 @@
             this.gestionVisiteur,
             this.msProfil,
             this.informationsRégionsEtSecteursToolStripMenuItem,
+            this.rapportsToolStripMenuItem,
             this.msDeconnexion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -134,6 +139,45 @@
             this.informationsRégionsEtSecteursToolStripMenuItem.Text = "Informations Régions et Secteurs";
             this.informationsRégionsEtSecteursToolStripMenuItem.Click += new System.EventHandler(this.informationsRégionsEtSecteursToolStripMenuItem_Click);
             // 
+            // rapportsToolStripMenuItem
+            // 
+            this.rapportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msVisualiser,
+            this.msAjouter,
+            this.msModifier});
+            this.rapportsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.rapportsToolStripMenuItem.Name = "rapportsToolStripMenuItem";
+            this.rapportsToolStripMenuItem.Size = new System.Drawing.Size(97, 27);
+            this.rapportsToolStripMenuItem.Text = "Rapports";
+            // 
+            // msVisualiser
+            // 
+            this.msVisualiser.ForeColor = System.Drawing.Color.Black;
+            this.msVisualiser.Name = "msVisualiser";
+            this.msVisualiser.Size = new System.Drawing.Size(157, 28);
+            this.msVisualiser.Text = "Visualiser";
+            this.msVisualiser.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // msAjouter
+            // 
+            this.msAjouter.Name = "msAjouter";
+            this.msAjouter.Size = new System.Drawing.Size(157, 28);
+            this.msAjouter.Text = "Ajouter";
+            // 
+            // msModifier
+            // 
+            this.msModifier.Name = "msModifier";
+            this.msModifier.Size = new System.Drawing.Size(157, 28);
+            this.msModifier.Text = "Modifier";
+            // 
+            // msDeconnexion
+            // 
+            this.msDeconnexion.ForeColor = System.Drawing.Color.White;
+            this.msDeconnexion.Name = "msDeconnexion";
+            this.msDeconnexion.Size = new System.Drawing.Size(130, 27);
+            this.msDeconnexion.Text = "Deconnexion";
+            this.msDeconnexion.Click += new System.EventHandler(this.msDeconnexion_Click);
+            // 
             // dgv_util
             // 
             this.dgv_util.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -162,14 +206,6 @@
             this.lbInformations.Size = new System.Drawing.Size(123, 28);
             this.lbInformations.TabIndex = 4;
             this.lbInformations.Text = "Informations";
-            // 
-            // msDeconnexion
-            // 
-            this.msDeconnexion.ForeColor = System.Drawing.Color.White;
-            this.msDeconnexion.Name = "msDeconnexion";
-            this.msDeconnexion.Size = new System.Drawing.Size(130, 27);
-            this.msDeconnexion.Text = "Deconnexion";
-            this.msDeconnexion.Click += new System.EventHandler(this.msDeconnexion_Click);
             // 
             // FMenu
             // 
@@ -212,5 +248,9 @@
         private System.Windows.Forms.Label lbTitre;
         private System.Windows.Forms.Label lbInformations;
         private System.Windows.Forms.ToolStripMenuItem msDeconnexion;
+        private System.Windows.Forms.ToolStripMenuItem rapportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msVisualiser;
+        private System.Windows.Forms.ToolStripMenuItem msAjouter;
+        private System.Windows.Forms.ToolStripMenuItem msModifier;
     }
 }

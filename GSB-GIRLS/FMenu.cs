@@ -160,5 +160,11 @@ namespace GSB_GIRLS
                 Application.Exit();     // Pour quitter l'application           }
             }
         }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRVisite crv = new CRVisite(maConnexion, levisiteur);
+            crv.Show();
+        }
     }
 }

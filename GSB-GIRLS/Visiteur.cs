@@ -13,8 +13,7 @@ namespace GSB_GIRLS
     using System.Collections.Generic;
     
     public partial class Visiteur
-    {   
-       
+    {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Visiteur()
         {

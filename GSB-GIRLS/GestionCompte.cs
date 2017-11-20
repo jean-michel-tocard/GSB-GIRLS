@@ -52,7 +52,7 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CRVisite crvisite = new CRVisite();
+            CRVisite crvisite = new CRVisite(maConnexion, levisiteur);
             crvisite.Show();
         }
 
