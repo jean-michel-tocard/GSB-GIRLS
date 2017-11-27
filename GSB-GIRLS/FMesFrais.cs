@@ -34,7 +34,24 @@ namespace GSB_GIRLS
 
         private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var LQuery = Modele.MaConnexion.fichefrais.ToList()
+                               .Where(x => x.idVisiteur == cboMois.SelectedValue.ToString());
+                BindingSource bs = new BindingSource();
+                bs.DataSource = LQuery;
+                bs.MoveFirst();
+                fichefrais ffrais = (fichefrais)bs.Current;
+                cboMois.DataSource = ffrais.mois;
+
+                txtEtat.Text = ffrais.idEtat;
+                txtMontant.Text = ffrais.montantValide.ToString();
+                txtNbJustificatifs.Text = ffrais.nbJustificatifs.ToString();
+            }
+            catch
+            {
+
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)

@@ -139,7 +139,7 @@ namespace GSB_GIRLS
         { 
             if (dgvAutreFrais.RowCount > 0)
             {
-                dgvAutreFrais_RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
+                dgvAutreFrais.RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
                 if (dgvAutreFrais.Rows[dgvAutreFrais.RowCount - 1].ErrorText == "")
                 {
                     dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });

@@ -50,10 +50,13 @@
             this.dgvFMois = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNbJustificatifs = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -146,7 +149,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(389, 532);
+            this.label8.Location = new System.Drawing.Point(170, 547);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 24);
             this.label8.TabIndex = 31;
@@ -155,7 +158,7 @@
             // dgvElementForfaitise
             // 
             this.dgvElementForfaitise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvElementForfaitise.Location = new System.Drawing.Point(393, 559);
+            this.dgvElementForfaitise.Location = new System.Drawing.Point(15, 583);
             this.dgvElementForfaitise.Name = "dgvElementForfaitise";
             this.dgvElementForfaitise.Size = new System.Drawing.Size(547, 265);
             this.dgvElementForfaitise.TabIndex = 32;
@@ -241,11 +244,31 @@
             this.txtNbJustificatifs.TabIndex = 41;
             this.txtNbJustificatifs.TextChanged += new System.EventHandler(this.txtNbJustificatifs_TextChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(588, 583);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(501, 265);
+            this.dataGridView1.TabIndex = 43;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(765, 547);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(188, 24);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Elements hors forfaits";
+            // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 882);
+            this.ClientSize = new System.Drawing.Size(1101, 882);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtNbJustificatifs);
             this.Controls.Add(this.txtMontant);
@@ -273,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +325,7 @@
         private System.Windows.Forms.DataGridView dgvFMois;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNbJustificatifs;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label11;
     }
 }
