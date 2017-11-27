@@ -51,6 +51,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.bsFraisForfait = new System.Windows.Forms.BindingSource(this.components);
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMatricule = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).BeginInit();
@@ -61,7 +64,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(18, 246);
+            this.linkLabel1.Location = new System.Drawing.Point(18, 301);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 11;
@@ -80,7 +83,7 @@
             // linkEdition
             // 
             this.linkEdition.AutoSize = true;
-            this.linkEdition.Location = new System.Drawing.Point(18, 209);
+            this.linkEdition.Location = new System.Drawing.Point(18, 264);
             this.linkEdition.Name = "linkEdition";
             this.linkEdition.Size = new System.Drawing.Size(109, 13);
             this.linkEdition.TabIndex = 7;
@@ -242,11 +245,39 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "Validation des frais par Comptable";
             // 
+            // txtNom
+            // 
+            this.txtNom.Enabled = false;
+            this.txtNom.Location = new System.Drawing.Point(82, 169);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(155, 20);
+            this.txtNom.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Matricule :";
+            // 
+            // txtMatricule
+            // 
+            this.txtMatricule.Enabled = false;
+            this.txtMatricule.Location = new System.Drawing.Point(73, 209);
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(164, 20);
+            this.txtMatricule.TabIndex = 64;
+            // 
             // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 874);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtMatricule);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -304,5 +335,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource bsFraisForfait;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtMatricule;
     }
 }

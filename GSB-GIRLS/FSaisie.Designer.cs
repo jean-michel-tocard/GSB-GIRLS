@@ -488,7 +488,7 @@
             this.txtMatricule.Enabled = false;
             this.txtMatricule.Location = new System.Drawing.Point(68, 189);
             this.txtMatricule.Name = "txtMatricule";
-            this.txtMatricule.Size = new System.Drawing.Size(261, 20);
+            this.txtMatricule.Size = new System.Drawing.Size(155, 20);
             this.txtMatricule.TabIndex = 60;
             // 
             // label7
