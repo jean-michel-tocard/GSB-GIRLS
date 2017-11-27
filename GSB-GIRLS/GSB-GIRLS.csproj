@@ -93,6 +93,7 @@
     <Compile Include="CRVisite.Designer.cs">
       <DependentUpon>CRVisite.cs</DependentUpon>
     </Compile>
+    <Compile Include="CryptageMD5.cs" />
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -120,11 +121,17 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInfoVisiteur.cs">
+    <Compile Include="FModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FInfoVisiteur.Designer.cs">
-      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    <Compile Include="FModif.Designer.cs">
+      <DependentUpon>FModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInscription.Designer.cs">
+      <DependentUpon>FInscription.cs</DependentUpon>
     </Compile>
     <Compile Include="FMesFrais.cs">
       <SubType>Form</SubType>
@@ -132,8 +139,20 @@
     <Compile Include="FMesFrais.Designer.cs">
       <DependentUpon>FMesFrais.cs</DependentUpon>
     </Compile>
+    <Compile Include="FModifVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModifVisiteur.Designer.cs">
+      <DependentUpon>FModifVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegion.Designer.cs">
+      <DependentUpon>FRegion.cs</DependentUpon>
     </Compile>
     <Compile Include="FSaisie.cs">
       <SubType>Form</SubType>
@@ -244,11 +263,20 @@
     <EmbeddedResource Include="FEditionFiche.resx">
       <DependentUpon>FEditionFiche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInfoVisiteur.resx">
-      <DependentUpon>FInfoVisiteur.cs</DependentUpon>
+    <EmbeddedResource Include="FModif.resx">
+      <DependentUpon>FModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInscription.resx">
+      <DependentUpon>FInscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMesFrais.resx">
       <DependentUpon>FMesFrais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModifVisiteur.resx">
+      <DependentUpon>FModifVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRegion.resx">
+      <DependentUpon>FRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSaisie.resx">
       <DependentUpon>FSaisie.cs</DependentUpon>

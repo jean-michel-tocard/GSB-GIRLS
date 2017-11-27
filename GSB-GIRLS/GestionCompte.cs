@@ -13,7 +13,7 @@ namespace GSB_GIRLS
     public partial class GestionCompte : Accueil
     {
 
-        private GSBgirls maConnexion;
+       // private GSBgirls maConnexion;
         private Visiteur levisiteur;
         public GestionCompte()
         {
@@ -69,7 +69,7 @@ namespace GSB_GIRLS
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
-            FMenu fMenu = new FMenu(maConnexion, levisiteur);
+            FMenu fMenu = new FMenu(Modele.MaConnexion, levisiteur);
             fMenu.Show();
         }
     }
