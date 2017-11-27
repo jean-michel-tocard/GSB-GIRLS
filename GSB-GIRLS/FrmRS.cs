@@ -13,7 +13,7 @@ namespace GSB_GIRLS
     public partial class FrmRS : Accueil
     {
 
-        private GSBgirls maConnexion;
+       // private GSBgirls maConnexion;
         private Visiteur levisiteur;
 
         /*private GSBgirls maConnexion;*/
@@ -34,7 +34,7 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FMenu fMenu = new FMenu(maConnexion, levisiteur);
+            FMenu fMenu = new FMenu(Modele.MaConnexion, levisiteur);
             fMenu.Show();
             this.Hide();
         }

@@ -46,14 +46,16 @@
             this.txtIdent.Name = "txtIdent";
             this.txtIdent.Size = new System.Drawing.Size(300, 20);
             this.txtIdent.TabIndex = 1;
+            this.txtIdent.Text = "jmartin";
             // 
             // txtmdp
             // 
             this.txtmdp.Location = new System.Drawing.Point(288, 184);
             this.txtmdp.Name = "txtmdp";
-            this.txtmdp.PasswordChar = '*';
+            this.txtmdp.PasswordChar = '★';
             this.txtmdp.Size = new System.Drawing.Size(300, 20);
             this.txtmdp.TabIndex = 2;
+            this.txtmdp.Text = "dywvt";
             // 
             // valider
             // 
@@ -113,6 +115,7 @@
             // 
             // Connexion
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(823, 413);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -122,6 +125,13 @@
             this.Controls.Add(this.txtmdp);
             this.Controls.Add(this.txtIdent);
             this.Name = "Connexion";
+            this.Controls.SetChildIndex(this.txtIdent, 0);
+            this.Controls.SetChildIndex(this.txtmdp, 0);
+            this.Controls.SetChildIndex(this.valider, 0);
+            this.Controls.SetChildIndex(this.quitter, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteurs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

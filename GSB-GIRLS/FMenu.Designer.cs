@@ -37,10 +37,10 @@
             this.msProfil = new System.Windows.Forms.ToolStripMenuItem();
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationsRégionsEtSecteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +51,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionVisiteur,
-            this.msProfil,
-            this.informationsRégionsEtSecteursToolStripMenuItem});
+            this.msProfil});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(777, 31);
@@ -124,14 +123,6 @@
             this.msDonnées.Text = "Voir Données";
             this.msDonnées.Click += new System.EventHandler(this.msDonnées_Click);
             // 
-            // informationsRégionsEtSecteursToolStripMenuItem
-            // 
-            this.informationsRégionsEtSecteursToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.informationsRégionsEtSecteursToolStripMenuItem.Name = "informationsRégionsEtSecteursToolStripMenuItem";
-            this.informationsRégionsEtSecteursToolStripMenuItem.Size = new System.Drawing.Size(300, 27);
-            this.informationsRégionsEtSecteursToolStripMenuItem.Text = "Informations Régions et Secteurs";
-            this.informationsRégionsEtSecteursToolStripMenuItem.Click += new System.EventHandler(this.informationsRégionsEtSecteursToolStripMenuItem_Click);
-            // 
             // dgv_util
             // 
             this.dgv_util.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -144,6 +135,7 @@
             // 
             this.lbTitre.AutoSize = true;
             this.lbTitre.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbTitre.Location = new System.Drawing.Point(12, 31);
             this.lbTitre.Name = "lbTitre";
             this.lbTitre.Size = new System.Drawing.Size(64, 28);
@@ -155,17 +147,31 @@
             // 
             this.lbInformations.AutoSize = true;
             this.lbInformations.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInformations.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbInformations.Location = new System.Drawing.Point(12, 363);
             this.lbInformations.Name = "lbInformations";
             this.lbInformations.Size = new System.Drawing.Size(123, 28);
             this.lbInformations.TabIndex = 4;
             this.lbInformations.Text = "Informations";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(659, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Déconnexion";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 412);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbInformations);
             this.Controls.Add(this.lbTitre);
             this.Controls.Add(this.dgv_util);
@@ -174,6 +180,11 @@
             this.Name = "FMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FMenu_Load);
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
+            this.Controls.SetChildIndex(this.dgv_util, 0);
+            this.Controls.SetChildIndex(this.lbTitre, 0);
+            this.Controls.SetChildIndex(this.lbInformations, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).EndInit();
@@ -187,7 +198,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestionVisiteur;
         private System.Windows.Forms.ToolStripMenuItem msProfil;
-        private System.Windows.Forms.ToolStripMenuItem informationsRégionsEtSecteursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laboratoireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parSecteurToolStripMenuItem;
@@ -197,5 +207,6 @@
         private System.Windows.Forms.ToolStripMenuItem msDonnées;
         private System.Windows.Forms.Label lbTitre;
         private System.Windows.Forms.Label lbInformations;
+        private System.Windows.Forms.Button button1;
     }
 }

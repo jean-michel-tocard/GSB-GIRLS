@@ -12,25 +12,30 @@ namespace GSB_GIRLS
 {
     public partial class FLabo : Accueil
     {
+        private GSBgirls maConnexion;
+        private Visiteur levisiteur;
         bool fermeture = false;
         public FLabo()
         {
             InitializeComponent();
-            bsVisiteurs.DataSource = Modele.MaConnexion.Visiteur.ToList();
+            maConnexion = new GSBgirls();
+            bsVisiteurs.DataSource = maConnexion.Visiteur.ToList();
         }
 
         private void FormulaireVisiteurs_Load(object sender, EventArgs e)
         {
             cboLabo.ValueMember = "idLabo"; // permet de stocker l'identifiant
             cboLabo.DisplayMember = "nomLabo";
-            bsLabo.DataSource = Modele.MaConnexion.Laboratoire.ToList();
+            bsLabo.DataSource = maConnexion.Laboratoire.ToList();
             cboLabo.DataSource = bsLabo;
         }
 
         private void cboLabo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (fermeture) return;
-            var LQuery = Modele.MaConnexion.Visiteur.ToList().Where(x => x.idLabo == int.Parse(cboLabo.SelectedValue.ToString())).Select(x => new
+            var LQuery = maConnexion.Visiteur.ToList()
+                .Where(x => x.idLabo == int.Parse(cboLabo.SelectedValue.ToString()))
+                .Select(x => new
             {
                 x.nom,
                 x.prenom,
@@ -53,6 +58,14 @@ namespace GSB_GIRLS
         private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
         {
             fermeture = true;
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            FMenu menu = new FMenu(maConnexion, levisiteur);
+            //menu.MdiParent = this;
+            menu.Show();
+            this.Hide();
         }
     }
 
