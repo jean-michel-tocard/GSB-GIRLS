@@ -69,8 +69,8 @@ namespace GSB_GIRLS
             var req = from v in maConnexion.Visiteur
 
                       select v;
-            this.dgv_util.DataSource = ((ObjectQuery)(req));
-
+            //this.dgv_util.DataSource = ((ObjectQuery)(req));
+            dgv_util.DataSource = req.ToList();
             // les ajouts et suppressions sont interdits
             dgv_util.AllowUserToAddRows = false;
             dgv_util.AllowUserToDeleteRows = false;
@@ -82,8 +82,8 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.idVisiteur == levisiteur.idVisiteur
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
-
+                //this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                dgv_util.DataSource = requete.ToList();
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
                 dgv_util.Columns[2].HeaderText = "Nom";
@@ -98,8 +98,8 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.idVisiteur == levisiteur.idVisiteur
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
-
+                //this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                dgv_util.DataSource = requete.ToList();
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
                 dgv_util.Columns[2].HeaderText = "Nom";
@@ -115,8 +115,8 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.droit <= 2
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
-
+                //this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                dgv_util.DataSource = requete.ToList();
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
                 dgv_util.Columns[2].HeaderText = "Nom";
@@ -181,8 +181,25 @@ namespace GSB_GIRLS
 
         private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRVisite crv = new CRVisite(maConnexion, levisiteur);
-            crv.Show();
+           RapportVisite rv = new RapportVisite(maConnexion, levisiteur);
+            rv.Show();
+        }
+
+        private void msAjouter_Click(object sender, EventArgs e)
+        {
+            CreationRapport crr = new CreationRapport(maConnexion, levisiteur);
+            crr.ShowDialog();
+        }
+
+        private void msModifier_Click(object sender, EventArgs e)
+        {
+            ModifCRVisite mcrv = new ModifCRVisite(maConnexion, levisiteur);
+            mcrv.ShowDialog();
+        }
+
+        private void lbInformations_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

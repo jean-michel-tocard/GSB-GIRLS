@@ -141,7 +141,7 @@
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(312, 272);
+            this.btnEnregistrer.Location = new System.Drawing.Point(12, 12);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(75, 23);
             this.btnEnregistrer.TabIndex = 12;
@@ -188,6 +188,20 @@
             this.Name = "CreationRapport";
             this.Text = "CreationRapport";
             this.Load += new System.EventHandler(this.CreationRapport_Load);
+            this.Controls.SetChildIndex(this.cbMedecin, 0);
+            this.Controls.SetChildIndex(this.cbMotif, 0);
+            this.Controls.SetChildIndex(this.cbMed, 0);
+            this.Controls.SetChildIndex(this.txtQuantMed, 0);
+            this.Controls.SetChildIndex(this.txtBilan, 0);
+            this.Controls.SetChildIndex(this.lbMedecin, 0);
+            this.Controls.SetChildIndex(this.lbDate, 0);
+            this.Controls.SetChildIndex(this.lbMotif, 0);
+            this.Controls.SetChildIndex(this.lbBilan, 0);
+            this.Controls.SetChildIndex(this.lbMed, 0);
+            this.Controls.SetChildIndex(this.lbQuant, 0);
+            this.Controls.SetChildIndex(this.btnEnregistrer, 0);
+            this.Controls.SetChildIndex(this.lbInformation, 0);
+            this.Controls.SetChildIndex(this.dtpDate, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -11,7 +11,7 @@ using System.Data.Objects.DataClasses;
 
 namespace GSB_GIRLS
 {
-    public partial class CreationRapport : Form
+    public partial class CreationRapport : Accueil
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
@@ -39,14 +39,15 @@ namespace GSB_GIRLS
             var reqmedi = from M in maConnexion.MEDICAMENT
                           select M;
             // recuperation des requete effectuer et affectation du champ selectionner dans la combobox
-            this.cbMedecin.DisplayMember = "Patronyme";
-            cbMedecin.DataSource = ((ObjectQuery)(reqMedecin));
-
+            this.cbMedecin.DisplayMember = "nomPrenom";
+            //cbMedecin.DataSource = ((ObjectQuery)(reqMedecin));
+            cbMedecin.DataSource = reqMedecin.ToList();
             this.cbMed.DisplayMember = "nomCommercial";
-            cbMed.DataSource = ((ObjectQuery)(reqmedi));
-
+            // cbMed.DataSource = ((ObjectQuery)(reqmedi));
+            cbMed.DataSource = reqmedi.ToList();
             this.cbMotif.DisplayMember = "libMotif";
-            cbMotif.DataSource = ((ObjectQuery)(reqMotif));
+            //cbMotif.DataSource = ((ObjectQuery)(reqMotif));
+            cbMotif.DataSource = reqMotif.ToList();
 
         }
 
@@ -68,7 +69,7 @@ namespace GSB_GIRLS
             MEDECIN unMedecin = (MEDECIN)this.cbMedecin.SelectedItem;
             leMedecin = unMedecin;
         }
-
+        
         private void cbMed_SelectedIndexChanged(object sender, EventArgs e)
         {
             MEDICAMENT unMedicament = (MEDICAMENT)this.cbMed.SelectedItem;
@@ -78,7 +79,7 @@ namespace GSB_GIRLS
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             string message = "Voulez-vous vraiment enregistrer ?";
-            string caption = "Vôtre enregistrestrement à été pris en compte  fermeture de fenêtre";
+            string caption = "Votre enregistrement a été pris en compte  fermeture de fenêtre";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
             // Affichage de la boîte de dialogue 
@@ -103,7 +104,7 @@ namespace GSB_GIRLS
             leRapport = new RAPPORT();
             lOffre = new OFFRIR();
 
-            // affectatoion des proprieter a l'objet rapport et offrir
+            // affectation des proprietés à l'objet rapport et offrir
             leRapport.dateRapport = dtpDate.Value;
             leRapport.idMotif = leMotif.idMotif;
             leRapport.bilan = txtBilan.Text;

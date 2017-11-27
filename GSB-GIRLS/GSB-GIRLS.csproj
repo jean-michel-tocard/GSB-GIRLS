@@ -93,11 +93,11 @@
     <Compile Include="CreationRapport.Designer.cs">
       <DependentUpon>CreationRapport.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRVisite.cs">
+    <Compile Include="ModifCRVisite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRVisite.Designer.cs">
-      <DependentUpon>CRVisite.cs</DependentUpon>
+    <Compile Include="ModifCRVisite.Designer.cs">
+      <DependentUpon>ModifCRVisite.cs</DependentUpon>
     </Compile>
     <Compile Include="CryptageMD5.cs" />
     <Compile Include="Etat.cs">
@@ -256,7 +256,7 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="Visiteur.partial.cs" />
+    <Compile Include="nomPrenom.cs" />
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,8 +266,8 @@
     <EmbeddedResource Include="CreationRapport.resx">
       <DependentUpon>CreationRapport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRVisite.resx">
-      <DependentUpon>CRVisite.cs</DependentUpon>
+    <EmbeddedResource Include="ModifCRVisite.resx">
+      <DependentUpon>ModifCRVisite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>

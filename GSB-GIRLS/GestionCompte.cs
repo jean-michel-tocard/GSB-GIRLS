@@ -13,7 +13,7 @@ namespace GSB_GIRLS
     public partial class GestionCompte : Accueil
     {
 
-       // private GSBgirls maConnexion;
+        private GSBgirls maConnexion;
         private Visiteur levisiteur;
         public GestionCompte()
         {
@@ -52,7 +52,7 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CRVisite crvisite = new CRVisite(maConnexion, levisiteur);
+            ModifCRVisite crvisite = new ModifCRVisite(maConnexion, levisiteur);
             crvisite.Show();
         }
 

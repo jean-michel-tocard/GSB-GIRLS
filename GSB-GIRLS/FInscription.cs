@@ -26,7 +26,7 @@ namespace GSB_GIRLS
         {
             if (txtMdp.Text == txtConfirmMDP.Text)
             {
-                //instantion d'un nouveau visiteur vide
+                //instanciation d'un nouveau visiteur vide
                 Visiteur unVisiteur = new Visiteur();
 
 

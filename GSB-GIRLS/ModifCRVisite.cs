@@ -12,14 +12,15 @@ using System.Data.Objects.DataClasses;
 
 namespace GSB_GIRLS
 {
-    public partial class CRVisite : Form
+    public partial class ModifCRVisite : Accueil
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
         int idMedecin;
+        int ceIdRapport;
         RAPPORT ceRapport;
         int idMotif;
-        public CRVisite(GSBgirls MaConnexion, Visiteur Levisiteur)
+        public ModifCRVisite(GSBgirls MaConnexion, Visiteur Levisiteur)
         {
             InitializeComponent();
             InitializeComponent();
@@ -70,15 +71,15 @@ namespace GSB_GIRLS
 
 
 
-            this.dgvRapport.DataSource = ((ObjectQuery)(reqRapport));
-
-            dgvRapport.Columns[0].HeaderText = "idRapport";
-            dgvRapport.Columns[1].HeaderText = "nom Medecin";
-            dgvRapport.Columns[2].HeaderText = "prenom Medecin";
-            dgvRapport.Columns[3].HeaderText = "libMotif";
-            dgvRapport.Columns[4].HeaderText = "dateRapport";
-            dgvRapport.Columns[5].HeaderText = "bilan";
-            dgvRapport.Columns[6].HeaderText = "etatRapport";
+            // this.dgvRapport.DataSource = ((ObjectQuery)(reqRapport));
+            dgv_Rapport.DataSource = reqRapport.ToList();
+            dgv_Rapport.Columns[0].HeaderText = "idRapport";
+            dgv_Rapport.Columns[1].HeaderText = "nom Medecin";
+            dgv_Rapport.Columns[2].HeaderText = "prenom Medecin";
+            dgv_Rapport.Columns[3].HeaderText = "libMotif";
+            dgv_Rapport.Columns[4].HeaderText = "dateRapport";
+            dgv_Rapport.Columns[5].HeaderText = "bilan";
+            dgv_Rapport.Columns[6].HeaderText = "etatRapport";
 
             ceRapport = (RAPPORT)this.bsRapport.Current;
 
@@ -100,8 +101,8 @@ namespace GSB_GIRLS
 
                            select Mo;
 
-            bsRapport.DataSource = ((ObjectQuery)(reqRapport2));
-
+            //bsRapport.DataSource = ((ObjectQuery)(reqRapport2));
+            bsRapport.DataSource = reqRapport2.ToList();
             //txt_motif.ReadOnly = true;
             txtPrenom.ReadOnly = true;
 
@@ -137,8 +138,6 @@ namespace GSB_GIRLS
         public void Affecter()
         {
 
-
-
             ceRapport = (RAPPORT)this.bsRapport.Current;
 
             ceRapport.idMotif = idMotif;
@@ -150,7 +149,7 @@ namespace GSB_GIRLS
 
         private void dgvRapport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var ceVisiteur = this.dgvRapport.CurrentRow;
+            var ceVisiteur = this.dgv_Rapport.CurrentRow;
 
 
             int idRapport = (Convert.ToInt32(ceVisiteur.Cells[0].Value));
@@ -159,14 +158,14 @@ namespace GSB_GIRLS
             string libMotif = Convert.ToString(ceVisiteur.Cells[3].Value);
             string dateRapport = Convert.ToString(ceVisiteur.Cells[4].Value);
             string bilan = Convert.ToString(ceVisiteur.Cells[5].Value);
-            bool cloturer = Convert.ToBoolean(ceVisiteur.Cells[6].Value);
+            
 
 
             rtxtBilan.Text = bilan;
             cbMotif.Text = libMotif;
             txtPrenom.Text = prenomMedecin;
             cbNom.Text = nomMedecin;
-         //   if (cloturer) { cbCloturer.Checked = true; txtCloturer.Text = "Votre rapport est cloteré impossible \n de modifier  "; } else { cbCloturer.Checked = false; txtCloturer.Text = "Non cloturé"; }
+         //   if (cloturer) { cbCloturer.Checked = true; txtCloturer.Text = "Votre rapport est cloturé impossible \n de modifier  "; } else { cbCloturer.Checked = false; txtCloturer.Text = "Non cloturé"; }
 
 
 
@@ -193,7 +192,7 @@ namespace GSB_GIRLS
         }
         private void dgvRapport_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var ceVisiteur = this.dgvRapport.CurrentRow;
+            var ceVisiteur = this.dgv_Rapport.CurrentRow;
 
 
             int idRapport = (Convert.ToInt32(ceVisiteur.Cells[0].Value));
@@ -202,7 +201,6 @@ namespace GSB_GIRLS
             string libMotif = Convert.ToString(ceVisiteur.Cells[3].Value);
             string dateRapport = Convert.ToString(ceVisiteur.Cells[4].Value);
             string bilan = Convert.ToString(ceVisiteur.Cells[5].Value);
-            bool cloturer = Convert.ToBoolean(ceVisiteur.Cells[6].Value);
 
 
             rtxtBilan.Text = bilan;
@@ -222,6 +220,78 @@ namespace GSB_GIRLS
         {
             MOTIF unMotif = (MOTIF)this.cbMotif.SelectedItem;
             idMotif = unMotif.idMotif;
+        }
+
+        private void cbID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RAPPORT ceRapport = (RAPPORT)this.cbID.SelectedItem;
+            ceIdRapport = ceRapport.idRapport;
+
+            var reqOffrir = from O in maConnexion.OFFRIR
+                            join R in maConnexion.RAPPORT on O.idRapport equals R.idRapport
+                            join M in maConnexion.MEDICAMENT on O.idMedicament equals M.idMedicament
+                            where O.idRapport == ceIdRapport
+                            select new { M.nomCommercial, O.quantite };
+            var reqRapport = from R in maConnexion.RAPPORT
+
+                             join M in maConnexion.MEDECIN on R.idMedecin equals M.idMedecin
+                             join Mo in maConnexion.MOTIF on R.idMotif equals Mo.idMotif
+                             join O in maConnexion.OFFRIR on R.idRapport equals O.idRapport
+                             join Me in maConnexion.MEDICAMENT on O.idMedicament equals Me.idMedicament
+
+                             where R.idRapport == ceIdRapport
+
+                             orderby R.idRapport
+                             select new { R.idRapport, M.nom, M.prenom, Mo.libMotif, R.dateRapport, R.bilan, Me.nomCommercial, O.quantite };
+
+
+
+           // this.cbMedicament.DisplayMember = "nomCommercial";
+            // cbMedicament.DataSource = ((ObjectQuery)(reqOffrir));
+            //cbMedicament.DataSource = reqOffrir.ToList();
+            //this.dgvRapport.DataSource = ((ObjectQuery)(reqRapport));
+            this.dgv_Rapport.DataSource = reqRapport.ToList();
+
+
+
+            // Appliquer des styles par défaut aux données du dataGridview
+            dgv_Rapport.DefaultCellStyle.BackColor = Color.Bisque;
+            dgv_Rapport.DefaultCellStyle.Font = new Font("Calibri", 9);
+            dgv_Rapport.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            // les ajouts et suppressions sont interdits
+            dgv_Rapport.AllowUserToAddRows = false;
+            dgv_Rapport.AllowUserToDeleteRows = false;
+
+            dgv_Rapport.Columns[0].HeaderText = "ID";
+            dgv_Rapport.Columns[1].HeaderText = "Nom";
+            dgv_Rapport.Columns[2].HeaderText = "Prenom";
+            dgv_Rapport.Columns[3].HeaderText = "libellé";
+            dgv_Rapport.Columns[4].HeaderText = "Date";
+            dgv_Rapport.Columns[5].HeaderText = "Bilan";
+            dgv_Rapport.Columns[6].HeaderText = "Nom Commercial";
+            dgv_Rapport.Columns[7].HeaderText = "Quantité";
+
+            // les colonnes sont redimensionnées automatiquement, le nom est mis en gras
+            dgv_Rapport.AutoResizeColumns();
+            dgv_Rapport.Columns[1].Width = 120;
+            dgv_Rapport.Columns[1].DefaultCellStyle.Font = new Font("Calibri", 9, FontStyle.Bold);
+            dgv_Rapport.Columns[2].Width = 120;
+            var ceVisiteur = this.dgv_Rapport.CurrentRow;
+
+
+            int idRapport = (Convert.ToInt32(ceVisiteur.Cells[0].Value));
+            string nomMedecin = (Convert.ToString(ceVisiteur.Cells[1].Value).Trim()); // .Trim() = supprime les blancs inutiles
+            string prenomMedecin = (Convert.ToString(ceVisiteur.Cells[2].Value).Trim());
+            string libMotif = Convert.ToString(ceVisiteur.Cells[3].Value);
+            string bilan = Convert.ToString(ceVisiteur.Cells[5].Value);
+
+
+            txtPrenom.Text = prenomMedecin;
+            cbNom.Text = nomMedecin;
+            cbMotif.Text = libMotif;
+            rtxtBilan.Text = bilan;
+
         }
     }
 }

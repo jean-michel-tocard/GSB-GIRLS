@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class CRVisite
+    partial class ModifCRVisite
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvRapport = new System.Windows.Forms.DataGridView();
-            this.txtNum = new System.Windows.Forms.TextBox();
+            this.dgv_Rapport = new System.Windows.Forms.DataGridView();
             this.rtxtBilan = new System.Windows.Forms.RichTextBox();
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -41,30 +40,23 @@
             this.Modification = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Modif = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbMotif = new System.Windows.Forms.ComboBox();
-            this.cbNom = new System.Windows.Forms.ComboBox();
-            this.cbCloturer = new System.Windows.Forms.CheckBox();
             this.bsRapport = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).BeginInit();
+            this.cbID = new System.Windows.Forms.ComboBox();
+            this.lbID = new System.Windows.Forms.Label();
+            this.cbNom = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Rapport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvRapport
+            // dgv_Rapport
             // 
-            this.dgvRapport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRapport.Location = new System.Drawing.Point(304, 175);
-            this.dgvRapport.Name = "dgvRapport";
-            this.dgvRapport.Size = new System.Drawing.Size(227, 150);
-            this.dgvRapport.TabIndex = 1;
-            this.dgvRapport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapport_CellContentClick);
-            // 
-            // txtNum
-            // 
-            this.txtNum.Location = new System.Drawing.Point(105, 85);
-            this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(68, 20);
-            this.txtNum.TabIndex = 2;
+            this.dgv_Rapport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Rapport.Location = new System.Drawing.Point(304, 175);
+            this.dgv_Rapport.Name = "dgv_Rapport";
+            this.dgv_Rapport.Size = new System.Drawing.Size(227, 150);
+            this.dgv_Rapport.TabIndex = 1;
+            this.dgv_Rapport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapport_CellContentClick);
             // 
             // rtxtBilan
             // 
@@ -87,7 +79,7 @@
             this.textBox3.ForeColor = System.Drawing.Color.Navy;
             this.textBox3.Location = new System.Drawing.Point(54, 12);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 31);
+            this.textBox3.Size = new System.Drawing.Size(325, 31);
             this.textBox3.TabIndex = 6;
             this.textBox3.Text = "RAPPORTS DE VISITE";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -96,22 +88,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(20, 114);
+            this.label1.Location = new System.Drawing.Point(26, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Nom Practicien";
+            this.label1.Text = "Nom Medecin";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(6, 141);
+            this.label2.Location = new System.Drawing.Point(12, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Prenom Practicien";
+            this.label2.Text = "Prenom Medecin";
             // 
             // label3
             // 
@@ -137,7 +129,7 @@
             // 
             this.Modification.AutoSize = true;
             this.Modification.BackColor = System.Drawing.Color.Transparent;
-            this.Modification.Location = new System.Drawing.Point(327, 75);
+            this.Modification.Location = new System.Drawing.Point(336, 141);
             this.Modification.Name = "Modification";
             this.Modification.Size = new System.Drawing.Size(115, 13);
             this.Modification.TabIndex = 12;
@@ -154,23 +146,13 @@
             // 
             // Modif
             // 
-            this.Modif.Location = new System.Drawing.Point(158, 365);
+            this.Modif.Location = new System.Drawing.Point(153, 341);
             this.Modif.Name = "Modif";
             this.Modif.Size = new System.Drawing.Size(70, 23);
             this.Modif.TabIndex = 16;
             this.Modif.Text = "Modifier";
             this.Modif.UseVisualStyleBackColor = true;
             this.Modif.Click += new System.EventHandler(this.Modif_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(14, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Numéro Rapport";
             // 
             // cbMotif
             // 
@@ -181,34 +163,42 @@
             this.cbMotif.TabIndex = 19;
             this.cbMotif.SelectedIndexChanged += new System.EventHandler(this.cbMotif_SelectedIndexChanged);
             // 
+            // cbID
+            // 
+            this.cbID.FormattingEnabled = true;
+            this.cbID.Location = new System.Drawing.Point(105, 84);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(156, 21);
+            this.cbID.TabIndex = 21;
+            this.cbID.SelectedIndexChanged += new System.EventHandler(this.cbID_SelectedIndexChanged);
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(43, 87);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(56, 13);
+            this.lbID.TabIndex = 22;
+            this.lbID.Text = "id Rapport";
+            // 
             // cbNom
             // 
             this.cbNom.FormattingEnabled = true;
             this.cbNom.Location = new System.Drawing.Point(105, 111);
             this.cbNom.Name = "cbNom";
             this.cbNom.Size = new System.Drawing.Size(156, 21);
-            this.cbNom.TabIndex = 20;
-            this.cbNom.SelectedIndexChanged += new System.EventHandler(this.cbNom_SelectedIndexChanged);
+            this.cbNom.TabIndex = 23;
+            this.cbNom.TabStop = false;
             // 
-            // cbCloturer
-            // 
-            this.cbCloturer.AutoSize = true;
-            this.cbCloturer.Location = new System.Drawing.Point(105, 331);
-            this.cbCloturer.Name = "cbCloturer";
-            this.cbCloturer.Size = new System.Drawing.Size(62, 17);
-            this.cbCloturer.TabIndex = 21;
-            this.cbCloturer.Text = "Clôturer";
-            this.cbCloturer.UseVisualStyleBackColor = true;
-            // 
-            // CRVisite
+            // ModifCRVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 429);
-            this.Controls.Add(this.cbCloturer);
             this.Controls.Add(this.cbNom);
+            this.Controls.Add(this.lbID);
+            this.Controls.Add(this.cbID);
             this.Controls.Add(this.cbMotif);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.Modif);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Modification);
@@ -219,12 +209,26 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.rtxtBilan);
-            this.Controls.Add(this.txtNum);
-            this.Controls.Add(this.dgvRapport);
-            this.Name = "CRVisite";
+            this.Controls.Add(this.dgv_Rapport);
+            this.Name = "ModifCRVisite";
             this.Text = "CRVisite";
             this.Load += new System.EventHandler(this.CRVisite_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRapport)).EndInit();
+            this.Controls.SetChildIndex(this.dgv_Rapport, 0);
+            this.Controls.SetChildIndex(this.rtxtBilan, 0);
+            this.Controls.SetChildIndex(this.txtPrenom, 0);
+            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.Modification, 0);
+            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.Modif, 0);
+            this.Controls.SetChildIndex(this.cbMotif, 0);
+            this.Controls.SetChildIndex(this.cbID, 0);
+            this.Controls.SetChildIndex(this.lbID, 0);
+            this.Controls.SetChildIndex(this.cbNom, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Rapport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,8 +237,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvRapport;
-        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.DataGridView dgv_Rapport;
         private System.Windows.Forms.RichTextBox rtxtBilan;
         private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.TextBox textBox3;
@@ -245,10 +248,10 @@
         private System.Windows.Forms.Label Modification;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Modif;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbMotif;
-        private System.Windows.Forms.ComboBox cbNom;
-        private System.Windows.Forms.CheckBox cbCloturer;
         private System.Windows.Forms.BindingSource bsRapport;
+        private System.Windows.Forms.ComboBox cbID;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.ComboBox cbNom;
     }
 }
