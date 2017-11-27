@@ -76,6 +76,7 @@
             this.nupAjoutMontant = new System.Windows.Forms.NumericUpDown();
             this.dtpAjoutDate = new System.Windows.Forms.DateTimePicker();
             this.txtNom = new System.Windows.Forms.TextBox();
+            this.bsMontantUnitaire = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSaisieFiche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMontantUnitaireKilometrage)).BeginInit();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteNuitee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -614,6 +616,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteNuitee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -668,5 +671,6 @@
         private System.Windows.Forms.NumericUpDown nupAjoutMontant;
         private System.Windows.Forms.DateTimePicker dtpAjoutDate;
         private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.BindingSource bsMontantUnitaire;
     }
 }
