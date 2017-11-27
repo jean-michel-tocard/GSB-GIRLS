@@ -27,12 +27,14 @@ namespace GSB_GIRLS
 
         private void FSaisie_Load(object sender, EventArgs e)
         {
+            //récupérer le matricule du visiteur
+            txtMatricule.Text = Modele.VisiteurConnect.idVisiteur.ToString();
 
             //Récuperer Nom  du visiteur
-            txtNom.Text = Modele.MaConnexion.Visiteur.nom + " " + Modele.MaConnexion.Visiteur.prenom;
+            txtNom.Text = Modele.VisiteurConnect.nom + " " + Modele.VisiteurConnect.prenom;
            
                //récupérer Date
-            txtMois.Text = DateTime.Now.ToString("MMMM yyyy", CultureInfo.CreateSpecificCulture("fr-FR"));
+            txtMois.Text = DateTime.Now.ToString("MMMM yyyy");
 
             //recupérer Typevehicule
             cboTypeVehicule.Text = cboTypeVehicule.Items[0].ToString();
@@ -57,19 +59,21 @@ namespace GSB_GIRLS
 
             string moisEnCour = DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("yyyy");
             var ficheFrais = Modele.MaConnexion.fichefrais.ToList()
-                .Where(x => x.idVisiteur == Modele.MaConnexion.Visiteur.idVisiteur && x.mois == moisEnCour);
-            //if (ficheFrais == null)
-            fichefrais uneFiche = new fichefrais();
-            uneFiche.idVisiteur = Modele.MaConnexion.Visiteur.idVisiteur;
-            uneFiche.mois = moisEnCour;
-            uneFiche.nbJustificatifs = 0;
-            uneFiche.montantValide = 0;
-            uneFiche.dateModif = DateTime.Now;
-            uneFiche.idEtat = "CR";
-            Modele.MaConnexion.fichefrais.AddObject(uneFiche);
-            Modele.MaConnexion.SaveChanges();
-            int i = 0;
-        }
+                .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
+            if (ficheFrais == null)
+            {
+                fichefrais uneFiche = new fichefrais();
+                uneFiche.idVisiteur = Modele.VisiteurConnect.idVisiteur.ToString();
+                uneFiche.mois = moisEnCour;
+                uneFiche.nbJustificatifs = 0;
+                uneFiche.montantValide = 0;
+                uneFiche.dateModif = DateTime.Now;
+                uneFiche.idEtat = "CR";
+                Modele.MaConnexion.fichefrais.AddObject(uneFiche);
+                Modele.MaConnexion.SaveChanges();
+
+            }
+           }
 
         private void cboTypeVehicule_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,7 +136,7 @@ namespace GSB_GIRLS
         }
         //ajoute une ligne des frais hors forfaits
         private void btnAjouterLigne_Click(object sender, EventArgs e)
-        {
+        { 
             if (dgvAutreFrais.RowCount > 0)
             {
                 dgvAutreFrais_RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
@@ -145,7 +149,8 @@ namespace GSB_GIRLS
             {
                 dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
             }
-        }
+        
+    }
        
         //ajout des renseignements
         private void btnAjouter1_Click(object sender, EventArgs e)

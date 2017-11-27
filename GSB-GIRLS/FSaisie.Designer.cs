@@ -68,10 +68,11 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMois = new System.Windows.Forms.TextBox();
             this.txtAjoutLibelle = new System.Windows.Forms.TextBox();
-            this.nupAjoutMontant = new System.Windows.Forms.NumericUpDown();
-            this.dtpAjoutDate = new System.Windows.Forms.DateTimePicker();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.bsMontantUnitaire = new System.Windows.Forms.BindingSource(this.components);
+            this.txtMatricule = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpAjoutDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSaisieFiche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMontantUnitaireKilometrage)).BeginInit();
@@ -83,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteRepasMidi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteNuitee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).BeginInit();
             this.SuspendLayout();
             // 
@@ -475,19 +475,30 @@
             this.txtAjoutLibelle.TabIndex = 58;
             this.txtAjoutLibelle.Visible = false;
             // 
-            // nupAjoutMontant
+            // txtNom
             // 
-            this.nupAjoutMontant.DecimalPlaces = 2;
-            this.nupAjoutMontant.Location = new System.Drawing.Point(762, 122);
-            this.nupAjoutMontant.Maximum = new decimal(new int[] {
-            1661992959,
-            1808227885,
-            5,
-            0});
-            this.nupAjoutMontant.Name = "nupAjoutMontant";
-            this.nupAjoutMontant.Size = new System.Drawing.Size(59, 20);
-            this.nupAjoutMontant.TabIndex = 57;
-            this.nupAjoutMontant.Visible = false;
+            this.txtNom.Enabled = false;
+            this.txtNom.Location = new System.Drawing.Point(68, 163);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(155, 20);
+            this.txtNom.TabIndex = 59;
+            // 
+            // txtMatricule
+            // 
+            this.txtMatricule.Enabled = false;
+            this.txtMatricule.Location = new System.Drawing.Point(68, 189);
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(261, 20);
+            this.txtMatricule.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Matricule :";
             // 
             // dtpAjoutDate
             // 
@@ -498,22 +509,15 @@
             this.dtpAjoutDate.Value = new System.DateTime(2017, 11, 6, 15, 47, 1, 0);
             this.dtpAjoutDate.Visible = false;
             // 
-            // txtNom
-            // 
-            this.txtNom.Enabled = false;
-            this.txtNom.Location = new System.Drawing.Point(68, 163);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(155, 20);
-            this.txtNom.TabIndex = 59;
-            // 
             // FSaisie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 828);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtMatricule);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtAjoutLibelle);
-            this.Controls.Add(this.nupAjoutMontant);
             this.Controls.Add(this.dtpAjoutDate);
             this.Controls.Add(this.txtMois);
             this.Controls.Add(this.dgvAutreFrais);
@@ -563,7 +567,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteRepasMidi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantiteNuitee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -611,9 +614,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox txtMois;
         private System.Windows.Forms.TextBox txtAjoutLibelle;
-        private System.Windows.Forms.NumericUpDown nupAjoutMontant;
-        private System.Windows.Forms.DateTimePicker dtpAjoutDate;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.BindingSource bsMontantUnitaire;
+        private System.Windows.Forms.TextBox txtMatricule;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpAjoutDate;
     }
 }

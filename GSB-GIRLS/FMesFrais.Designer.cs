@@ -48,6 +48,8 @@
             this.txtEtat = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.dgvFMois = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNbJustificatifs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
@@ -218,14 +220,34 @@
             this.dgvFMois.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFMois.Location = new System.Drawing.Point(393, 405);
             this.dgvFMois.Name = "dgvFMois";
-            this.dgvFMois.Size = new System.Drawing.Size(342, 83);
+            this.dgvFMois.Size = new System.Drawing.Size(342, 111);
             this.dgvFMois.TabIndex = 40;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(399, 481);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 13);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Nombre de  justificatifs fournis";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txtNbJustificatifs
+            // 
+            this.txtNbJustificatifs.Location = new System.Drawing.Point(566, 478);
+            this.txtNbJustificatifs.Name = "txtNbJustificatifs";
+            this.txtNbJustificatifs.Size = new System.Drawing.Size(100, 20);
+            this.txtNbJustificatifs.TabIndex = 41;
+            this.txtNbJustificatifs.TextChanged += new System.EventHandler(this.txtNbJustificatifs_TextChanged);
             // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 882);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtNbJustificatifs);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label5);
@@ -277,5 +299,7 @@
         private System.Windows.Forms.TextBox txtEtat;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.DataGridView dgvFMois;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtNbJustificatifs;
     }
 }
