@@ -34,7 +34,38 @@ namespace GSB_GIRLS
 
         private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var LQuery = Modele.MaConnexion.fichefrais.ToList()
+                               .Where(x => x.idVisiteur == cboMois.SelectedValue.ToString());
+                BindingSource bs = new BindingSource();
+                bs.DataSource = LQuery;
+                bs.MoveFirst();
+                fichefrais ffrais = (fichefrais)bs.Current;
+                LigneFraisHorsForfait lhf = (LigneFraisHorsForfait)bs.Current;
+                cboMois.DataSource = ffrais.mois;
+                //affiche etat montant nbjustificatifs
+                txtEtat.Text = ffrais.idEtat;
+                txtMontant.Text = ffrais.montantValide.ToString();
+                txtNbJustificatifs.Text = ffrais.nbJustificatifs.ToString();
+               
+                // affiche dans la dgv les éléments forfaitisés            
+                bsMois.DataSource = LQuery;
+                dgvElementForfaitise.DataSource = bsMois;
+                dgvElementForfaitise.Columns[0].HeaderText = "libelle";
+                dgvElementForfaitise.Columns[1].HeaderText = "montant";
+                dgvElementForfaitise.Columns[2].Visible = false;
+                //afiche dans la dgv les éléments hors forfaits 
+                dgvHorsForfait.DataSource = bsMois;
+                dgvHorsForfait.Columns[0].HeaderText = lhf.libelle;
+                dgvHorsForfait.Columns[1].HeaderText = lhf.date.ToString();
+                dgvHorsForfait.Columns[2].HeaderText = lhf.montant.ToString();
+
+            }
+            catch
+            {
+
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -42,6 +73,14 @@ namespace GSB_GIRLS
 
         }
 
+        private void txtNbJustificatifs_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

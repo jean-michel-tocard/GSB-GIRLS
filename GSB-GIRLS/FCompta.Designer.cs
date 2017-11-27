@@ -40,26 +40,33 @@
             this.cboMois = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvFraisForfait = new System.Windows.Forms.DataGridView();
+            this.dgvFraisHorsForfait = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNbJustif = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.bsFraisForfait = new System.Windows.Forms.BindingSource(this.components);
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMatricule = new System.Windows.Forms.TextBox();
+            this.bsMois = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(18, 246);
+            this.linkLabel1.Location = new System.Drawing.Point(18, 301);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(70, 13);
             this.linkLabel1.TabIndex = 11;
@@ -78,7 +85,7 @@
             // linkEdition
             // 
             this.linkEdition.AutoSize = true;
-            this.linkEdition.Location = new System.Drawing.Point(18, 209);
+            this.linkEdition.Location = new System.Drawing.Point(18, 264);
             this.linkEdition.Name = "linkEdition";
             this.linkEdition.Size = new System.Drawing.Size(109, 13);
             this.linkEdition.TabIndex = 7;
@@ -162,21 +169,21 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "frais hors forfait";
             // 
-            // dataGridView1
+            // dgvFraisForfait
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(306, 246);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(756, 122);
-            this.dataGridView1.TabIndex = 18;
+            this.dgvFraisForfait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFraisForfait.Location = new System.Drawing.Point(306, 246);
+            this.dgvFraisForfait.Name = "dgvFraisForfait";
+            this.dgvFraisForfait.Size = new System.Drawing.Size(756, 122);
+            this.dgvFraisForfait.TabIndex = 18;
             // 
-            // dataGridView2
+            // dgvFraisHorsForfait
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(306, 465);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(756, 255);
-            this.dataGridView2.TabIndex = 19;
+            this.dgvFraisHorsForfait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFraisHorsForfait.Location = new System.Drawing.Point(306, 465);
+            this.dgvFraisHorsForfait.Name = "dgvFraisHorsForfait";
+            this.dgvFraisHorsForfait.Size = new System.Drawing.Size(756, 255);
+            this.dgvFraisHorsForfait.TabIndex = 19;
             // 
             // label7
             // 
@@ -205,12 +212,12 @@
             this.button2.Text = "Valider cette fiche";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNbJustif
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 487);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtNbJustif.Location = new System.Drawing.Point(146, 487);
+            this.txtNbJustif.Name = "txtNbJustif";
+            this.txtNbJustif.Size = new System.Drawing.Size(100, 20);
+            this.txtNbJustif.TabIndex = 23;
             // 
             // button3
             // 
@@ -240,20 +247,48 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "Validation des frais par Comptable";
             // 
+            // txtNom
+            // 
+            this.txtNom.Enabled = false;
+            this.txtNom.Location = new System.Drawing.Point(82, 169);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(155, 20);
+            this.txtNom.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Matricule :";
+            // 
+            // txtMatricule
+            // 
+            this.txtMatricule.Enabled = false;
+            this.txtMatricule.Location = new System.Drawing.Point(73, 209);
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(164, 20);
+            this.txtMatricule.TabIndex = 64;
+            // 
             // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 874);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtMatricule);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNbJustif);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFraisHorsForfait);
+            this.Controls.Add(this.dgvFraisForfait);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboMois);
@@ -269,9 +304,11 @@
             this.Text = "FCompta";
             this.Load += new System.EventHandler(this.FCompta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,15 +327,20 @@
         private System.Windows.Forms.ComboBox cboMois;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvFraisForfait;
+        private System.Windows.Forms.DataGridView dgvFraisHorsForfait;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource bsChoixV;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNbJustif;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.BindingSource bsFraisForfait;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtMatricule;
+        private System.Windows.Forms.BindingSource bsMois;
     }
 }

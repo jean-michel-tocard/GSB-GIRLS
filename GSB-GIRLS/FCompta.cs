@@ -33,7 +33,6 @@ namespace GSB_GIRLS
             cboChoixV.ValueMember = "idVisiteur";
             cboChoixV.DisplayMember = "np";
              bsChoixV.DataSource = Modele.MaConnexion.Visiteur.OrderBy(x => x.nom).ThenBy(x=>x.prenom).ToList();
-
             cboChoixV.DataSource = bsChoixV;
             bLoad = false;
         }
@@ -53,17 +52,39 @@ namespace GSB_GIRLS
 
         private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (fermeture) return;
-            var LQuery = Modele.MaConnexion.COMPOSITEUR.ToList()
-                           .Where(x => x.idStyle == int.Parse(cboStyle.SelectedValue.ToString()))
-                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.idCompositeur })
-                           .OrderBy(x => x.nomCompositeur);
+            try
+            {
+                var LQuery = Modele.MaConnexion.fichefrais.ToList()
+                               .Where(x => x.idVisiteur == cboMois.SelectedValue.ToString());
+                BindingSource bs = new BindingSource();
+                bs.DataSource = LQuery;
+                bs.MoveFirst();
+                fichefrais ffrais = (fichefrais)bs.Current;
+                LigneFraisHorsForfait lhf = (LigneFraisHorsForfait)bs.Current;
+                cboMois.DataSource = ffrais.mois;
 
-            bsCompositeur.DataSource = LQuery;
-            dgvCompoStyle.DataSource = bsCompositeur;
-            dgvCompoStyle.Columns[0].HeaderText = "NOM";
-            dgvCompoStyle.Columns[1].HeaderText = "PRENOM";
-            dgvCompoStyle.Columns[2].Visible = false;*/
+              
+                // affiche dans la dgv les éléments forfaitisés            
+                bsMois.DataSource = LQuery;
+                txtNbJustif.Text = ffrais.nbJustificatifs.ToString();
+                dgvFraisForfait.DataSource = bsMois;
+                dgvFraisForfait.Columns[0].HeaderText = "libelle";
+                dgvFraisForfait.Columns[1].HeaderText = "montant";
+                dgvFraisForfait.Columns[2].Visible = false;
+                //afiche dans la dgv les éléments hors forfaits 
+                dgvFraisHorsForfait.DataSource = bsMois;
+                dgvFraisHorsForfait.Columns[0].HeaderText = lhf.libelle;
+                dgvFraisHorsForfait.Columns[1].HeaderText = lhf.date.ToString();
+                dgvFraisHorsForfait.Columns[2].HeaderText = lhf.montant.ToString();
+
+            }
+            catch
+            {
+
+            }
+
         }
+
+
     }
 }
