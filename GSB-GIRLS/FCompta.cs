@@ -63,8 +63,10 @@ namespace GSB_GIRLS
                 LigneFraisHorsForfait lhf = (LigneFraisHorsForfait)bs.Current;
                 cboMois.DataSource = ffrais.mois;
 
+              
                 // affiche dans la dgv les éléments forfaitisés            
                 bsMois.DataSource = LQuery;
+                txtNbJustif.Text = ffrais.nbJustificatifs.ToString();
                 dgvFraisForfait.DataSource = bsMois;
                 dgvFraisForfait.Columns[0].HeaderText = "libelle";
                 dgvFraisForfait.Columns[1].HeaderText = "montant";

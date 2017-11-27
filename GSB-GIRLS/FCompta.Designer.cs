@@ -46,7 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNbJustif = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -212,12 +212,12 @@
             this.button2.Text = "Valider cette fiche";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNbJustif
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 487);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtNbJustif.Location = new System.Drawing.Point(146, 487);
+            this.txtNbJustif.Name = "txtNbJustif";
+            this.txtNbJustif.Size = new System.Drawing.Size(100, 20);
+            this.txtNbJustif.TabIndex = 23;
             // 
             // button3
             // 
@@ -283,7 +283,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNbJustif);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -333,7 +333,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource bsChoixV;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNbJustif;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
