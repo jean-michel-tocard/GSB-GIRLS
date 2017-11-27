@@ -24,29 +24,20 @@ namespace GSB_GIRLS
             fparMesFrais.Show();
         }
 
-        private void btnAjouter1_Click(object sender, EventArgs e)
+
+        private void FSaisie_Load(object sender, EventArgs e)
         {
+
+            //Récuperer Nom  du visiteur
+            txtNom.Text = Modele.MaConnexion.Visiteur.nom + " " + Modele.MaConnexion.Visiteur.prenom;
            
-        }
-
-
-
-
-        private void FETATFRAIS_Load(object sender, EventArgs e)
-        {
-            //Set Value Matricule
-            txtMatricule.Text = Modele.MonVisiteurConnecte.idVisiteur;
-
-            //Set Value Nom
-            txtNom.Text = Modele.MonVisiteurConnecte.nom + " " + Modele.MonVisiteurConnecte.prenom;
-            //Set Value Date
-
+               //récupérer Date
             txtMois.Text = DateTime.Now.ToString("MMMM yyyy", CultureInfo.CreateSpecificCulture("fr-FR"));
 
-            //Set Valu Typevehicule
+            //recupérer Typevehicule
             cboTypeVehicule.Text = cboTypeVehicule.Items[0].ToString();
 
-            //Set Value MontantUnitaire
+            //récupérer MontantUnitaire
             var MontantUnitaire = Modele.MaConnexion.FraisForfait.ToList()
                 .Where(x => x.id == "NUI")
                 .Select(x => new { x.montant });
@@ -66,10 +57,10 @@ namespace GSB_GIRLS
 
             string moisEnCour = DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("yyyy");
             var ficheFrais = Modele.MaConnexion.fichefrais.ToList()
-                .Where(x => x.idVisiteur == Modele.MonVisiteurConnecte.idVisiteur && x.mois == moisEnCour);
+                .Where(x => x.idVisiteur == Modele.MaConnexion.Visiteur.idVisiteur && x.mois == moisEnCour);
             //if (ficheFrais == null)
             fichefrais uneFiche = new fichefrais();
-            uneFiche.idVisiteur = Modele.MonVisiteurConnecte.idVisiteur;
+            uneFiche.idVisiteur = Modele.MaConnexion.Visiteur.idVisiteur;
             uneFiche.mois = moisEnCour;
             uneFiche.nbJustificatifs = 0;
             uneFiche.montantValide = 0;
@@ -78,45 +69,6 @@ namespace GSB_GIRLS
             Modele.MaConnexion.fichefrais.AddObject(uneFiche);
             Modele.MaConnexion.SaveChanges();
             int i = 0;
-        }
-
-
-        private void cbNuitee_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbNuitee.Checked == true)
-                nupQuantiteNuitee.Enabled = true;
-            else
-                nupQuantiteNuitee.Enabled = false;
-        }
-
-        private void cbRepasMidi_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbRepasMidi.Checked == true)
-                nupQuantiteRepasMidi.Enabled = true;
-            else
-                nupQuantiteRepasMidi.Enabled = false;
-        }
-
-        private void cbRelaisEtape_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbRelaisEtape.Checked == true)
-                nupQuantiteRelaisEtape.Enabled = true;
-            else
-                nupQuantiteRelaisEtape.Enabled = false;
-        }
-
-        private void cbKilometrage_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbKilometrage.Checked == true)
-            {
-                nupQuantiteKilometrage.Enabled = true;
-                cboTypeVehicule.Enabled = true;
-            }
-            else
-            {
-                nupQuantiteKilometrage.Enabled = false;
-                cboTypeVehicule.Enabled = false;
-            }
         }
 
         private void cboTypeVehicule_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,7 +100,6 @@ namespace GSB_GIRLS
             txtTotalNuitee.Text = (nupQuantiteNuitee.Value * nupMontantUnitaireNuitee.Value).ToString();
         }
 
-
         private void nupQuantiteRepasMidi_ValueChanged(object sender, EventArgs e)
         {
             txtTotalRepasMidi.Text = (nupQuantiteRepasMidi.Value * nupMontantUnitaireRepasMidi.Value).ToString();
@@ -164,10 +115,7 @@ namespace GSB_GIRLS
             txtTotalKilometrage.Text = (nupQuantiteKilometrage.Value * nupMontantUnitaireKilometrage.Value).ToString();
         }
 
-        private void btnFermer_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
 
         private void dgvAutreFrais_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -182,7 +130,34 @@ namespace GSB_GIRLS
 
 
         }
-
+        //ajoute une ligne des frais hors forfaits
+        private void btnAjouterLigne_Click(object sender, EventArgs e)
+        {
+            if (dgvAutreFrais.RowCount > 0)
+            {
+                dgvAutreFrais_RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
+                if (dgvAutreFrais.Rows[dgvAutreFrais.RowCount - 1].ErrorText == "")
+                {
+                    dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
+                }
+            }
+            else
+            {
+                dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
+            }
         }
+       
+        //ajout des renseignements
+        private void btnAjouter1_Click(object sender, EventArgs e)
+        {
+           
+        }
+         //annuler l'ajout des rensiegnements
+        private void btnAnnule_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    }
 
     }
