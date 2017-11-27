@@ -52,8 +52,35 @@ namespace GSB_GIRLS
 
         private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            try
+            {
+                var LQuery = Modele.MaConnexion.fichefrais.ToList()
+                               .Where(x => x.idVisiteur == cboMois.SelectedValue.ToString());
+                BindingSource bs = new BindingSource();
+                bs.DataSource = LQuery;
+                bs.MoveFirst();
+                fichefrais ffrais = (fichefrais)bs.Current;
+                LigneFraisHorsForfait lhf = (LigneFraisHorsForfait)bs.Current;
+                cboMois.DataSource = ffrais.mois;
+
+                // affiche dans la dgv les éléments forfaitisés            
+                bsMois.DataSource = LQuery;
+                dgvFraisForfait.DataSource = bsMois;
+                dgvFraisForfait.Columns[0].HeaderText = "libelle";
+                dgvFraisForfait.Columns[1].HeaderText = "montant";
+                dgvFraisForfait.Columns[2].Visible = false;
+                //afiche dans la dgv les éléments hors forfaits 
+                dgvFraisHorsForfait.DataSource = bsMois;
+                dgvFraisHorsForfait.Columns[0].HeaderText = lhf.libelle;
+                dgvFraisHorsForfait.Columns[1].HeaderText = lhf.date.ToString();
+                dgvFraisHorsForfait.Columns[2].HeaderText = lhf.montant.ToString();
+
+            }
+            catch
+            {
+
+            }
+
         }
 
 

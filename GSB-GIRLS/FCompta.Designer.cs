@@ -54,11 +54,13 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMatricule = new System.Windows.Forms.TextBox();
+            this.bsMois = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -306,6 +308,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +341,6 @@
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMatricule;
+        private System.Windows.Forms.BindingSource bsMois;
     }
 }
