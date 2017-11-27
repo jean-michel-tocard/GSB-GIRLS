@@ -30,11 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
-            this.bsVisiteurs = new System.Windows.Forms.BindingSource(this.components);
             this.bsregion = new System.Windows.Forms.BindingSource(this.components);
             this.cboRegion = new System.Windows.Forms.ComboBox();
             this.retour = new System.Windows.Forms.Button();
-            this.textboxid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxnom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +45,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxcp = new System.Windows.Forms.TextBox();
             this.dgvVisiteurs = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).BeginInit();
+            this.bsVisiteurs = new System.Windows.Forms.BindingSource(this.components);
+            this.dateEmbaucheDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.villeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsregion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -84,23 +90,16 @@
             this.retour.UseVisualStyleBackColor = false;
             this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
-            // textboxid
-            // 
-            this.textboxid.Location = new System.Drawing.Point(206, 102);
-            this.textboxid.Name = "textboxid";
-            this.textboxid.Size = new System.Drawing.Size(158, 20);
-            this.textboxid.TabIndex = 9;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(128, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 20);
+            this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 10;
-            this.label3.Text = "ID :";
+            this.label3.Text = "Responsable";
             // 
             // textBoxnom
             // 
@@ -194,17 +193,73 @@
             // 
             // dgvVisiteurs
             // 
+            this.dgvVisiteurs.AutoGenerateColumns = false;
             this.dgvVisiteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisiteurs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idVisiteurDataGridViewTextBoxColumn,
+            this.nomDataGridViewTextBoxColumn,
+            this.prenomDataGridViewTextBoxColumn,
+            this.rueDataGridViewTextBoxColumn,
+            this.cpDataGridViewTextBoxColumn,
+            this.villeDataGridViewTextBoxColumn,
+            this.dateEmbaucheDataGridViewTextBoxColumn});
+            this.dgvVisiteurs.DataSource = this.bsVisiteurs;
             this.dgvVisiteurs.Location = new System.Drawing.Point(399, 102);
             this.dgvVisiteurs.Name = "dgvVisiteurs";
-            this.dgvVisiteurs.Size = new System.Drawing.Size(390, 187);
+            this.dgvVisiteurs.Size = new System.Drawing.Size(445, 187);
             this.dgvVisiteurs.TabIndex = 21;
+            // 
+            // bsVisiteurs
+            // 
+            this.bsVisiteurs.DataSource = typeof(GSB_GIRLS.Visiteur);
+            // 
+            // dateEmbaucheDataGridViewTextBoxColumn
+            // 
+            this.dateEmbaucheDataGridViewTextBoxColumn.DataPropertyName = "dateEmbauche";
+            this.dateEmbaucheDataGridViewTextBoxColumn.HeaderText = "dateEmbauche";
+            this.dateEmbaucheDataGridViewTextBoxColumn.Name = "dateEmbaucheDataGridViewTextBoxColumn";
+            // 
+            // villeDataGridViewTextBoxColumn
+            // 
+            this.villeDataGridViewTextBoxColumn.DataPropertyName = "ville";
+            this.villeDataGridViewTextBoxColumn.HeaderText = "ville";
+            this.villeDataGridViewTextBoxColumn.Name = "villeDataGridViewTextBoxColumn";
+            // 
+            // cpDataGridViewTextBoxColumn
+            // 
+            this.cpDataGridViewTextBoxColumn.DataPropertyName = "cp";
+            this.cpDataGridViewTextBoxColumn.HeaderText = "cp";
+            this.cpDataGridViewTextBoxColumn.Name = "cpDataGridViewTextBoxColumn";
+            // 
+            // rueDataGridViewTextBoxColumn
+            // 
+            this.rueDataGridViewTextBoxColumn.DataPropertyName = "rue";
+            this.rueDataGridViewTextBoxColumn.HeaderText = "rue";
+            this.rueDataGridViewTextBoxColumn.Name = "rueDataGridViewTextBoxColumn";
+            // 
+            // prenomDataGridViewTextBoxColumn
+            // 
+            this.prenomDataGridViewTextBoxColumn.DataPropertyName = "prenom";
+            this.prenomDataGridViewTextBoxColumn.HeaderText = "prenom";
+            this.prenomDataGridViewTextBoxColumn.Name = "prenomDataGridViewTextBoxColumn";
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            // 
+            // idVisiteurDataGridViewTextBoxColumn
+            // 
+            this.idVisiteurDataGridViewTextBoxColumn.DataPropertyName = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.HeaderText = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.Name = "idVisiteurDataGridViewTextBoxColumn";
             // 
             // FRegion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 419);
+            this.ClientSize = new System.Drawing.Size(869, 419);
             this.Controls.Add(this.dgvVisiteurs);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxcp);
@@ -217,7 +272,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxnom);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textboxid);
             this.Controls.Add(this.retour);
             this.Controls.Add(this.cboRegion);
             this.Controls.Add(this.label2);
@@ -227,7 +281,6 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.cboRegion, 0);
             this.Controls.SetChildIndex(this.retour, 0);
-            this.Controls.SetChildIndex(this.textboxid, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.textBoxnom, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -240,9 +293,9 @@
             this.Controls.SetChildIndex(this.textBoxcp, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.dgvVisiteurs, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsregion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,11 +304,9 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource bsVisiteurs;
         private System.Windows.Forms.BindingSource bsregion;
         private System.Windows.Forms.ComboBox cboRegion;
         private System.Windows.Forms.Button retour;
-        private System.Windows.Forms.TextBox textboxid;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxnom;
         private System.Windows.Forms.Label label4;
@@ -268,5 +319,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxcp;
         private System.Windows.Forms.DataGridView dgvVisiteurs;
+        private System.Windows.Forms.BindingSource bsVisiteurs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVisiteurDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn villeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateEmbaucheDataGridViewTextBoxColumn;
     }
 }

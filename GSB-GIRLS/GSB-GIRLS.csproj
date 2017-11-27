@@ -97,6 +97,12 @@
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
+    <Compile Include="FAjoutVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutVisiteur.Designer.cs">
+      <DependentUpon>FAjoutVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAjoutVisiteur.resx">
+      <DependentUpon>FAjoutVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCompta.resx">
       <DependentUpon>FCompta.cs</DependentUpon>

@@ -12,7 +12,7 @@ namespace GSB_GIRLS
         static GSBgirls maConnexion;
         static Visiteur visiteurConnect;
         static Secteur unSecteur;
-
+        private static Visiteur monVisiteur;
 
         public static GSBgirls MaConnexion
         {
@@ -39,6 +39,20 @@ namespace GSB_GIRLS
                 visiteurConnect = value;
             }
         }
+
+        public static Visiteur MonVisiteur
+        {
+            get
+            {
+                return monVisiteur;
+            }
+
+            set
+            {
+                monVisiteur = value;
+            }
+        }
+
         public static Secteur UnSecteur
         {
             get

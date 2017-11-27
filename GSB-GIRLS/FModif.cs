@@ -40,6 +40,7 @@ namespace GSB_GIRLS
 
               FModifVisiteur fmodifvisiteur = new FModifVisiteur(monVisiteur);
               fmodifvisiteur.Show();
+            this.Hide();
         }
 
         private void FModif_Load(object sender, EventArgs e)
@@ -77,9 +78,48 @@ namespace GSB_GIRLS
         private void retour_Click(object sender, EventArgs e)
         {
             FMenu menu = new FMenu(maConnexion, levisiteur);
-            //menu.MdiParent = this;
             menu.Show();
             this.Hide();
+        }
+
+        private void bajouter_Click(object sender, EventArgs e)
+        {
+            FAjoutVisiteur ajout = new FAjoutVisiteur();
+            ajout.Show();
+            this.Hide();
+        }
+
+        private void btnSupp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Voulez-vous vraiment supprimer ce visiteur ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var filteredData = Modele.MaConnexion.Visiteur.ToList()
+             .Where(x => x.idVisiteur == dgvVisiteurs.SelectedRows[0].Cells[6].Value.ToString());
+
+                BindingSource bs = new BindingSource();
+                bs.DataSource = filteredData; // application du filtre
+                bs.MoveFirst();
+
+                Visiteur monVisiteur = (Visiteur)bs.Current;
+
+                Modele.MaConnexion.Visiteur.Remove(monVisiteur);
+                Modele.MaConnexion.SaveChanges();
+
+                    FModif modif = new FModif();
+                    modif.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    //
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Suppression erreur : " + ex.ToString(), "Action");
+            }
         }
     }
 }

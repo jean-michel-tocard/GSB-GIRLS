@@ -53,7 +53,7 @@ namespace GSB_GIRLS
 
         private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (fermeture) return;
+            /*if (fermeture) return;
             var LQuery = Modele.MaConnexion.COMPOSITEUR.ToList()
                            .Where(x => x.idStyle == int.Parse(cboStyle.SelectedValue.ToString()))
                            .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.idCompositeur })
@@ -63,7 +63,7 @@ namespace GSB_GIRLS
             dgvCompoStyle.DataSource = bsCompositeur;
             dgvCompoStyle.Columns[0].HeaderText = "NOM";
             dgvCompoStyle.Columns[1].HeaderText = "PRENOM";
-            dgvCompoStyle.Columns[2].Visible = false;
+            dgvCompoStyle.Columns[2].Visible = false;*/
         }
     }
 }

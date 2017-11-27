@@ -52,7 +52,7 @@ namespace GSB_GIRLS
                 try
                 {
                     //ajout du visiteur
-                    this.maConnexion.AddToVisiteur(unVisiteur);
+                   // this.maConnexion.AddToVisiteur(unVisiteur);
                     //sauvegarde
                     this.maConnexion.SaveChanges();
                     MessageBox.Show("Visiteur ajouté.");
