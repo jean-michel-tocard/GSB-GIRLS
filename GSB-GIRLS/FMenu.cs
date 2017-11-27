@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Objects;
-using System.Data.Objects.DataClasses;
 
 
 namespace GSB_GIRLS
@@ -51,12 +50,18 @@ namespace GSB_GIRLS
 
         private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FRegion region = new FRegion();
+            //menu.MdiParent = this;
+            region.Show();
+            this.Hide();
         }
 
         private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FModif modif= new FModif();
+            //menu.MdiParent = this;
+            modif.Show();
+            this.Hide();
         }
 
         private void msDonnées_Click(object sender, EventArgs e)
@@ -69,17 +74,22 @@ namespace GSB_GIRLS
             // les ajouts et suppressions sont interdits
             dgv_util.AllowUserToAddRows = false;
             dgv_util.AllowUserToDeleteRows = false;
-        
+
             // L'entête de colonne des autres champs sont modifiés
-            if (levisiteur.droit == 1)
+            if (levisiteur.droit == 1 || levisiteur.droit == null)
             {
+                var requete = from v in maConnexion.Visiteur
+                              orderby v.nom
+                              where v.idVisiteur == levisiteur.idVisiteur
+                              select v;
+                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
                 dgv_util.Columns[2].HeaderText = "Nom";
                 dgv_util.Columns[3].HeaderText = "Prenom";
                 dgv_util.Columns[4].HeaderText = "Rue";
                 dgv_util.Columns[5].HeaderText = "Code Postal";
-
                 dgv_util.Show();
             }
             if (levisiteur.droit == 0 || levisiteur.droit == null)
@@ -121,15 +131,17 @@ namespace GSB_GIRLS
         {
             // information utilisateur 
             lbInformations.Text = "Utilisateur Connecté  : " + levisiteur.nom + "  " + levisiteur.prenom;
-            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 0
+            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
             if (levisiteur.droit == 0)
             {
+               
                 msGestionUser.Visible = false;
+                
             }
-
-            dgv_util.Hide();
-            //msRapportVisite.Visible = false;
-            //msProfil.Visible = false;
+                dgv_util.Hide();
+                //msRapportVisite.Visible = false;
+                msProfil.Visible = true;
+            
         }
 
         private void gestionDesUtilisateursToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,7 +157,7 @@ namespace GSB_GIRLS
 
         }
 
-        private void msDeconnexion_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string message = "Voulez-vous vraiment quitter ?";
             string caption = "Fermeture de l'application";
@@ -155,10 +167,16 @@ namespace GSB_GIRLS
             result = MessageBox.Show(message, caption, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                maConnexion.Dispose();  // Pour libérer la connexion à la base de données */
-                Application.Exit();     // Pour quitter l'application           }
+                Connexion con = new Connexion();
+                
+                con.Show();
+                this.Hide();
+
+                /* this.Close();
+                 maConnexion.Dispose();  // Pour libérer la connexion à la base de données */
+                /*Application.Exit();     // Pour quitter l'application    */
             }
+            
         }
 
         private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
