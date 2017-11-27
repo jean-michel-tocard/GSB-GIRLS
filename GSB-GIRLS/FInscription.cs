@@ -35,7 +35,7 @@ namespace GSB_GIRLS
                     // On crypte le mot de passe saisi en utilisant la méthode GetMD5Hash de la classe CRYPTAGE
                     this.passwdCrypte = CryptageMD5.GetMD5Hash(md5Hash, Convert.ToString(txtMdp.Text));
                 }
-                //affecte a chaque champ visiteur la valeur saisie
+                //affecte à chaque champ visiteur la valeur saisie
 
                 unVisiteur.idVisiteur = txtID.Text;
                 unVisiteur.nom = txtNom.Text;
