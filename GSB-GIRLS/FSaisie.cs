@@ -180,7 +180,7 @@ namespace GSB_GIRLS
         { 
             if (dgvAutreFrais.RowCount > 0)
             {
-                dgvAutreFrais.RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
+                //dgvAutreFrais.RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
                 if (dgvAutreFrais.Rows[dgvAutreFrais.RowCount - 1].ErrorText == "")
                 {
                     dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
@@ -211,7 +211,7 @@ namespace GSB_GIRLS
                     .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
             if (ficheFrais.Count() == 0)
             {
-                Modele.MaConnexion.fichefrais.AddObject(uneFiche);
+                Modele.MaConnexion.fichefrais.Add(uneFiche);
             }
             else
             {
@@ -233,7 +233,7 @@ namespace GSB_GIRLS
                 MessageBox.Show(ficheFrais.Count().ToString());
                 if (ligneNuitee.Count() == 0)
                 {
-                    Modele.MaConnexion.LigneFraisForfait.AddObject(unFrais);
+                    Modele.MaConnexion.LigneFraisForfait.Add(unFrais);
                 }
                 else
                 {
