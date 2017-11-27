@@ -56,23 +56,7 @@ namespace GSB_GIRLS
             nupMontantUnitaireRelaisEtape.Value = decimal.Parse(MontantUnitaire.ElementAt(0).montant.ToString());
 
             nupMontantUnitaireKilometrage.Value = 0.52M;
-
-            string moisEnCour = DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("yyyy");
-            var ficheFrais = Modele.MaConnexion.fichefrais.ToList()
-                .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
-            if (ficheFrais == null)
-            {
-                fichefrais uneFiche = new fichefrais();
-                uneFiche.idVisiteur = Modele.VisiteurConnect.idVisiteur.ToString();
-                uneFiche.mois = moisEnCour;
-                uneFiche.nbJustificatifs = 0;
-                uneFiche.montantValide = 0;
-                uneFiche.dateModif = DateTime.Now;
-                uneFiche.idEtat = "CR";
-                Modele.MaConnexion.fichefrais.AddObject(uneFiche);
-                Modele.MaConnexion.SaveChanges();
-
-            }
+          
            }
 
         private void cboTypeVehicule_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,9 +115,66 @@ namespace GSB_GIRLS
                 dtpAjoutDate.Show();
                 dtpAjoutDate.Focus();
             }
+            if (e.ColumnIndex == 1)
+            {
+                txtAjoutLibelle.Text = dgvAutreFrais.CurrentCell.Value.ToString();
+                txtAjoutLibelle.Visible = true;
+                txtAjoutLibelle.Parent = dgvAutreFrais;
+                txtAjoutLibelle.Location = dgvAutreFrais.GetCellDisplayRectangle(e.ColumnIndex, dgvAutreFrais.CurrentCell.RowIndex, true).Location;
+                txtAjoutLibelle.Show();
+                txtAjoutLibelle.Focus();
+            }
 
+            if (e.ColumnIndex == 2)
+            {
+                nupAjoutMontant.Value = int.Parse(dgvAutreFrais.CurrentCell.Value.ToString());
+                nupAjoutMontant.Visible = true;
+                nupAjoutMontant.Parent = dgvAutreFrais;
+                nupAjoutMontant.Location = dgvAutreFrais.GetCellDisplayRectangle(e.ColumnIndex, dgvAutreFrais.CurrentCell.RowIndex, true).Location;
+                nupAjoutMontant.Show();
+                nupAjoutMontant.Focus();
+            }
 
         }
+
+        private void dtpAjoutDate_Validated(object sender, EventArgs e)
+        {
+            dgvAutreFrais.CurrentCell.Value = dtpAjoutDate.Value.ToString("d");
+            dtpAjoutDate.Visible = false;
+        }
+        private void txtAjoutLibelle_Validated(object sender, EventArgs e)
+        {
+            dgvAutreFrais.CurrentCell.Value = txtAjoutLibelle.Text;
+            txtAjoutLibelle.Visible = false;
+        }
+
+        private void nupAjoutMontant_Validated(object sender, EventArgs e)
+        {
+            dgvAutreFrais.CurrentCell.Value = nupAjoutMontant.Value.ToString();
+            nupAjoutMontant.Visible = false;
+        }
+
+        private void dgvAutreFrais_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            e.Cancel = false;
+            dgvAutreFrais.Rows[e.RowIndex].ErrorText = "";
+            if (dgvAutreFrais.Rows[e.RowIndex].Cells[0].Value == null)
+            {
+                e.Cancel = true;
+                dgvAutreFrais.Rows[e.RowIndex].ErrorText += "La date de ne peut pas être null\n";
+            }
+            if (dgvAutreFrais.Rows[e.RowIndex].Cells[1].Value.ToString() == "" || dgvAutreFrais.Rows[e.RowIndex].Cells[1].Value == null)
+            {
+                e.Cancel = true;
+                dgvAutreFrais.Rows[e.RowIndex].ErrorText += "Le libellé ne peut pas être null\n";
+            }
+            if (dgvAutreFrais.Rows[e.RowIndex].Cells[2].Value.ToString() == "0" || dgvAutreFrais.Rows[e.RowIndex].Cells[2].Value == null)
+            {
+                e.Cancel = true;
+                dgvAutreFrais.Rows[e.RowIndex].ErrorText += "le montant ne peut pas être null";
+            }
+        }
+
         //ajoute une ligne des frais hors forfaits
         private void btnAjouterLigne_Click(object sender, EventArgs e)
         { 
@@ -155,9 +196,54 @@ namespace GSB_GIRLS
         //ajout des renseignements
         private void btnAjouter1_Click(object sender, EventArgs e)
         {
-           
+
+            string moisEnCour = DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("yy") + " ";
+
+            // Fiche Frais
+            fichefrais uneFiche = new fichefrais();
+            uneFiche.idVisiteur = Modele.VisiteurConnect.idVisiteur.ToString();
+            uneFiche.mois = moisEnCour;
+            uneFiche.nbJustificatifs = 0;
+            uneFiche.montantValide = 0;
+            uneFiche.dateModif = DateTime.Now;
+            uneFiche.idEtat = "CR";
+            var ficheFrais = Modele.MaConnexion.fichefrais.ToList()
+                    .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
+            if (ficheFrais.Count() == 0)
+            {
+                Modele.MaConnexion.fichefrais.AddObject(uneFiche);
+            }
+            else
+            {
+                ficheFrais.First().dateModif = DateTime.Now;
+                ficheFrais.First().montantValide = 0;
+            }
+
+
+            // Nuitée
+            if (nupQuantiteNuitee != null)
+            {
+                LigneFraisForfait unFrais = new LigneFraisForfait();
+                unFrais.idVisiteur = Modele.VisiteurConnect.idVisiteur.ToString();
+                unFrais.mois = moisEnCour;
+                unFrais.idFraisForfait = "NUI";
+                unFrais.quantite = int.Parse(nupQuantiteNuitee.Value.ToString());
+                var ligneNuitee = Modele.MaConnexion.LigneFraisForfait.ToList()
+                    .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour && x.idFraisForfait == "NUI");
+                MessageBox.Show(ficheFrais.Count().ToString());
+                if (ligneNuitee.Count() == 0)
+                {
+                    Modele.MaConnexion.LigneFraisForfait.AddObject(unFrais);
+                }
+                else
+                {
+                    ligneNuitee.First().quantite = int.Parse(nupQuantiteNuitee.Value.ToString());
+                }
+            }
+            Modele.MaConnexion.SaveChanges();
         }
-         //annuler l'ajout des rensiegnements
+    
+         //annuler l'ajout des renseignements
         private void btnAnnule_Click_1(object sender, EventArgs e)
         {
             this.Close();
