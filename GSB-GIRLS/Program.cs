@@ -17,10 +17,8 @@ namespace GSB_GIRLS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //  Application.Run(new Connexion());
-            Modele.Initialise();
-            // Application.Run(new Connexion());
             Application.Run(new Connexion());
+            Modele.Initialise();
         }
     }
 }
