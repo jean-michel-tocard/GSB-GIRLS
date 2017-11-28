@@ -42,6 +42,9 @@
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +56,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionVisiteur,
             this.msProfil,
-            this.ficheDeFrais});
+            this.ficheDeFrais,
+            this.rapportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(777, 31);
@@ -176,6 +180,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // rapportToolStripMenuItem
+            // 
+            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualiserToolStripMenuItem,
+            this.modifierToolStripMenuItem});
+            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
+            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
+            this.rapportToolStripMenuItem.Text = "Rapport";
+            // 
+            // visualiserToolStripMenuItem
+            // 
+            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
+            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.visualiserToolStripMenuItem.Text = "Visualiser";
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +244,8 @@
         private System.Windows.Forms.Label lbInformations;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem ficheDeFrais;
+        private System.Windows.Forms.ToolStripMenuItem rapportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualiserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
     }
 }
