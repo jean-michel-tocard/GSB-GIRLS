@@ -211,7 +211,7 @@ namespace GSB_GIRLS
                     .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
             if (ficheFrais.Count() == 0)
             {
-                Modele.MaConnexion.fichefrais.Add(uneFiche);
+               // Modele.MaConnexion.fichefrais.AddObject(uneFiche);
             }
             else
             {
@@ -233,7 +233,7 @@ namespace GSB_GIRLS
                 MessageBox.Show(ficheFrais.Count().ToString());
                 if (ligneNuitee.Count() == 0)
                 {
-                    Modele.MaConnexion.LigneFraisForfait.Add(unFrais);
+                    //Modele.MaConnexion.LigneFraisForfait.AddObject(unFrais);
                 }
                 else
                 {

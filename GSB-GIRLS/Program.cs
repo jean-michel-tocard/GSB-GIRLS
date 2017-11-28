@@ -10,15 +10,17 @@ namespace GSB_GIRLS
     static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application. gdshtfdshd
+        /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Connexion());
+            //  Application.Run(new Connexion());
             Modele.Initialise();
+            // Application.Run(new Connexion());
+            Application.Run(new Connexion());
         }
     }
 }
