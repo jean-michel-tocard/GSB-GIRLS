@@ -185,5 +185,10 @@ namespace GSB_GIRLS
             gc.Show();
             this.Hide();
         }
+
+        private void parSecteurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

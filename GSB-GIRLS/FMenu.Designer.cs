@@ -38,13 +38,13 @@
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
             this.ficheDeFrais = new System.Windows.Forms.ToolStripMenuItem();
+            this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,7 @@
             this.parSecteurToolStripMenuItem.Name = "parSecteurToolStripMenuItem";
             this.parSecteurToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
             this.parSecteurToolStripMenuItem.Text = "Par secteur";
+            this.parSecteurToolStripMenuItem.Click += new System.EventHandler(this.parSecteurToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
@@ -136,6 +137,28 @@
             this.ficheDeFrais.Size = new System.Drawing.Size(134, 27);
             this.ficheDeFrais.Text = "Fiche de frais";
             this.ficheDeFrais.Click += new System.EventHandler(this.ficheDeFraisToolStripMenuItem_Click);
+            // 
+            // rapportToolStripMenuItem
+            // 
+            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualiserToolStripMenuItem,
+            this.modifierToolStripMenuItem});
+            this.rapportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
+            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
+            this.rapportToolStripMenuItem.Text = "Rapport";
+            // 
+            // visualiserToolStripMenuItem
+            // 
+            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
+            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.visualiserToolStripMenuItem.Text = "Visualiser";
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.modifierToolStripMenuItem.Text = "Modifier";
             // 
             // dgv_util
             // 
@@ -179,27 +202,6 @@
             this.button1.Text = "Déconnexion";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // rapportToolStripMenuItem
-            // 
-            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualiserToolStripMenuItem,
-            this.modifierToolStripMenuItem});
-            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
-            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
-            this.rapportToolStripMenuItem.Text = "Rapport";
-            // 
-            // visualiserToolStripMenuItem
-            // 
-            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
-            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.visualiserToolStripMenuItem.Text = "Visualiser";
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.modifierToolStripMenuItem.Text = "Modifier";
             // 
             // FMenu
             // 
