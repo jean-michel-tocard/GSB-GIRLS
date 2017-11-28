@@ -176,7 +176,6 @@
             this.msDeconnexion.Name = "msDeconnexion";
             this.msDeconnexion.Size = new System.Drawing.Size(130, 27);
             this.msDeconnexion.Text = "Deconnexion";
-            this.msDeconnexion.Click += new System.EventHandler(this.msDeconnexion_Click);
             // 
             // dgv_util
             // 
