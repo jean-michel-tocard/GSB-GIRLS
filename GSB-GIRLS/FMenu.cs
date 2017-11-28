@@ -185,5 +185,23 @@ namespace GSB_GIRLS
             gc.Show();
             this.Hide();
         }
+
+        private void visualiserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RapportVisite rv = new RapportVisite(maConnexion, levisiteur);
+            rv.Show();
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModifCRVisite rv = new ModifCRVisite(maConnexion, levisiteur);
+            rv.Show();
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreationRapport rv = new CreationRapport(maConnexion, levisiteur);
+            rv.Show();
+        }
     }
 }

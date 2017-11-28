@@ -45,6 +45,7 @@
             this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +185,8 @@
             // 
             this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visualiserToolStripMenuItem,
-            this.modifierToolStripMenuItem});
+            this.modifierToolStripMenuItem,
+            this.ajouterToolStripMenuItem});
             this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
             this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
             this.rapportToolStripMenuItem.Text = "Rapport";
@@ -194,12 +196,21 @@
             this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
             this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
             this.visualiserToolStripMenuItem.Text = "Visualiser";
+            this.visualiserToolStripMenuItem.Click += new System.EventHandler(this.visualiserToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
             this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // FMenu
             // 
@@ -247,5 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem rapportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualiserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
     }
 }
