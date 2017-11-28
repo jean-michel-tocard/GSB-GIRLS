@@ -82,28 +82,28 @@
             // laboratoireToolStripMenuItem
             // 
             this.laboratoireToolStripMenuItem.Name = "laboratoireToolStripMenuItem";
-            this.laboratoireToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.laboratoireToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
             this.laboratoireToolStripMenuItem.Text = "Par laboratoire";
             this.laboratoireToolStripMenuItem.Click += new System.EventHandler(this.laboratoireToolStripMenuItem_Click);
             // 
             // regionsToolStripMenuItem
             // 
             this.regionsToolStripMenuItem.Name = "regionsToolStripMenuItem";
-            this.regionsToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.regionsToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
             this.regionsToolStripMenuItem.Text = "Par régions";
             this.regionsToolStripMenuItem.Click += new System.EventHandler(this.regionsToolStripMenuItem_Click);
             // 
             // parSecteurToolStripMenuItem
             // 
             this.parSecteurToolStripMenuItem.Name = "parSecteurToolStripMenuItem";
-            this.parSecteurToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.parSecteurToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
             this.parSecteurToolStripMenuItem.Text = "Par secteur";
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
-            this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
+            this.modificationToolStripMenuItem.Text = "Tous les visiteurs";
             this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // msProfil

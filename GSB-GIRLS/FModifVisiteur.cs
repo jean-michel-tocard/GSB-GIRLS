@@ -37,7 +37,10 @@ namespace GSB_GIRLS
 
                 Modele.MaConnexion.SaveChanges();
                 MessageBox.Show("Modification réussie", "Action");
-                this.Close();
+
+                FModif modif = new FModif();
+                modif.Show();
+                this.Hide();
             }
 
             catch (Exception ex)
@@ -50,7 +53,9 @@ namespace GSB_GIRLS
         {
             if (MessageBox.Show("Voulez-vous vraiment annuler les modifications ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                FModif modif = new FModif();
+                modif.Show();
+                this.Hide();
             }
             else
             {
