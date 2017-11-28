@@ -40,7 +40,7 @@ namespace GSB_GIRLS
 
               FModifVisiteur fmodifvisiteur = new FModifVisiteur(monVisiteur);
               fmodifvisiteur.Show();
-               this.Hide();
+               //this.Hide();
         }
 
         private void FModif_Load(object sender, EventArgs e)
