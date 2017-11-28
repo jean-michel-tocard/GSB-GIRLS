@@ -40,7 +40,7 @@ namespace GSB_GIRLS
 
               FModifVisiteur fmodifvisiteur = new FModifVisiteur(monVisiteur);
               fmodifvisiteur.Show();
-            this.Hide();
+               this.Hide();
         }
 
         private void FModif_Load(object sender, EventArgs e)
@@ -73,6 +73,20 @@ namespace GSB_GIRLS
             
             dgvVisiteurs.Columns[6].Visible = false;
             dgvVisiteurs.Rows[0].Selected = true;
+
+            // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
+            if (levisiteur.droit == 0)
+            {
+
+                btnSupp.Visible = false;
+                btnModif.Visible = false;
+                btnajouter.Visible = false;
+            }
+
+            //msRapportVisite.Visible = false;
+            dgvVisiteurs.Visible = true;
+
+
         }
 
         private void retour_Click(object sender, EventArgs e)

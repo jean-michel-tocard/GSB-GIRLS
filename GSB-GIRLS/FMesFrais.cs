@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FMesFrais : Form
+    public partial class FMesFrais : Accueil
     {
         public FMesFrais()
         {
