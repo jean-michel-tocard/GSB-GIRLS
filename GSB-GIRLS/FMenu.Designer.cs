@@ -30,18 +30,18 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionVisiteur = new System.Windows.Forms.ToolStripMenuItem();
-            this.laboratoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laboratoire = new System.Windows.Forms.ToolStripMenuItem();
             this.regionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msProfil = new System.Windows.Forms.ToolStripMenuItem();
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
+            this.ficheDeFrais = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.ficheDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionVisiteur,
             this.msProfil,
-            this.ficheDeFraisToolStripMenuItem});
+            this.ficheDeFrais});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(777, 31);
@@ -63,7 +63,7 @@
             // gestionVisiteur
             // 
             this.gestionVisiteur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.laboratoireToolStripMenuItem,
+            this.laboratoire,
             this.regionsToolStripMenuItem,
             this.parSecteurToolStripMenuItem,
             this.modificationToolStripMenuItem});
@@ -73,12 +73,12 @@
             this.gestionVisiteur.Text = "Visiteurs";
             this.gestionVisiteur.Click += new System.EventHandler(this.gestionVisiteur_Click);
             // 
-            // laboratoireToolStripMenuItem
+            // laboratoire
             // 
-            this.laboratoireToolStripMenuItem.Name = "laboratoireToolStripMenuItem";
-            this.laboratoireToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
-            this.laboratoireToolStripMenuItem.Text = "Par laboratoire";
-            this.laboratoireToolStripMenuItem.Click += new System.EventHandler(this.laboratoireToolStripMenuItem_Click);
+            this.laboratoire.Name = "laboratoire";
+            this.laboratoire.Size = new System.Drawing.Size(221, 28);
+            this.laboratoire.Text = "Par laboratoire";
+            this.laboratoire.Click += new System.EventHandler(this.laboratoireToolStripMenuItem_Click);
             // 
             // regionsToolStripMenuItem
             // 
@@ -125,12 +125,20 @@
             this.msDonnées.Text = "Voir Données";
             this.msDonnées.Click += new System.EventHandler(this.msDonnées_Click);
             // 
+            // ficheDeFrais
+            // 
+            this.ficheDeFrais.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ficheDeFrais.Name = "ficheDeFrais";
+            this.ficheDeFrais.Size = new System.Drawing.Size(134, 27);
+            this.ficheDeFrais.Text = "Fiche de frais";
+            this.ficheDeFrais.Click += new System.EventHandler(this.ficheDeFraisToolStripMenuItem_Click);
+            // 
             // dgv_util
             // 
             this.dgv_util.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_util.Location = new System.Drawing.Point(102, 55);
+            this.dgv_util.Location = new System.Drawing.Point(17, 164);
             this.dgv_util.Name = "dgv_util";
-            this.dgv_util.Size = new System.Drawing.Size(516, 305);
+            this.dgv_util.Size = new System.Drawing.Size(727, 78);
             this.dgv_util.TabIndex = 2;
             // 
             // lbTitre
@@ -168,13 +176,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ficheDeFraisToolStripMenuItem
-            // 
-            this.ficheDeFraisToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ficheDeFraisToolStripMenuItem.Name = "ficheDeFraisToolStripMenuItem";
-            this.ficheDeFraisToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
-            this.ficheDeFraisToolStripMenuItem.Text = "Fiche de frais";
-            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,7 +208,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestionVisiteur;
         private System.Windows.Forms.ToolStripMenuItem msProfil;
-        private System.Windows.Forms.ToolStripMenuItem laboratoireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem laboratoire;
         private System.Windows.Forms.ToolStripMenuItem regionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parSecteurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
@@ -217,6 +218,6 @@
         private System.Windows.Forms.Label lbTitre;
         private System.Windows.Forms.Label lbInformations;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripMenuItem ficheDeFraisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ficheDeFrais;
     }
 }
