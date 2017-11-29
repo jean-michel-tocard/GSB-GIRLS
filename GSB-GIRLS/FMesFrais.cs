@@ -19,9 +19,10 @@ namespace GSB_GIRLS
 
         private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FSaisie fparSaisieFrais = new FSaisie();
-            fparSaisieFrais.MdiParent = this;
-            fparSaisieFrais.Show();
+            FSaisie fs = new FSaisie();
+            //menu.MdiParent = this;
+            fs.Show();
+            this.Hide();
         }
 
         private void FMesFrais_Load(object sender, EventArgs e)

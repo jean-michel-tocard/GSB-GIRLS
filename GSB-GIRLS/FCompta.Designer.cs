@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.linkEdition = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboChoixV = new System.Windows.Forms.ComboBox();
@@ -45,19 +44,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
             this.txtNbJustif = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.bsFraisForfait = new System.Windows.Forms.BindingSource(this.components);
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMatricule = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
+            this.bsFraisForfait = new System.Windows.Forms.BindingSource(this.components);
             this.bsMois = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
@@ -91,7 +91,7 @@
             this.linkEdition.TabIndex = 7;
             this.linkEdition.TabStop = true;
             this.linkEdition.Text = "Edition fiches du mois";
-            this.linkEdition.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEdition_LinkClicked);
+            this.linkEdition.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEdition_LinkClicked_1);
             // 
             // label1
             // 
@@ -102,16 +102,6 @@
             this.label1.Size = new System.Drawing.Size(383, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Suivi du rembourssement des frais";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GSB_GIRLS.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -138,7 +128,6 @@
             this.cboChoixV.Name = "cboChoixV";
             this.cboChoixV.Size = new System.Drawing.Size(121, 21);
             this.cboChoixV.TabIndex = 14;
-            this.cboChoixV.SelectedIndexChanged += new System.EventHandler(this.cboChoixV_SelectedIndexChanged);
             // 
             // cboMois
             // 
@@ -147,7 +136,6 @@
             this.cboMois.Name = "cboMois";
             this.cboMois.Size = new System.Drawing.Size(121, 21);
             this.cboMois.TabIndex = 15;
-            this.cboMois.SelectedIndexChanged += new System.EventHandler(this.cboMois_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -272,6 +260,16 @@
             this.txtMatricule.Size = new System.Drawing.Size(164, 20);
             this.txtMatricule.TabIndex = 64;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GSB_GIRLS.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,9 +301,9 @@
             this.Name = "FCompta";
             this.Text = "FCompta";
             this.Load += new System.EventHandler(this.FCompta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsChoixV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();

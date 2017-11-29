@@ -24,5 +24,13 @@ namespace GSB_GIRLS
             fparCompta.Show();
 
         }
+
+        private void linkAccCompt_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FCompta fc = new FCompta();
+            //menu.MdiParent = this;
+            fc.Show();
+            this.Show();
+        }
     }
 }

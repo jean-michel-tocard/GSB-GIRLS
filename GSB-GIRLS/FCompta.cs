@@ -85,6 +85,12 @@ namespace GSB_GIRLS
 
         }
 
-
+        private void linkEdition_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FEditionFiche edition = new FEditionFiche();
+            //menu.MdiParent = this;
+            edition.Show();
+            this.Hide();
+        }
     }
 }

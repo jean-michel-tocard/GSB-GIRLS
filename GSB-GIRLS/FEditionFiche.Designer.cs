@@ -105,7 +105,7 @@
             this.linkAccCompt.TabIndex = 21;
             this.linkAccCompt.TabStop = true;
             this.linkAccCompt.Text = "Accueil Comptable";
-            
+            this.linkAccCompt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAccCompt_LinkClicked_1);
             // 
             // FEditionFiche
             // 
