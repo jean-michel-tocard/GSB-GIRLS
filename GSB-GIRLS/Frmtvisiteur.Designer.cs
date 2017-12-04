@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FSecteur
+    partial class Frmtvisiteur
     {
         /// <summary>
         /// Required designer variable.
@@ -29,63 +29,66 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.cboSecteur = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgvVisiteurs = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.retour = new System.Windows.Forms.Button();
             this.bsVisiteurs = new System.Windows.Forms.BindingSource(this.components);
-            this.bssecteur = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).BeginInit();
             this.SuspendLayout();
             // 
-            // cboSecteur
+            // dgvVisiteurs
             // 
-            this.cboSecteur.FormattingEnabled = true;
-            this.cboSecteur.Location = new System.Drawing.Point(355, 38);
-            this.cboSecteur.Name = "cboSecteur";
-            this.cboSecteur.Size = new System.Drawing.Size(283, 21);
-            this.cboSecteur.TabIndex = 9;
+            this.dgvVisiteurs.AllowUserToAddRows = false;
+            this.dgvVisiteurs.AllowUserToDeleteRows = false;
+            this.dgvVisiteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisiteurs.Location = new System.Drawing.Point(101, 79);
+            this.dgvVisiteurs.Name = "dgvVisiteurs";
+            this.dgvVisiteurs.ReadOnly = true;
+            this.dgvVisiteurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVisiteurs.Size = new System.Drawing.Size(531, 230);
+            this.dgvVisiteurs.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(43, 26);
+            this.label2.Location = new System.Drawing.Point(226, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 33);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Secteurs";
+            this.label2.Size = new System.Drawing.Size(243, 33);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Tous les visiteurs";
             // 
-            // dgvVisiteurs
+            // retour
             // 
-            this.dgvVisiteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisiteurs.Location = new System.Drawing.Point(368, 97);
-            this.dgvVisiteurs.Name = "dgvVisiteurs";
-            this.dgvVisiteurs.Size = new System.Drawing.Size(405, 187);
-            this.dgvVisiteurs.TabIndex = 22;
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(26, 345);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 9;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
-            // bsVisiteurs
-            // 
-            this.bsVisiteurs.DataSource = typeof(GSB_GIRLS.Visiteur);
-            // 
-            // FSecteur
+            // Ftvisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 402);
+            this.ClientSize = new System.Drawing.Size(766, 387);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.dgvVisiteurs);
-            this.Controls.Add(this.cboSecteur);
             this.Controls.Add(this.label2);
-            this.Name = "FSecteur";
-            this.Text = "FSecteur";
+            this.Name = "Ftvisiteur";
+            this.Text = "Ftvisiteur";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormulaireVisiteurs_FormClosing);
+            this.Load += new System.EventHandler(this.FVisiteur_Load);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.cboSecteur, 0);
             this.Controls.SetChildIndex(this.dgvVisiteurs, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,10 +96,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboSecteur;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvVisiteurs;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button retour;
         private System.Windows.Forms.BindingSource bsVisiteurs;
-        private System.Windows.Forms.BindingSource bssecteur;
     }
 }

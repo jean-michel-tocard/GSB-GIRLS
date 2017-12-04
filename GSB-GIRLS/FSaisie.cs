@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace GSB_GIRLS
 {
     public partial class FSaisie : Form
-    {
+    {   
         public FSaisie()
         {
             InitializeComponent();
@@ -19,9 +19,10 @@ namespace GSB_GIRLS
 
         private void linkMesFiches_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FMesFrais fparMesFrais = new FMesFrais();
-            fparMesFrais.MdiParent = this;
-            fparMesFrais.Show();
+          FMesFrais mf = new FMesFrais();
+            //menu.MdiParent = this;
+            mf.Show();
+            this.Hide();
         }
 
 
@@ -178,18 +179,7 @@ namespace GSB_GIRLS
         //ajoute une ligne des frais hors forfaits
         private void btnAjouterLigne_Click(object sender, EventArgs e)
         { 
-            if (dgvAutreFrais.RowCount > 0)
-            {
-                //dgvAutreFrais.RowValidating(dgvAutreFrais, new DataGridViewCellCancelEventArgs(1, dgvAutreFrais.RowCount - 1));
-                if (dgvAutreFrais.Rows[dgvAutreFrais.RowCount - 1].ErrorText == "")
-                {
-                    dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
-                }
-            }
-            else
-            {
-                dgvAutreFrais.Rows.Add(new Object[] { dtpAjoutDate.Value.ToString("d"), "", "0" });
-            }
+          
         
     }
        
@@ -209,15 +199,7 @@ namespace GSB_GIRLS
             uneFiche.idEtat = "CR";
             var ficheFrais = Modele.MaConnexion.fichefrais.ToList()
                     .Where(x => x.idVisiteur == Modele.VisiteurConnect.idVisiteur.ToString() && x.mois == moisEnCour);
-            if (ficheFrais.Count() == 0)
-            {
-               // Modele.MaConnexion.fichefrais.AddObject(uneFiche);
-            }
-            else
-            {
-                ficheFrais.First().dateModif = DateTime.Now;
-                ficheFrais.First().montantValide = 0;
-            }
+            
 
 
             // Nuitée
@@ -233,7 +215,7 @@ namespace GSB_GIRLS
                 MessageBox.Show(ficheFrais.Count().ToString());
                 if (ligneNuitee.Count() == 0)
                 {
-                    //Modele.MaConnexion.LigneFraisForfait.AddObject(unFrais);
+                    Modele.MaConnexion.LigneFraisForfait.Add(unFrais);
                 }
                 else
                 {

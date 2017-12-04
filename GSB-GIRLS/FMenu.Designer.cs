@@ -38,14 +38,19 @@
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
             this.ficheDeFrais = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgv_util = new System.Windows.Forms.DataGridView();
-            this.lbTitre = new System.Windows.Forms.Label();
-            this.lbInformations = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ajouterFicheDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesFichesDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lesFichesDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgv_util = new System.Windows.Forms.DataGridView();
+            this.lbTitre = new System.Windows.Forms.Label();
+            this.lbInformations = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +63,8 @@
             this.gestionVisiteur,
             this.msProfil,
             this.ficheDeFrais,
-            this.rapportToolStripMenuItem});
+            this.rapportToolStripMenuItem,
+            this.comptableToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(777, 31);
@@ -132,11 +138,83 @@
             // 
             // ficheDeFrais
             // 
+            this.ficheDeFrais.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterFicheDeFraisToolStripMenuItem,
+            this.mesFichesDeFraisToolStripMenuItem});
             this.ficheDeFrais.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ficheDeFrais.Name = "ficheDeFrais";
             this.ficheDeFrais.Size = new System.Drawing.Size(134, 27);
             this.ficheDeFrais.Text = "Fiche de frais";
             this.ficheDeFrais.Click += new System.EventHandler(this.ficheDeFraisToolStripMenuItem_Click);
+            // 
+            // ajouterFicheDeFraisToolStripMenuItem
+            // 
+            this.ajouterFicheDeFraisToolStripMenuItem.Name = "ajouterFicheDeFraisToolStripMenuItem";
+            this.ajouterFicheDeFraisToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
+            this.ajouterFicheDeFraisToolStripMenuItem.Text = "Ajouter fiche de frais";
+            this.ajouterFicheDeFraisToolStripMenuItem.Click += new System.EventHandler(this.ajouterFicheDeFraisToolStripMenuItem_Click);
+            // 
+            // mesFichesDeFraisToolStripMenuItem
+            // 
+            this.mesFichesDeFraisToolStripMenuItem.Name = "mesFichesDeFraisToolStripMenuItem";
+            this.mesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
+            this.mesFichesDeFraisToolStripMenuItem.Text = "Mes Fiches de frais";
+            // 
+            // rapportToolStripMenuItem
+            // 
+            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualiserToolStripMenuItem,
+            this.modifierToolStripMenuItem,
+            this.ajouterToolStripMenuItem});
+            this.rapportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
+            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
+            this.rapportToolStripMenuItem.Text = "Rapport";
+            // 
+            // visualiserToolStripMenuItem
+            // 
+            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
+            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.visualiserToolStripMenuItem.Text = "Visualiser";
+            this.visualiserToolStripMenuItem.Click += new System.EventHandler(this.visualiserToolStripMenuItem_Click);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // comptableToolStripMenuItem
+            // 
+            this.comptableToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lesFichesDeFraisToolStripMenuItem,
+            this.editionToolStripMenuItem});
+            this.comptableToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.comptableToolStripMenuItem.Name = "comptableToolStripMenuItem";
+            this.comptableToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
+            this.comptableToolStripMenuItem.Text = "Comptable";
+            // 
+            // lesFichesDeFraisToolStripMenuItem
+            // 
+            this.lesFichesDeFraisToolStripMenuItem.Name = "lesFichesDeFraisToolStripMenuItem";
+            this.lesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
+            this.lesFichesDeFraisToolStripMenuItem.Text = "Les fiches de frais";
+            this.lesFichesDeFraisToolStripMenuItem.Click += new System.EventHandler(this.lesFichesDeFraisToolStripMenuItem_Click);
+            // 
+            // editionToolStripMenuItem
+            // 
+            this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
+            this.editionToolStripMenuItem.Text = "Edition";
+            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
             // dgv_util
             // 
@@ -180,37 +258,6 @@
             this.button1.Text = "Déconnexion";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // rapportToolStripMenuItem
-            // 
-            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualiserToolStripMenuItem,
-            this.modifierToolStripMenuItem,
-            this.ajouterToolStripMenuItem});
-            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
-            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
-            this.rapportToolStripMenuItem.Text = "Rapport";
-            // 
-            // visualiserToolStripMenuItem
-            // 
-            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
-            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.visualiserToolStripMenuItem.Text = "Visualiser";
-            this.visualiserToolStripMenuItem.Click += new System.EventHandler(this.visualiserToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.modifierToolStripMenuItem.Text = "Modifier";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // FMenu
             // 
@@ -259,5 +306,10 @@
         private System.Windows.Forms.ToolStripMenuItem visualiserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterFicheDeFraisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesFichesDeFraisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comptableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lesFichesDeFraisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
     }
 }

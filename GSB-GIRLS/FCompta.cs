@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FCompta : Form
+    public partial class FCompta : Accueil
     {
+        bool fermeture = false;
         private bool bLoad = true;
         public FCompta()
         {
@@ -85,6 +86,23 @@ namespace GSB_GIRLS
 
         }
 
+        private void linkEdition_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FEditionFiche edition = new FEditionFiche();
+            //menu.MdiParent = this;
+            edition.Show();
+            this.Hide();
+        }
 
+        private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fermeture = true;
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            fermeture = true;
+            this.Close();
+        }
     }
 }

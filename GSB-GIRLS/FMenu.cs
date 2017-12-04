@@ -21,13 +21,14 @@ namespace GSB_GIRLS
             InitializeComponent();
             maConnexion = MaConnexion;
             levisiteur = Levisiteur;
+            Modele.MonVisiteur = levisiteur;
         }
 
         private void informationsRégionsEtSecteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRS rs = new FrmRS();
             rs.Show();
-            this.Hide();
+          
         }
 
         private void gestionCompte_Click(object sender, EventArgs e)
@@ -42,26 +43,26 @@ namespace GSB_GIRLS
 
         private void laboratoireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FLabo labo = new FLabo();
+            FrmLabo labo = new FrmLabo();
             //menu.MdiParent = this;
             labo.Show();
-            this.Hide();
+            
         }
 
         private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRegion region = new FRegion();
+            FrmRegion region = new FrmRegion();
             //menu.MdiParent = this;
             region.Show();
-            this.Hide();
+            
         }
 
         private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FModif modif= new FModif();
+            FrmModif modif= new FrmModif();
             //menu.MdiParent = this;
             modif.Show();
-            this.Hide();
+            
         }
 
         private void msDonnées_Click(object sender, EventArgs e)
@@ -149,7 +150,7 @@ namespace GSB_GIRLS
             GestionCompte gc = new GestionCompte();
             //menu.MdiParent = this;
             gc.Show();
-            this.Hide();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -181,9 +182,7 @@ namespace GSB_GIRLS
 
         private void ficheDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FMesFrais gc = new FMesFrais();
-            gc.Show();
-            this.Hide();
+        
         }
 
         private void visualiserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,6 +201,27 @@ namespace GSB_GIRLS
         {
             CreationRapport rv = new CreationRapport(maConnexion, levisiteur);
             rv.Show();
+        }
+
+        private void ajouterFicheDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ficheDeFrais fdf = new ficheDeFrais();
+            fdf.Show();
+           
+        }
+
+        private void lesFichesDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCompta fc = new FCompta();
+            fc.Show();
+            
+        }
+
+        private void editionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FEditionFiche fed = new FEditionFiche();
+            fed.Show();
+            
         }
     }
 }

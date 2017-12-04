@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FEditionFiche : Form
+    public partial class FEditionFiche : Accueil
     {
+        bool fermeture = false;
         public FEditionFiche()
         {
             InitializeComponent();
@@ -23,6 +24,25 @@ namespace GSB_GIRLS
             fparCompta.MdiParent = this;
             fparCompta.Show();
 
+        }
+
+        private void linkAccCompt_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FCompta fc = new FCompta();
+            //menu.MdiParent = this;
+            fc.Show();
+            this.Show();
+        }
+
+        private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fermeture = true;
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            fermeture = true;
+            this.Close();
         }
     }
 }

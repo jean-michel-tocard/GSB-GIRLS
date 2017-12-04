@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FLabo : Accueil
+    public partial class FrmLabo : Accueil
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
         bool fermeture = false;
-        public FLabo()
+        public FrmLabo()
         {
             InitializeComponent();
             maConnexion = new GSBgirls();
@@ -62,10 +62,8 @@ namespace GSB_GIRLS
 
         private void retour_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu(maConnexion, levisiteur);
-            //menu.MdiParent = this;
-            menu.Show();
-            this.Hide();
+            fermeture = true;
+            this.Close();
         }
     }
 

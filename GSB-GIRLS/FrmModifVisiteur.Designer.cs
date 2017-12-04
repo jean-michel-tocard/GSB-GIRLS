@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FModifVisiteur
+    partial class FrmModifVisiteur
     {
         /// <summary>
         /// Required designer variable.

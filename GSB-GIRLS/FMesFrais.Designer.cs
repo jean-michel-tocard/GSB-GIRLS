@@ -30,36 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboMois = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dgvElementForfaitise = new System.Windows.Forms.DataGridView();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkSaisieFrais = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.bsMois = new System.Windows.Forms.BindingSource(this.components);
-            this.txtEtat = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.dgvFMois = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNbJustificatifs = new System.Windows.Forms.TextBox();
-            this.dgvHorsForfait = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtMatricule = new System.Windows.Forms.TextBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tbEtat = new System.Windows.Forms.TextBox();
+            this.dgvFraisForfaitaires = new System.Windows.Forms.DataGridView();
+            this.tbMatricule = new System.Windows.Forms.TextBox();
+            this.tbVisiteur = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvAutresFrais = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnSupprimerForfait = new System.Windows.Forms.Button();
+            this.btnModifFraisForfait = new System.Windows.Forms.Button();
+            this.btnAjout = new System.Windows.Forms.Button();
+            this.btnSuppr = new System.Windows.Forms.Button();
+            this.cbMois = new System.Windows.Forms.ComboBox();
+            this.bsFraisForfaitaires = new System.Windows.Forms.BindingSource(this.components);
+            this.bsAutresFrais = new System.Windows.Forms.BindingSource(this.components);
+            this.retour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorsForfait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfaitaires)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutresFrais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfaitaires)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsAutresFrais)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,16 +82,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulter mes fiches de frais";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(395, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mois à sélectionner :";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -90,24 +90,6 @@
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mois : ";
-            // 
-            // cboMois
-            // 
-            this.cboMois.FormattingEnabled = true;
-            this.cboMois.Location = new System.Drawing.Point(464, 286);
-            this.cboMois.Name = "cboMois";
-            this.cboMois.Size = new System.Drawing.Size(164, 21);
-            this.cboMois.TabIndex = 3;
-            this.cboMois.SelectedIndexChanged += new System.EventHandler(this.cboMois_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(673, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Valider ";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -132,16 +114,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(399, 423);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 13);
             this.label6.TabIndex = 29;
             this.label6.Text = "Etat : Saisie clôturée depuis le ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(399, 448);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 13);
@@ -158,28 +141,10 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Elements forfaitisés";
             // 
-            // dgvElementForfaitise
-            // 
-            this.dgvElementForfaitise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvElementForfaitise.Location = new System.Drawing.Point(15, 583);
-            this.dgvElementForfaitise.Name = "dgvElementForfaitise";
-            this.dgvElementForfaitise.Size = new System.Drawing.Size(547, 265);
-            this.dgvElementForfaitise.TabIndex = 32;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 246);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(70, 13);
-            this.linkLabel1.TabIndex = 36;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Déconnexion";
-            // 
             // linkSaisieFrais
             // 
             this.linkSaisieFrais.AutoSize = true;
-            this.linkSaisieFrais.Location = new System.Drawing.Point(9, 221);
+            this.linkSaisieFrais.Location = new System.Drawing.Point(9, 246);
             this.linkSaisieFrais.Name = "linkSaisieFrais";
             this.linkSaisieFrais.Size = new System.Drawing.Size(98, 13);
             this.linkSaisieFrais.TabIndex = 33;
@@ -197,18 +162,11 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Suivi du remboursement des frais";
             // 
-            // txtEtat
-            // 
-            this.txtEtat.Location = new System.Drawing.Point(566, 419);
-            this.txtEtat.Name = "txtEtat";
-            this.txtEtat.Size = new System.Drawing.Size(100, 20);
-            this.txtEtat.TabIndex = 38;
-            // 
             // txtMontant
             // 
             this.txtMontant.Location = new System.Drawing.Point(566, 445);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(100, 20);
+            this.txtMontant.Size = new System.Drawing.Size(155, 20);
             this.txtMontant.TabIndex = 39;
             // 
             // dgvFMois
@@ -223,28 +181,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(399, 481);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(147, 13);
             this.label10.TabIndex = 42;
             this.label10.Text = "Nombre de  justificatifs fournis";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtNbJustificatifs
             // 
             this.txtNbJustificatifs.Location = new System.Drawing.Point(566, 478);
             this.txtNbJustificatifs.Name = "txtNbJustificatifs";
-            this.txtNbJustificatifs.Size = new System.Drawing.Size(100, 20);
+            this.txtNbJustificatifs.Size = new System.Drawing.Size(155, 20);
             this.txtNbJustificatifs.TabIndex = 41;
-            this.txtNbJustificatifs.TextChanged += new System.EventHandler(this.txtNbJustificatifs_TextChanged);
-            // 
-            // dgvHorsForfait
-            // 
-            this.dgvHorsForfait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHorsForfait.Location = new System.Drawing.Point(588, 583);
-            this.dgvHorsForfait.Name = "dgvHorsForfait";
-            this.dgvHorsForfait.Size = new System.Drawing.Size(501, 265);
-            this.dgvHorsForfait.TabIndex = 43;
             // 
             // label11
             // 
@@ -259,75 +208,247 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 190);
+            this.label9.Location = new System.Drawing.Point(9, 206);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 65;
             this.label9.Text = "Matricule :";
             // 
-            // txtMatricule
-            // 
-            this.txtMatricule.Enabled = false;
-            this.txtMatricule.Location = new System.Drawing.Point(68, 189);
-            this.txtMatricule.Name = "txtMatricule";
-            this.txtMatricule.Size = new System.Drawing.Size(155, 20);
-            this.txtMatricule.TabIndex = 64;
-            // 
-            // txtNom
-            // 
-            this.txtNom.Enabled = false;
-            this.txtNom.Location = new System.Drawing.Point(68, 163);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(155, 20);
-            this.txtNom.TabIndex = 63;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 166);
+            this.label12.Location = new System.Drawing.Point(12, 182);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 62;
             this.label12.Text = "Visiteur : ";
+            // 
+            // tbEtat
+            // 
+            this.tbEtat.Enabled = false;
+            this.tbEtat.Location = new System.Drawing.Point(566, 416);
+            this.tbEtat.Name = "tbEtat";
+            this.tbEtat.Size = new System.Drawing.Size(155, 20);
+            this.tbEtat.TabIndex = 70;
+            // 
+            // dgvFraisForfaitaires
+            // 
+            this.dgvFraisForfaitaires.AllowUserToAddRows = false;
+            this.dgvFraisForfaitaires.AllowUserToDeleteRows = false;
+            this.dgvFraisForfaitaires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFraisForfaitaires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFraisForfaitaires.Location = new System.Drawing.Point(25, 583);
+            this.dgvFraisForfaitaires.Name = "dgvFraisForfaitaires";
+            this.dgvFraisForfaitaires.ReadOnly = true;
+            this.dgvFraisForfaitaires.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFraisForfaitaires.Size = new System.Drawing.Size(483, 249);
+            this.dgvFraisForfaitaires.TabIndex = 69;
+            // 
+            // tbMatricule
+            // 
+            this.tbMatricule.Enabled = false;
+            this.tbMatricule.Location = new System.Drawing.Point(68, 205);
+            this.tbMatricule.Name = "tbMatricule";
+            this.tbMatricule.Size = new System.Drawing.Size(155, 20);
+            this.tbMatricule.TabIndex = 67;
+            // 
+            // tbVisiteur
+            // 
+            this.tbVisiteur.Enabled = false;
+            this.tbVisiteur.Location = new System.Drawing.Point(68, 179);
+            this.tbVisiteur.Name = "tbVisiteur";
+            this.tbVisiteur.Size = new System.Drawing.Size(155, 20);
+            this.tbVisiteur.TabIndex = 66;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(395, 238);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mois à sélectionner :";
+            // 
+            // dgvAutresFrais
+            // 
+            this.dgvAutresFrais.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAutresFrais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAutresFrais.Location = new System.Drawing.Point(650, 592);
+            this.dgvAutresFrais.Name = "dgvAutresFrais";
+            this.dgvAutresFrais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAutresFrais.Size = new System.Drawing.Size(402, 240);
+            this.dgvAutresFrais.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(586, 583);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(18, 20);
+            this.label13.TabIndex = 78;
+            this.label13.Text = "€";
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbTotal.Location = new System.Drawing.Point(533, 583);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(18, 20);
+            this.lbTotal.TabIndex = 77;
+            this.lbTotal.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(537, 551);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 20);
+            this.label14.TabIndex = 76;
+            this.label14.Text = "Total :";
+            // 
+            // btnSupprimerForfait
+            // 
+            this.btnSupprimerForfait.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimerForfait.Location = new System.Drawing.Point(97, 838);
+            this.btnSupprimerForfait.Name = "btnSupprimerForfait";
+            this.btnSupprimerForfait.Size = new System.Drawing.Size(115, 33);
+            this.btnSupprimerForfait.TabIndex = 75;
+            this.btnSupprimerForfait.Text = "Supprimer";
+            this.btnSupprimerForfait.UseVisualStyleBackColor = true;
+            // 
+            // btnModifFraisForfait
+            // 
+            this.btnModifFraisForfait.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifFraisForfait.Location = new System.Drawing.Point(317, 838);
+            this.btnModifFraisForfait.Name = "btnModifFraisForfait";
+            this.btnModifFraisForfait.Size = new System.Drawing.Size(121, 33);
+            this.btnModifFraisForfait.TabIndex = 74;
+            this.btnModifFraisForfait.Text = "Modifier";
+            this.btnModifFraisForfait.UseVisualStyleBackColor = true;
+            // 
+            // btnAjout
+            // 
+            this.btnAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjout.Location = new System.Drawing.Point(949, 837);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(115, 33);
+            this.btnAjout.TabIndex = 73;
+            this.btnAjout.Text = "Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = true;
+            // 
+            // btnSuppr
+            // 
+            this.btnSuppr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppr.Location = new System.Drawing.Point(729, 837);
+            this.btnSuppr.Name = "btnSuppr";
+            this.btnSuppr.Size = new System.Drawing.Size(115, 33);
+            this.btnSuppr.TabIndex = 72;
+            this.btnSuppr.Text = "Supprimer";
+            this.btnSuppr.UseVisualStyleBackColor = true;
+            // 
+            // cbMois
+            // 
+            this.cbMois.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMois.FormattingEnabled = true;
+            this.cbMois.Location = new System.Drawing.Point(446, 281);
+            this.cbMois.Name = "cbMois";
+            this.cbMois.Size = new System.Drawing.Size(100, 21);
+            this.cbMois.TabIndex = 79;
+            // 
+            // retour
+            // 
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(963, 12);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 80;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 882);
+            this.Controls.Add(this.retour);
+            this.Controls.Add(this.cbMois);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnSupprimerForfait);
+            this.Controls.Add(this.btnModifFraisForfait);
+            this.Controls.Add(this.btnAjout);
+            this.Controls.Add(this.btnSuppr);
+            this.Controls.Add(this.dgvAutresFrais);
+            this.Controls.Add(this.tbEtat);
+            this.Controls.Add(this.dgvFraisForfaitaires);
+            this.Controls.Add(this.tbMatricule);
+            this.Controls.Add(this.tbVisiteur);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtMatricule);
-            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dgvHorsForfait);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtNbJustificatifs);
             this.Controls.Add(this.txtMontant);
-            this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkSaisieFrais);
-            this.Controls.Add(this.dgvElementForfaitise);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cboMois);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFMois);
             this.Name = "FMesFrais";
             this.Text = "FMesFrais";
             this.Load += new System.EventHandler(this.FMesFrais_Load);
+            this.Controls.SetChildIndex(this.dgvFMois, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.linkSaisieFrais, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtMontant, 0);
+            this.Controls.SetChildIndex(this.txtNbJustificatifs, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.tbVisiteur, 0);
+            this.Controls.SetChildIndex(this.tbMatricule, 0);
+            this.Controls.SetChildIndex(this.dgvFraisForfaitaires, 0);
+            this.Controls.SetChildIndex(this.tbEtat, 0);
+            this.Controls.SetChildIndex(this.dgvAutresFrais, 0);
+            this.Controls.SetChildIndex(this.btnSuppr, 0);
+            this.Controls.SetChildIndex(this.btnAjout, 0);
+            this.Controls.SetChildIndex(this.btnModifFraisForfait, 0);
+            this.Controls.SetChildIndex(this.btnSupprimerForfait, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.lbTotal, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
+            this.Controls.SetChildIndex(this.cbMois, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvElementForfaitise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorsForfait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfaitaires)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAutresFrais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfaitaires)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsAutresFrais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,30 +457,38 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboMois;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dgvElementForfaitise;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkSaisieFrais;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource bsMois;
-        private System.Windows.Forms.TextBox txtEtat;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.DataGridView dgvFMois;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNbJustificatifs;
-        private System.Windows.Forms.DataGridView dgvHorsForfait;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtMatricule;
-        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbEtat;
+        private System.Windows.Forms.DataGridView dgvFraisForfaitaires;
+        private System.Windows.Forms.TextBox tbMatricule;
+        private System.Windows.Forms.TextBox tbVisiteur;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvAutresFrais;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnSupprimerForfait;
+        private System.Windows.Forms.Button btnModifFraisForfait;
+        private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.Button btnSuppr;
+        private System.Windows.Forms.ComboBox cbMois;
+        private System.Windows.Forms.BindingSource bsFraisForfaitaires;
+        private System.Windows.Forms.BindingSource bsAutresFrais;
+        private System.Windows.Forms.Button retour;
     }
 }

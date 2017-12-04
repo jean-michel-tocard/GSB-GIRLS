@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FLabo
+    partial class FrmLabo
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.retour.UseVisualStyleBackColor = false;
             this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
-            // FLabo
+            // FrmLabo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +89,7 @@
             this.Controls.Add(this.dgvVisiteurs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboLabo);
-            this.Name = "FLabo";
+            this.Name = "FrmLabo";
             this.Text = "Formulaire des laboratoires";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormulaireVisiteurs_FormClosing);
             this.Load += new System.EventHandler(this.FormulaireVisiteurs_Load);
