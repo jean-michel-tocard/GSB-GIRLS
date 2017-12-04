@@ -28,8 +28,8 @@ namespace GSB_GIRLS
 
         private void FMesFrais_Load(object sender, EventArgs e)
         {
-            tbVisiteur.Text = Modele.VisiteurConnecte1.nom + " " + Modele.VisiteurConnecte1.prenom;
-            tbMatricule.Text = Modele.VisiteurConnecte1.idVisiteur;
+            tbVisiteur.Text = Modele.MonVisiteur.nom + " " + Modele.MonVisiteur.prenom;
+            tbMatricule.Text = Modele.MonVisiteur.idVisiteur;
 
             for (int j = 11; j >= 0; j--)
             {
@@ -46,7 +46,7 @@ namespace GSB_GIRLS
         {
             dgvAutresFrais.DataSource = null;
             var LQueryTest = Modele.MaConnexion.fichefrais.ToList()
-                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.mois == cbMois.Text)
+                .Where(x => x.idVisiteur == Modele.MonVisiteur.idVisiteur && x.mois == cbMois.Text)
                 .Select(x => new { x.Etat.libelle });
             if (LQueryTest.Count() > 0)
             {
@@ -57,7 +57,7 @@ namespace GSB_GIRLS
             else { tbEtat.Text = "Fiche non créée"; }
 
             var LQuery = Modele.MaConnexion.LigneFraisForfait.ToList()
-                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.idFraisForfait == x.FraisForfait.id && x.mois == cbMois.Text)
+                .Where(x => x.idVisiteur == Modele.MonVisiteur1.idVisiteur && x.idFraisForfait == x.FraisForfait.id && x.mois == cbMois.Text)
                 .Select(x => new { x.FraisForfait.libelle, x.idFraisForfait, x.quantite, x.FraisForfait.montant, test = x.quantite * x.FraisForfait.montant, x.fichefrais.idEtat });
 
             bsFraisForfaitaires.DataSource = LQuery;
@@ -77,7 +77,7 @@ namespace GSB_GIRLS
             }
             lbTotal.Text = total.ToString();
             var LQuery2 = Modele.MaConnexion.LigneFraisHorsForfait.ToList()
-                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.mois == cbMois.Text)
+                .Where(x => x.idVisiteur == Modele.MonVisiteur.idVisiteur && x.mois == cbMois.Text)
                 .Select(x => new { x.id, x.date, x.libelle, x.montant });
 
             bsAutresFrais.DataSource = LQuery2;

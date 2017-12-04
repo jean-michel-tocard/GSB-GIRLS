@@ -370,6 +370,11 @@ namespace GSB_GIRLS
             this.Close();
         }
 
+        private void cbMois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void linkMesFiches_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FMesFrais mf = new FMesFrais();

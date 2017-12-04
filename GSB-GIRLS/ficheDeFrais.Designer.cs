@@ -318,6 +318,7 @@
             this.cbMois.Name = "cbMois";
             this.cbMois.Size = new System.Drawing.Size(100, 21);
             this.cbMois.TabIndex = 43;
+            this.cbMois.SelectedIndexChanged += new System.EventHandler(this.cbMois_SelectedIndexChanged);
             // 
             // lblMatricule
             // 
