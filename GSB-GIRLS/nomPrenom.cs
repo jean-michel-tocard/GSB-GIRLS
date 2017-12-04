@@ -8,11 +8,11 @@ namespace GSB_GIRLS
 {
     partial class Visiteur
     {
-        public string np
+        public string nomPrenom
         {
             get
             {
-                return this.nom + this.prenom;
+                return nom.Trim() + prenom.Trim();
             }
         }
     }

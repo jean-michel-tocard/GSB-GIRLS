@@ -10,7 +10,7 @@ namespace GSB_GIRLS
     static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application. gdshtfdshd
+        /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
         static void Main()
@@ -20,7 +20,7 @@ namespace GSB_GIRLS
             //  Application.Run(new Connexion());
             Modele.Initialise();
             // Application.Run(new Connexion());
-            Application.Run(new FCompta());
+            Application.Run(new Connexion());
         }
     }
 }

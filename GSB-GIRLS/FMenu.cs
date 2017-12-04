@@ -69,7 +69,7 @@ namespace GSB_GIRLS
             var req = from v in maConnexion.Visiteur
 
                       select v;
-            this.dgv_util.DataSource = ((ObjectQuery)(req));
+            this.dgv_util.DataSource = req.ToList();
 
             // les ajouts et suppressions sont interdits
             dgv_util.AllowUserToAddRows = false;
@@ -82,7 +82,7 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.idVisiteur == levisiteur.idVisiteur
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                this.dgv_util.DataSource = requete.ToList();
 
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
@@ -98,7 +98,7 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.idVisiteur == levisiteur.idVisiteur
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                this.dgv_util.DataSource = requete.ToList();
 
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
@@ -115,7 +115,7 @@ namespace GSB_GIRLS
                               orderby v.nom
                               where v.droit <= 2
                               select v;
-                this.dgv_util.DataSource = ((ObjectQuery)(requete));
+                this.dgv_util.DataSource = requete.ToList();
 
                 dgv_util.Columns[0].HeaderText = "CodeVisiteur";
                 dgv_util.Columns[1].HeaderText = "CodeLabo";
@@ -136,7 +136,7 @@ namespace GSB_GIRLS
             {
                
                 msGestionUser.Visible = false;
-                
+                ficheDeFrais.Visible = false;
             }
                 dgv_util.Hide();
                 //msRapportVisite.Visible = false;
@@ -177,6 +177,31 @@ namespace GSB_GIRLS
                 /*Application.Exit();     // Pour quitter l'application    */
             }
             
+        }
+
+        private void ficheDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FMesFrais gc = new FMesFrais();
+            gc.Show();
+            this.Hide();
+        }
+
+        private void visualiserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RapportVisite rv = new RapportVisite(maConnexion, levisiteur);
+            rv.Show();
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModifCRVisite rv = new ModifCRVisite(maConnexion, levisiteur);
+            rv.Show();
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreationRapport rv = new CreationRapport(maConnexion, levisiteur);
+            rv.Show();
         }
     }
 }

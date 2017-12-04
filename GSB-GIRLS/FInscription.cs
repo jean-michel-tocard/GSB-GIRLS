@@ -26,7 +26,7 @@ namespace GSB_GIRLS
         {
             if (txtMdp.Text == txtConfirmMDP.Text)
             {
-                //instantion d'un nouveau visiteur vide
+                //instanciation d'un nouveau visiteur vide
                 Visiteur unVisiteur = new Visiteur();
 
 
@@ -35,7 +35,7 @@ namespace GSB_GIRLS
                     // On crypte le mot de passe saisi en utilisant la méthode GetMD5Hash de la classe CRYPTAGE
                     this.passwdCrypte = CryptageMD5.GetMD5Hash(md5Hash, Convert.ToString(txtMdp.Text));
                 }
-                //affecte a chaque champ visiteur la valeur saisie
+                //affecte à chaque champ visiteur la valeur saisie
 
                 unVisiteur.idVisiteur = txtID.Text;
                 unVisiteur.nom = txtNom.Text;
@@ -52,7 +52,7 @@ namespace GSB_GIRLS
                 try
                 {
                     //ajout du visiteur
-                  //  this.maConnexion.Add(unVisiteur);
+                  this.maConnexion.Visiteur.Add(unVisiteur);
                     //sauvegarde
                     this.maConnexion.SaveChanges();
                     MessageBox.Show("Visiteur ajouté.");
