@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FRegion
+    partial class FrmRegion
     {
         /// <summary>
         /// Required designer variable.
@@ -45,14 +45,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxcp = new System.Windows.Forms.TextBox();
             this.dgvVisiteurs = new System.Windows.Forms.DataGridView();
-            this.bsVisiteurs = new System.Windows.Forms.BindingSource(this.components);
-            this.dateEmbaucheDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.villeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.villeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateEmbaucheDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsVisiteurs = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsregion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).BeginInit();
@@ -209,39 +209,11 @@
             this.dgvVisiteurs.Size = new System.Drawing.Size(445, 187);
             this.dgvVisiteurs.TabIndex = 21;
             // 
-            // bsVisiteurs
+            // idVisiteurDataGridViewTextBoxColumn
             // 
-            this.bsVisiteurs.DataSource = typeof(GSB_GIRLS.Visiteur);
-            // 
-            // dateEmbaucheDataGridViewTextBoxColumn
-            // 
-            this.dateEmbaucheDataGridViewTextBoxColumn.DataPropertyName = "dateEmbauche";
-            this.dateEmbaucheDataGridViewTextBoxColumn.HeaderText = "dateEmbauche";
-            this.dateEmbaucheDataGridViewTextBoxColumn.Name = "dateEmbaucheDataGridViewTextBoxColumn";
-            // 
-            // villeDataGridViewTextBoxColumn
-            // 
-            this.villeDataGridViewTextBoxColumn.DataPropertyName = "ville";
-            this.villeDataGridViewTextBoxColumn.HeaderText = "ville";
-            this.villeDataGridViewTextBoxColumn.Name = "villeDataGridViewTextBoxColumn";
-            // 
-            // cpDataGridViewTextBoxColumn
-            // 
-            this.cpDataGridViewTextBoxColumn.DataPropertyName = "cp";
-            this.cpDataGridViewTextBoxColumn.HeaderText = "cp";
-            this.cpDataGridViewTextBoxColumn.Name = "cpDataGridViewTextBoxColumn";
-            // 
-            // rueDataGridViewTextBoxColumn
-            // 
-            this.rueDataGridViewTextBoxColumn.DataPropertyName = "rue";
-            this.rueDataGridViewTextBoxColumn.HeaderText = "rue";
-            this.rueDataGridViewTextBoxColumn.Name = "rueDataGridViewTextBoxColumn";
-            // 
-            // prenomDataGridViewTextBoxColumn
-            // 
-            this.prenomDataGridViewTextBoxColumn.DataPropertyName = "prenom";
-            this.prenomDataGridViewTextBoxColumn.HeaderText = "prenom";
-            this.prenomDataGridViewTextBoxColumn.Name = "prenomDataGridViewTextBoxColumn";
+            this.idVisiteurDataGridViewTextBoxColumn.DataPropertyName = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.HeaderText = "idVisiteur";
+            this.idVisiteurDataGridViewTextBoxColumn.Name = "idVisiteurDataGridViewTextBoxColumn";
             // 
             // nomDataGridViewTextBoxColumn
             // 
@@ -249,11 +221,39 @@
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
             // 
-            // idVisiteurDataGridViewTextBoxColumn
+            // prenomDataGridViewTextBoxColumn
             // 
-            this.idVisiteurDataGridViewTextBoxColumn.DataPropertyName = "idVisiteur";
-            this.idVisiteurDataGridViewTextBoxColumn.HeaderText = "idVisiteur";
-            this.idVisiteurDataGridViewTextBoxColumn.Name = "idVisiteurDataGridViewTextBoxColumn";
+            this.prenomDataGridViewTextBoxColumn.DataPropertyName = "prenom";
+            this.prenomDataGridViewTextBoxColumn.HeaderText = "prenom";
+            this.prenomDataGridViewTextBoxColumn.Name = "prenomDataGridViewTextBoxColumn";
+            // 
+            // rueDataGridViewTextBoxColumn
+            // 
+            this.rueDataGridViewTextBoxColumn.DataPropertyName = "rue";
+            this.rueDataGridViewTextBoxColumn.HeaderText = "rue";
+            this.rueDataGridViewTextBoxColumn.Name = "rueDataGridViewTextBoxColumn";
+            // 
+            // cpDataGridViewTextBoxColumn
+            // 
+            this.cpDataGridViewTextBoxColumn.DataPropertyName = "cp";
+            this.cpDataGridViewTextBoxColumn.HeaderText = "cp";
+            this.cpDataGridViewTextBoxColumn.Name = "cpDataGridViewTextBoxColumn";
+            // 
+            // villeDataGridViewTextBoxColumn
+            // 
+            this.villeDataGridViewTextBoxColumn.DataPropertyName = "ville";
+            this.villeDataGridViewTextBoxColumn.HeaderText = "ville";
+            this.villeDataGridViewTextBoxColumn.Name = "villeDataGridViewTextBoxColumn";
+            // 
+            // dateEmbaucheDataGridViewTextBoxColumn
+            // 
+            this.dateEmbaucheDataGridViewTextBoxColumn.DataPropertyName = "dateEmbauche";
+            this.dateEmbaucheDataGridViewTextBoxColumn.HeaderText = "dateEmbauche";
+            this.dateEmbaucheDataGridViewTextBoxColumn.Name = "dateEmbaucheDataGridViewTextBoxColumn";
+            // 
+            // bsVisiteurs
+            // 
+            this.bsVisiteurs.DataSource = typeof(GSB_GIRLS.Visiteur);
             // 
             // FRegion
             // 
@@ -277,6 +277,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FRegion";
             this.Text = "FRegion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormulaireVisiteurs_FormClosing);
             this.Load += new System.EventHandler(this.FRegion_Load);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.cboRegion, 0);

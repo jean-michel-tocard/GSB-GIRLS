@@ -11,11 +11,11 @@ using System.Security.Cryptography;
 
 namespace GSB_GIRLS
 {
-    public partial class FAjoutVisiteur : Accueil
+    public partial class FrmAjoutVisiteur : Accueil
     {
         private GSBgirls maConnexion;
 
-        public FAjoutVisiteur()
+        public FrmAjoutVisiteur()
         {
             
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace GSB_GIRLS
 
                     Modele.MaConnexion.SaveChanges();
                     MessageBox.Show("Ajout réussie", "Action");
-                    FModif modif = new FModif();
+                    FrmModif modif = new FrmModif();
                     modif.Show();
                     this.Hide();
                 }
@@ -84,7 +84,7 @@ namespace GSB_GIRLS
         {
             if (MessageBox.Show("Voulez-vous vraiment annuler l'ajout ? ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FModif modif = new FModif();
+                FrmModif modif = new FrmModif();
                 modif.Show();
                 this.Hide();
             }

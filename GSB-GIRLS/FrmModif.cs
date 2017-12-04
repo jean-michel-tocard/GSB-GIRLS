@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FModif : Accueil
+    public partial class FrmModif : Accueil
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
         bool fermeture = false;
-        public FModif()
+        public FrmModif()
         {
             InitializeComponent();
             maConnexion = new GSBgirls();
             bsVisiteurs.DataSource = maConnexion.Visiteur.ToList();
         }
 
-        private void FModif_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            fermeture = true;
-        }
+
 
         private void btnModif_Click(object sender, EventArgs e)
         {
@@ -39,7 +36,7 @@ namespace GSB_GIRLS
 
                 Visiteur monVisiteur = (Visiteur)bsmodif.Current;
 
-                FModifVisiteur fmodifvisiteur = new FModifVisiteur(monVisiteur);
+                FrmModifVisiteur fmodifvisiteur = new FrmModifVisiteur(monVisiteur);
                 fmodifvisiteur.Show();
                 this.Hide();
         }
@@ -90,19 +87,34 @@ namespace GSB_GIRLS
 
         private void retour_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu(maConnexion, levisiteur);
-            menu.Show();
-            this.Hide();
-        }
+            string message = "Voulez-vous vraiment quitter ?";
+            string caption = "Fermeture de l'application";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            // Affichage de la boîte de dialogue 
+            result = MessageBox.Show(message, caption, buttons);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Hide();
 
+                /* this.Close();
+                 maConnexion.Dispose();  // Pour libérer la connexion à la base de données */
+                /*Application.Exit();     // Pour quitter l'application    */
+            }
+        }
+        private void FModif_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+            fermeture = true;
+        }
         private void bajouter_Click(object sender, EventArgs e)
         {
-            FAjoutVisiteur ajout = new FAjoutVisiteur();
+            FrmAjoutVisiteur ajout = new FrmAjoutVisiteur();
             ajout.Show();
             this.Hide();
         }
 
-        private void btnSupp_Click(object sender, EventArgs e)
+      /*  private void btnSupp_Click(object sender, EventArgs e)
         {
             try
             {
@@ -133,6 +145,6 @@ namespace GSB_GIRLS
             {
                 MessageBox.Show("Suppression erreur : " + ex.ToString(), "Action");
             }
-        }
+        }*/
     }
 }

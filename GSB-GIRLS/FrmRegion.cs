@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FRegion : Accueil
+    public partial class FrmRegion : Accueil
     {
        // private ICollection<Visiteur> Visiteur1;
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
-        public FRegion()
+        bool fermeture = false;
+
+        public FrmRegion()
         {
            // ICollection<Visiteur> Visiteur1 = new ICollection<Visiteur>();
             InitializeComponent();
@@ -73,10 +75,13 @@ namespace GSB_GIRLS
 
         private void retour_Click(object sender, EventArgs e)
         {
-            FMenu menu = new FMenu(maConnexion, levisiteur);
-            //menu.MdiParent = this;
-            menu.Show();
-            this.Hide();
+            fermeture = true;
+            this.Close();
+        }
+        private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+            fermeture = true;
         }
     }
 }
