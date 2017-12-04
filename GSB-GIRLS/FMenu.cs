@@ -43,7 +43,7 @@ namespace GSB_GIRLS
 
         private void laboratoireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FLabo labo = new FLabo();
+            FrmLabo labo = new FrmLabo();
             //menu.MdiParent = this;
             labo.Show();
             this.Hide();
@@ -51,7 +51,7 @@ namespace GSB_GIRLS
 
         private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRegion region = new FRegion();
+            FrmRegion region = new FrmRegion();
             //menu.MdiParent = this;
             region.Show();
             this.Hide();
@@ -59,7 +59,7 @@ namespace GSB_GIRLS
 
         private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FModif modif= new FModif();
+            FrmModif modif= new FrmModif();
             //menu.MdiParent = this;
             modif.Show();
             this.Hide();

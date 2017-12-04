@@ -99,11 +99,17 @@
     <Compile Include="ficheDeFrais.Designer.cs">
       <DependentUpon>ficheDeFrais.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSecteur.cs">
+    <Compile Include="FrmAjoutVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSecteur.Designer.cs">
-      <DependentUpon>FSecteur.cs</DependentUpon>
+    <Compile Include="FrmAjoutVisiteur.Designer.cs">
+      <DependentUpon>FrmAjoutVisiteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSecteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSecteur.Designer.cs">
+      <DependentUpon>FrmSecteur.cs</DependentUpon>
     </Compile>
     <Compile Include="ModifCRVisite.cs">
       <SubType>Form</SubType>
@@ -114,12 +120,6 @@
     <Compile Include="CryptageMD5.cs" />
     <Compile Include="Etat.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FAjoutVisiteur.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAjoutVisiteur.Designer.cs">
-      <DependentUpon>FAjoutVisiteur.cs</DependentUpon>
     </Compile>
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
@@ -145,11 +145,11 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FModif.cs">
+    <Compile Include="FrmModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FModif.Designer.cs">
-      <DependentUpon>FModif.cs</DependentUpon>
+    <Compile Include="FrmModif.Designer.cs">
+      <DependentUpon>FrmModif.cs</DependentUpon>
     </Compile>
     <Compile Include="FInscription.cs">
       <SubType>Form</SubType>
@@ -163,20 +163,20 @@
     <Compile Include="FMesFrais.Designer.cs">
       <DependentUpon>FMesFrais.cs</DependentUpon>
     </Compile>
-    <Compile Include="FModifVisiteur.cs">
+    <Compile Include="FrmModifVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FModifVisiteur.Designer.cs">
-      <DependentUpon>FModifVisiteur.cs</DependentUpon>
+    <Compile Include="FrmModifVisiteur.Designer.cs">
+      <DependentUpon>FrmModifVisiteur.cs</DependentUpon>
     </Compile>
     <Compile Include="FraisForfait.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
     </Compile>
-    <Compile Include="FRegion.cs">
+    <Compile Include="FrmRegion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRegion.Designer.cs">
-      <DependentUpon>FRegion.cs</DependentUpon>
+    <Compile Include="FrmRegion.Designer.cs">
+      <DependentUpon>FrmRegion.cs</DependentUpon>
     </Compile>
     <Compile Include="FSaisie.cs">
       <SubType>Form</SubType>
@@ -184,11 +184,11 @@
     <Compile Include="FSaisie.Designer.cs">
       <DependentUpon>FSaisie.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLabo.cs">
+    <Compile Include="FrmLabo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLabo.Designer.cs">
-      <DependentUpon>FLabo.cs</DependentUpon>
+    <Compile Include="FrmLabo.Designer.cs">
+      <DependentUpon>FrmLabo.cs</DependentUpon>
     </Compile>
     <Compile Include="Laboratoire.cs">
       <DependentUpon>mdlGSBgirls.tt</DependentUpon>
@@ -232,9 +232,9 @@
     <Compile Include="GestionCompte.Designer.cs">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FMenu.cs" >
+	<SubType>Form</SubType>
+	</Compile>
     <Compile Include="FMenu.Designer.cs">
       <DependentUpon>FMenu.cs</DependentUpon>
     </Compile>
@@ -281,8 +281,11 @@
     <EmbeddedResource Include="ficheDeFrais.resx">
       <DependentUpon>ficheDeFrais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSecteur.resx">
-      <DependentUpon>FSecteur.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAjoutVisiteur.resx">
+      <DependentUpon>FrmAjoutVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSecteur.resx">
+      <DependentUpon>FrmSecteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifCRVisite.resx">
       <DependentUpon>ModifCRVisite.cs</DependentUpon>
@@ -290,17 +293,14 @@
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAjoutVisiteur.resx">
-      <DependentUpon>FAjoutVisiteur.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FCompta.resx">
       <DependentUpon>FCompta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEditionFiche.resx">
       <DependentUpon>FEditionFiche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FModif.resx">
-      <DependentUpon>FModif.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModif.resx">
+      <DependentUpon>FrmModif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FInscription.resx">
       <DependentUpon>FInscription.cs</DependentUpon>
@@ -308,11 +308,11 @@
     <EmbeddedResource Include="FMesFrais.resx">
       <DependentUpon>FMesFrais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FModifVisiteur.resx">
-      <DependentUpon>FModifVisiteur.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModifVisiteur.resx">
+      <DependentUpon>FrmModifVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRegion.resx">
-      <DependentUpon>FRegion.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRegion.resx">
+      <DependentUpon>FrmRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSaisie.resx">
       <DependentUpon>FSaisie.cs</DependentUpon>
@@ -323,11 +323,11 @@
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMenu.resx">
+    <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLabo.resx">
-      <DependentUpon>FLabo.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLabo.resx">
+      <DependentUpon>FrmLabo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

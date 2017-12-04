@@ -69,7 +69,7 @@ namespace GSB_GIRLS
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmMenu fMenu = new FrmMenu(Modele.MaConnexion, levisiteur);
+            FMenu fMenu = new FMenu(Modele.MaConnexion, levisiteur);
             fMenu.Show();
         }
     }

@@ -34,7 +34,7 @@ namespace GSB_GIRLS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMenu fMenu = new FrmMenu(Modele.MaConnexion, levisiteur);
+            FMenu fMenu = new FMenu(Modele.MaConnexion, levisiteur);
             fMenu.Show();
             this.Hide();
         }
