@@ -76,6 +76,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.retour = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantitéKilométrage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantitéRepasMidi)).BeginInit();
@@ -296,6 +297,7 @@
             this.cbTypeVehicule.Name = "cbTypeVehicule";
             this.cbTypeVehicule.Size = new System.Drawing.Size(100, 21);
             this.cbTypeVehicule.TabIndex = 45;
+            this.cbTypeVehicule.SelectedIndexChanged += new System.EventHandler(this.cbTypeVehicule_SelectedIndexChanged);
             // 
             // lbTypeVehicule
             // 
@@ -468,12 +470,6 @@
             this.gbFrais.Size = new System.Drawing.Size(375, 95);
             this.gbFrais.TabIndex = 58;
             this.gbFrais.TabStop = false;
-            this.gbFrais.Controls.SetChildIndex(this.label9, 0);
-            this.gbFrais.Controls.SetChildIndex(this.label13, 0);
-            this.gbFrais.Controls.SetChildIndex(this.button3, 0);
-            this.gbFrais.Controls.SetChildIndex(this.dateTimePicker1, 0);
-            this.gbFrais.Controls.SetChildIndex(this.tbLibelle, 0);
-            this.gbFrais.Controls.SetChildIndex(this.tbMontant, 0);
             // 
             // tbMontant
             // 
@@ -537,11 +533,25 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Date";
             // 
+            // retour
+            // 
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(866, 12);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 73;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // ficheDeFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 798);
+            this.Controls.Add(this.retour);
+            this.Controls.Add(this.lblTitleAutresFrais);
             this.Controls.Add(this.gbFrais);
             this.Controls.Add(this.dgvFrais);
             this.Controls.Add(this.label10);
@@ -549,7 +559,6 @@
             this.Controls.Add(this.linkMesFiches);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.lblTitleAutresFrais);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
@@ -564,6 +573,26 @@
             this.Name = "ficheDeFrais";
             this.Text = "ficheDeFrais";
             this.Load += new System.EventHandler(this.ficheDeFrais_Load);
+            this.Controls.SetChildIndex(this.lblMois, 0);
+            this.Controls.SetChildIndex(this.tbVisiteur, 0);
+            this.Controls.SetChildIndex(this.lblVisiteur, 0);
+            this.Controls.SetChildIndex(this.tbMatricule, 0);
+            this.Controls.SetChildIndex(this.lblMatricule, 0);
+            this.Controls.SetChildIndex(this.cbMois, 0);
+            this.Controls.SetChildIndex(this.lbTypeVehicule, 0);
+            this.Controls.SetChildIndex(this.cbTypeVehicule, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
+            this.Controls.SetChildIndex(this.btnRetour, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.linkMesFiches, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.dgvFrais, 0);
+            this.Controls.SetChildIndex(this.gbFrais, 0);
+            this.Controls.SetChildIndex(this.lblTitleAutresFrais, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantitéKilométrage)).EndInit();
@@ -631,5 +660,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button retour;
     }
 }

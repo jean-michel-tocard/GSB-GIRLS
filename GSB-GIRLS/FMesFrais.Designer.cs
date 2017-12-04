@@ -62,6 +62,7 @@
             this.cbMois = new System.Windows.Forms.ComboBox();
             this.bsFraisForfaitaires = new System.Windows.Forms.BindingSource(this.components);
             this.bsAutresFrais = new System.Windows.Forms.BindingSource(this.components);
+            this.retour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).BeginInit();
@@ -361,11 +362,24 @@
             this.cbMois.Size = new System.Drawing.Size(100, 21);
             this.cbMois.TabIndex = 79;
             // 
+            // retour
+            // 
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(963, 12);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 80;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // FMesFrais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 882);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.cbMois);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lbTotal);
@@ -427,6 +441,7 @@
             this.Controls.SetChildIndex(this.lbTotal, 0);
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.cbMois, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFMois)).EndInit();
@@ -474,5 +489,6 @@
         private System.Windows.Forms.ComboBox cbMois;
         private System.Windows.Forms.BindingSource bsFraisForfaitaires;
         private System.Windows.Forms.BindingSource bsAutresFrais;
+        private System.Windows.Forms.Button retour;
     }
 }

@@ -28,7 +28,7 @@ namespace GSB_GIRLS
         {
             FrmRS rs = new FrmRS();
             rs.Show();
-            this.Hide();
+          
         }
 
         private void gestionCompte_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace GSB_GIRLS
             FrmLabo labo = new FrmLabo();
             //menu.MdiParent = this;
             labo.Show();
-            this.Hide();
+            
         }
 
         private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace GSB_GIRLS
             FrmRegion region = new FrmRegion();
             //menu.MdiParent = this;
             region.Show();
-            this.Hide();
+            
         }
 
         private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace GSB_GIRLS
             FrmModif modif= new FrmModif();
             //menu.MdiParent = this;
             modif.Show();
-            this.Hide();
+            
         }
 
         private void msDonnées_Click(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace GSB_GIRLS
             GestionCompte gc = new GestionCompte();
             //menu.MdiParent = this;
             gc.Show();
-            this.Hide();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -207,21 +207,21 @@ namespace GSB_GIRLS
         {
             ficheDeFrais fdf = new ficheDeFrais();
             fdf.Show();
-            this.Hide();
+           
         }
 
         private void lesFichesDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FCompta fc = new FCompta();
             fc.Show();
-            this.Hide();
+            
         }
 
         private void editionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FEditionFiche fed = new FEditionFiche();
             fed.Show();
-            this.Hide();
+            
         }
     }
 }

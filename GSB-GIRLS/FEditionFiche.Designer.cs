@@ -37,6 +37,7 @@
             this.tbMatricule = new System.Windows.Forms.TextBox();
             this.tbComptable = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.retour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -124,11 +125,24 @@
             this.label9.TabIndex = 69;
             this.label9.Text = "Matricule :";
             // 
+            // retour
+            // 
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(853, 12);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 72;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // FEditionFiche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 807);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.tbMatricule);
             this.Controls.Add(this.tbComptable);
             this.Controls.Add(this.label9);
@@ -149,6 +163,7 @@
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.tbComptable, 0);
             this.Controls.SetChildIndex(this.tbMatricule, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -166,5 +181,6 @@
         private System.Windows.Forms.TextBox tbMatricule;
         private System.Windows.Forms.TextBox tbComptable;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button retour;
     }
 }

@@ -12,6 +12,7 @@ namespace GSB_GIRLS
 {
     public partial class FMesFrais : Accueil
     {
+        bool fermeture = false;
         public FMesFrais()
         {
             InitializeComponent();
@@ -135,6 +136,15 @@ namespace GSB_GIRLS
         private void btnSupprimerForfait_Click(object sender, EventArgs e)
         {
            
+        }
+        private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fermeture = true;
+        }
+        private void retour_Click(object sender, EventArgs e)
+        {
+            fermeture = true;
+            this.Close();
         }
     }
 }

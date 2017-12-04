@@ -12,6 +12,7 @@ namespace GSB_GIRLS
 {
     public partial class ficheDeFrais : Accueil
     {
+        bool fermeture = false;
         private string prixNUI, prixREP;
         private int nbFH = 0;
         public ficheDeFrais()
@@ -103,44 +104,7 @@ namespace GSB_GIRLS
 
         private void cbTypeVehicule_TextChanged(object sender, EventArgs e)
         {
-            if (cbTypeVehicule.Text == "4CV DIESEL")
-            {
-                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
-              .Where(x => x.id == "4cD");
-                bsKm.DataSource = filteredData;
-                bsKm.MoveFirst();
-                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
-                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
-            }
-            if (cbTypeVehicule.Text == "5/6CV DIESEL")
-            {
-                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
-              .Where(x => x.id == "5cD");
-                bsKm.DataSource = filteredData;
-                bsKm.MoveFirst();
-                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
-                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
-            }
-            if (cbTypeVehicule.Text == "4CV ESSENCE")
-            {
-                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
-              .Where(x => x.id == "4cE");
-                bsKm.DataSource = filteredData;
-                bsKm.MoveFirst();
-                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
-                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
-            }
-            if (cbTypeVehicule.Text == "5/6CV ESSENCE")
-            {
-                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
-              .Where(x => x.id == "5cE");
-                bsKm.DataSource = filteredData;
-                bsKm.MoveFirst();
-                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
-                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
-            }
-            textbox_Kilo_TextChanged(sender, e);
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -353,6 +317,57 @@ namespace GSB_GIRLS
         private void btnTotal_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbTypeVehicule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTypeVehicule.Text == "4CV DIESEL")
+            {
+                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
+              .Where(x => x.id == "4cD");
+                bsKm.DataSource = filteredData;
+                bsKm.MoveFirst();
+                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
+                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
+            }
+            if (cbTypeVehicule.Text == "5/6CV DIESEL")
+            {
+                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
+              .Where(x => x.id == "5cD");
+                bsKm.DataSource = filteredData;
+                bsKm.MoveFirst();
+                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
+                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
+            }
+            if (cbTypeVehicule.Text == "4CV ESSENCE")
+            {
+                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
+              .Where(x => x.id == "4cE");
+                bsKm.DataSource = filteredData;
+                bsKm.MoveFirst();
+                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
+                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
+            }
+            if (cbTypeVehicule.Text == "5/6CV ESSENCE")
+            {
+                var filteredData = Modele.MaConnexion.FraisForfait.ToList()
+              .Where(x => x.id == "5cE");
+                bsKm.DataSource = filteredData;
+                bsKm.MoveFirst();
+                FraisForfait fraisForfait2 = (FraisForfait)bsKm.Current;
+                tbMontantKilométrage.Text = fraisForfait2.montant.ToString();
+            }
+            textbox_Kilo_TextChanged(sender, e);
+
+        }
+        private void FormulaireVisiteurs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fermeture = true;
+        }
+        private void retour_Click(object sender, EventArgs e)
+        {
+            fermeture = true;
+            this.Close();
         }
 
         private void linkMesFiches_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)

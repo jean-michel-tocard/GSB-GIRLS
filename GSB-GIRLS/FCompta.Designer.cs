@@ -54,6 +54,7 @@
             this.bsChoixV = new System.Windows.Forms.BindingSource(this.components);
             this.bsFraisForfait = new System.Windows.Forms.BindingSource(this.components);
             this.bsMois = new System.Windows.Forms.BindingSource(this.components);
+            this.retour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -259,11 +260,24 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // retour
+            // 
+            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour.Location = new System.Drawing.Point(997, 9);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(77, 26);
+            this.retour.TabIndex = 73;
+            this.retour.Text = "Retour";
+            this.retour.UseVisualStyleBackColor = false;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // FCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 874);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.dgvFraisForfait);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMatricule);
@@ -311,6 +325,7 @@
             this.Controls.SetChildIndex(this.txtMatricule, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.dgvFraisForfait, 0);
+            this.Controls.SetChildIndex(this.retour, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -348,5 +363,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMatricule;
         private System.Windows.Forms.BindingSource bsMois;
+        private System.Windows.Forms.Button retour;
     }
 }
