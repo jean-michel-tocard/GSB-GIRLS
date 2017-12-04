@@ -15,5 +15,13 @@ namespace GSB_GIRLS
                 return nom.Trim() + prenom.Trim();
             }
         }
+
+        public string np
+        {
+            get
+            {
+                return this.nom + this.prenom;
+            }
+        }
     }
 }
