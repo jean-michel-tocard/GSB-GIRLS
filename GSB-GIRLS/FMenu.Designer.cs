@@ -159,6 +159,7 @@
             this.mesFichesDeFraisToolStripMenuItem.Name = "mesFichesDeFraisToolStripMenuItem";
             this.mesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
             this.mesFichesDeFraisToolStripMenuItem.Text = "Mes Fiches de frais";
+            this.mesFichesDeFraisToolStripMenuItem.Click += new System.EventHandler(this.mesFichesDeFraisToolStripMenuItem_Click);
             // 
             // rapportToolStripMenuItem
             // 

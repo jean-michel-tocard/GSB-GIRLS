@@ -223,5 +223,11 @@ namespace GSB_GIRLS
             fed.Show();
             
         }
+
+        private void mesFichesDeFraisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FMesFrais fed = new FMesFrais();
+            fed.Show();
+        }
     }
 }

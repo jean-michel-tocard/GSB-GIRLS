@@ -326,9 +326,7 @@
     <EmbeddedResource Include="GestionCompte.resx">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu.resx">
-      <DependentUpon>FMenu.cs</DependentUpon>
-    </EmbeddedResource>
+
     <EmbeddedResource Include="FrmLabo.resx">
       <DependentUpon>FrmLabo.cs</DependentUpon>
     </EmbeddedResource>

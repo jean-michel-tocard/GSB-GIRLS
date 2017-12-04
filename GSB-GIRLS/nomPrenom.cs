@@ -12,7 +12,7 @@ namespace GSB_GIRLS
         {
             get
             {
-                return nom.Trim() + prenom.Trim();
+                return nom.Trim() +" "+ prenom.Trim();
             }
         }
 
@@ -20,7 +20,7 @@ namespace GSB_GIRLS
         {
             get
             {
-                return this.nom + this.prenom;
+                return this.nom +" "+ this.prenom;
             }
         }
     }
