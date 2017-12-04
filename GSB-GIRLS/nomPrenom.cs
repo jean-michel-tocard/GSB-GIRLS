@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GSB_GIRLS
 {
-    partial class Visiteur
+   public partial class MEDECIN
     {
         public string nomPrenom
         {
