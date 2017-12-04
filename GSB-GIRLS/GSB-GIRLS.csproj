@@ -232,9 +232,9 @@
     <Compile Include="GestionCompte.Designer.cs">
       <DependentUpon>GestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMenu.cs" >
-	<SubType>Form</SubType>
-	</Compile>
+    <Compile Include="FMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FMenu.Designer.cs">
       <DependentUpon>FMenu.cs</DependentUpon>
     </Compile>
@@ -280,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ficheDeFrais.resx">
       <DependentUpon>ficheDeFrais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutVisiteur.resx">
       <DependentUpon>FrmAjoutVisiteur.cs</DependentUpon>
