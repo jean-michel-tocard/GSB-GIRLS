@@ -19,7 +19,7 @@ namespace GSB_GIRLS
 
         private void linkSaisieFrais_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FSaisie fs = new FSaisie();
+            ficheDeFrais fs = new ficheDeFrais();
             //menu.MdiParent = this;
             fs.Show();
             this.Hide();
@@ -27,61 +27,114 @@ namespace GSB_GIRLS
 
         private void FMesFrais_Load(object sender, EventArgs e)
         {
-            cboMois.ValueMember = "idVisiteur";
-            cboMois.DisplayMember = "mois";
-            bsMois.DataSource = Modele.MaConnexion.FraisForfait.ToList();
-            cboMois.DataSource = bsMois;
+            tbVisiteur.Text = Modele.VisiteurConnecte1.nom + " " + Modele.VisiteurConnecte1.prenom;
+            tbMatricule.Text = Modele.VisiteurConnecte1.idVisiteur;
+
+            for (int j = 11; j >= 0; j--)
+            {
+                cbMois.Items.Add(DateTime.Now.AddMonths(-j).ToString("MM") + "/" + DateTime.Now.AddMonths(-j).ToString("yy") + " ");
+            }
+            cbMois.Text = DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("yy") + " ";
+            Modele.Mois1 = cbMois.Text;
+
+
         }
 
-        private void cboMois_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void chargement()
+        {
+            dgvAutresFrais.DataSource = null;
+            var LQueryTest = Modele.MaConnexion.fichefrais.ToList()
+                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.mois == cbMois.Text)
+                .Select(x => new { x.Etat.libelle });
+            if (LQueryTest.Count() > 0)
+            {
+                bsFraisForfaitaires.DataSource = LQueryTest;
+                dgvFraisForfaitaires.DataSource = bsFraisForfaitaires;
+                tbEtat.Text = dgvFraisForfaitaires.Rows[0].Cells[0].Value.ToString();
+            }
+            else { tbEtat.Text = "Fiche non créée"; }
+
+            var LQuery = Modele.MaConnexion.LigneFraisForfait.ToList()
+                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.idFraisForfait == x.FraisForfait.id && x.mois == cbMois.Text)
+                .Select(x => new { x.FraisForfait.libelle, x.idFraisForfait, x.quantite, x.FraisForfait.montant, test = x.quantite * x.FraisForfait.montant, x.fichefrais.idEtat });
+
+            bsFraisForfaitaires.DataSource = LQuery;
+
+            dgvFraisForfaitaires.DataSource = bsFraisForfaitaires;
+            dgvFraisForfaitaires.Columns[0].HeaderText = "Frais Forfaitaires";
+            dgvFraisForfaitaires.Columns[1].Visible = false;
+            dgvFraisForfaitaires.Columns[2].HeaderText = "Quantité";
+            dgvFraisForfaitaires.Columns[3].HeaderText = "Montant unitaire";
+            dgvFraisForfaitaires.Columns[4].HeaderText = "Total";
+            dgvFraisForfaitaires.Columns[5].Visible = false;
+
+            float total = 0;
+            for (int j = 0; j < dgvFraisForfaitaires.Rows.Count; j++)
+            {
+                total += float.Parse(dgvFraisForfaitaires.Rows[j].Cells[4].Value.ToString());
+            }
+            lbTotal.Text = total.ToString();
+            var LQuery2 = Modele.MaConnexion.LigneFraisHorsForfait.ToList()
+                .Where(x => x.idVisiteur == Modele.VisiteurConnecte1.idVisiteur && x.mois == cbMois.Text)
+                .Select(x => new { x.id, x.date, x.libelle, x.montant });
+
+            bsAutresFrais.DataSource = LQuery2;
+            dgvAutresFrais.DataSource = bsAutresFrais;
+            dgvAutresFrais.Columns[0].Visible = false;
+            dgvAutresFrais.Columns[1].HeaderText = "Date";
+            dgvAutresFrais.Columns[2].HeaderText = "Libellé";
+            dgvAutresFrais.Columns[3].HeaderText = "Montant";
+        }
+        private void cbMois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            chargement();
+
+        }
+
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnModifFraisForfait_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSuppr_Click(object sender, EventArgs e)
         {
             try
             {
-                var LQuery = Modele.MaConnexion.fichefrais.ToList()
-                               .Where(x => x.idVisiteur == cboMois.SelectedValue.ToString());
-                BindingSource bs = new BindingSource();
-                bs.DataSource = LQuery;
-                bs.MoveFirst();
-                fichefrais ffrais = (fichefrais)bs.Current;
-                LigneFraisHorsForfait lhf = (LigneFraisHorsForfait)bs.Current;
-                cboMois.DataSource = ffrais.mois;
-                //affiche etat montant nbjustificatifs
-                txtEtat.Text = ffrais.idEtat;
-                txtMontant.Text = ffrais.montantValide.ToString();
-                txtNbJustificatifs.Text = ffrais.nbJustificatifs.ToString();
-               
-                // affiche dans la dgv les éléments forfaitisés            
-                bsMois.DataSource = LQuery;
-                dgvElementForfaitise.DataSource = bsMois;
-                dgvElementForfaitise.Columns[0].HeaderText = "libelle";
-                dgvElementForfaitise.Columns[1].HeaderText = "montant";
-                dgvElementForfaitise.Columns[2].Visible = false;
-                //afiche dans la dgv les éléments hors forfaits 
-                dgvHorsForfait.DataSource = bsMois;
-                dgvHorsForfait.Columns[0].HeaderText = lhf.libelle;
-                dgvHorsForfait.Columns[1].HeaderText = lhf.date.ToString();
-                dgvHorsForfait.Columns[2].HeaderText = lhf.montant.ToString();
-
+                var filteredData = Modele.MaConnexion.LigneFraisHorsForfait.ToList()
+   .Where(x => x.id == (int.Parse(dgvAutresFrais.SelectedRows[0].Cells[0].Value.ToString())));
+                if (filteredData.Count() > 0)
+                {
+                    BindingSource bsMaLigne = new BindingSource();
+                    bsMaLigne.DataSource = filteredData; // application du filtre
+                    LigneFraisHorsForfait maLigne = new LigneFraisHorsForfait();
+                    bsMaLigne.MoveFirst();
+                    maLigne = (LigneFraisHorsForfait)bsMaLigne.Current;
+                    Modele.MaConnexion.LigneFraisHorsForfait.Remove(maLigne);
+                    Modele.MaConnexion.SaveChanges();
+                    chargement();
+                    MessageBox.Show("Ligne supprimé");
+                }
+                else
+                {
+                    MessageBox.Show("Aucune ligne sélectionnée");
+                }
             }
             catch
             {
-
+                MessageBox.Show("Aucune ligne sélectionnée");
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btnSupprimerForfait_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtNbJustificatifs_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+           
         }
     }
 }

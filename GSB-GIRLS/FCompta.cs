@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FCompta : Form
+    public partial class FCompta : Accueil
     {
         private bool bLoad = true;
         public FCompta()

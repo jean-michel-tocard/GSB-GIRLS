@@ -39,7 +39,6 @@
             this.btnAjouterLigne = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.linkMesFiches = new System.Windows.Forms.LinkLabel();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,6 +73,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtpAjoutDate = new System.Windows.Forms.DateTimePicker();
             this.nupAjoutMontant = new System.Windows.Forms.NumericUpDown();
+            this.bsFrais = new System.Windows.Forms.BindingSource(this.components);
+            this.bsKm = new System.Windows.Forms.BindingSource(this.components);
+            this.bsBdd = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSaisieFiche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMontantUnitaireKilometrage)).BeginInit();
@@ -87,6 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFrais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBdd)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,7 +147,6 @@
             this.btnAjouter1.TabIndex = 9;
             this.btnAjouter1.Text = "Ajouter";
             this.btnAjouter1.UseVisualStyleBackColor = true;
-            this.btnAjouter1.Click += new System.EventHandler(this.btnAjouter1_Click);
             // 
             // label6
             // 
@@ -162,7 +166,6 @@
             this.btnAjouterLigne.TabIndex = 12;
             this.btnAjouterLigne.Text = "Ajouter ligne";
             this.btnAjouterLigne.UseVisualStyleBackColor = true;
-            this.btnAjouterLigne.Click += new System.EventHandler(this.btnAjouterLigne_Click);
             // 
             // label10
             // 
@@ -184,16 +187,6 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 248);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(70, 13);
-            this.linkLabel1.TabIndex = 28;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Déconnexion";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -212,7 +205,6 @@
             this.linkMesFiches.TabIndex = 26;
             this.linkMesFiches.TabStop = true;
             this.linkMesFiches.Text = "Mes fiches de frais";
-            this.linkMesFiches.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkMesFiches_LinkClicked);
             // 
             // label13
             // 
@@ -242,7 +234,6 @@
             this.btnAnnule.TabIndex = 35;
             this.btnAnnule.Text = "Supprimer";
             this.btnAnnule.UseVisualStyleBackColor = true;
-            this.btnAnnule.Click += new System.EventHandler(this.btnAnnule_Click_1);
             // 
             // nupMontantUnitaireKilometrage
             // 
@@ -554,7 +545,6 @@
             this.Controls.Add(this.btnAnnule);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblMontantUnitaire);
             this.Controls.Add(this.label12);
@@ -572,7 +562,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FSaisie";
             this.Text = "FSaisie";
-            this.Load += new System.EventHandler(this.FSaisie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsSaisieFiche)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMontantUnitaireKilometrage)).EndInit();
@@ -586,6 +575,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutreFrais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMontantUnitaire)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAjoutMontant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFrais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,7 +595,6 @@
         private System.Windows.Forms.Button btnAjouterLigne;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.LinkLabel linkMesFiches;
         private System.Windows.Forms.Label label13;
@@ -638,5 +629,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpAjoutDate;
         private System.Windows.Forms.NumericUpDown nupAjoutMontant;
+        private System.Windows.Forms.BindingSource bsFrais;
+        private System.Windows.Forms.BindingSource bsKm;
+        private System.Windows.Forms.BindingSource bsBdd;
     }
 }

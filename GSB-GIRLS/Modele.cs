@@ -11,8 +11,14 @@ namespace GSB_GIRLS
     {
         static GSBgirls maConnexion;
         static Visiteur visiteurConnect;
-        static Secteur unSecteur;
         private static Visiteur monVisiteur;
+
+        private static Visiteur VisiteurConnecte;
+        private static string Mois;
+        private static int action = 0; //1=Frais Forfait 2=Hors Forfait /!\
+        private static string libelle;
+        private static int nb;
+        private static string lib;
 
         public static GSBgirls MaConnexion
         {
@@ -53,22 +59,97 @@ namespace GSB_GIRLS
             }
         }
 
-        public static Secteur UnSecteur
+        public static Visiteur VisiteurConnecte1
         {
             get
             {
-                return unSecteur;
+                return VisiteurConnecte;
             }
 
             set
             {
-                unSecteur = value;
+                VisiteurConnecte = value;
             }
         }
+
+        public static string Mois1
+        {
+            get
+            {
+                return Mois;
+            }
+
+            set
+            {
+                Mois = value;
+            }
+        }
+
+        public static int Action
+        {
+            get
+            {
+                return action;
+            }
+
+            set
+            {
+                action = value;
+            }
+        }
+
+        public static string Libelle
+        {
+            get
+            {
+                return libelle;
+            }
+
+            set
+            {
+                libelle = value;
+            }
+        }
+
+        public static int Nb
+        {
+            get
+            {
+                return nb;
+            }
+
+            set
+            {
+                nb = value;
+            }
+        }
+
+        public static string Lib
+        {
+            get
+            {
+                return lib;
+            }
+
+            set
+            {
+                lib = value;
+            }
+        }
+
+        public static void init()
+        {
+            MaConnexion = new GSBgirls();
+        }
+        public static void reinit()
+        {
+            MaConnexion.Dispose();
+            MaConnexion = new GSBgirls();
+        }
+
         static public void Initialise()
         {
             maConnexion = new GSBgirls();
         }
     }
 }
-

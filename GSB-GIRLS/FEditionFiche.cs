@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FEditionFiche : Form
+    public partial class FEditionFiche : Accueil
     {
         public FEditionFiche()
         {

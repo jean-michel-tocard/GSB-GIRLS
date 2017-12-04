@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.linkEdition = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,16 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsFraisForfait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMois)).BeginInit();
             this.SuspendLayout();
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(18, 301);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(70, 13);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Déconnexion";
             // 
             // label2
             // 
@@ -162,7 +151,7 @@
             this.dgvFraisForfait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFraisForfait.Location = new System.Drawing.Point(306, 246);
             this.dgvFraisForfait.Name = "dgvFraisForfait";
-            this.dgvFraisForfait.Size = new System.Drawing.Size(756, 122);
+            this.dgvFraisForfait.Size = new System.Drawing.Size(756, 147);
             this.dgvFraisForfait.TabIndex = 18;
             // 
             // dgvFraisHorsForfait
@@ -209,7 +198,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(962, 374);
+            this.button3.Location = new System.Drawing.Point(962, 394);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
             this.button3.TabIndex = 24;
@@ -275,6 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 874);
+            this.Controls.Add(this.dgvFraisForfait);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMatricule);
             this.Controls.Add(this.txtNom);
@@ -286,14 +276,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvFraisHorsForfait);
-            this.Controls.Add(this.dgvFraisForfait);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboMois);
             this.Controls.Add(this.cboChoixV);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkEdition);
@@ -301,6 +289,28 @@
             this.Name = "FCompta";
             this.Text = "FCompta";
             this.Load += new System.EventHandler(this.FCompta_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.linkEdition, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.cboChoixV, 0);
+            this.Controls.SetChildIndex(this.cboMois, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.dgvFraisHorsForfait, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.txtNbJustif, 0);
+            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.txtNom, 0);
+            this.Controls.SetChildIndex(this.txtMatricule, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.dgvFraisForfait, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFraisHorsForfait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -313,8 +323,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkEdition;

@@ -93,6 +93,12 @@
     <Compile Include="CreationRapport.Designer.cs">
       <DependentUpon>CreationRapport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ficheDeFrais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ficheDeFrais.Designer.cs">
+      <DependentUpon>ficheDeFrais.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSecteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,12 +183,6 @@
     </Compile>
     <Compile Include="FSaisie.Designer.cs">
       <DependentUpon>FSaisie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FVisiteur.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FVisiteur.Designer.cs">
-      <DependentUpon>FVisiteur.cs</DependentUpon>
     </Compile>
     <Compile Include="FLabo.cs">
       <SubType>Form</SubType>
@@ -278,6 +278,9 @@
     <EmbeddedResource Include="CreationRapport.resx">
       <DependentUpon>CreationRapport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ficheDeFrais.resx">
+      <DependentUpon>ficheDeFrais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSecteur.resx">
       <DependentUpon>FSecteur.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,9 +316,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSaisie.resx">
       <DependentUpon>FSaisie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FVisiteur.resx">
-      <DependentUpon>FVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRS.resx">
       <DependentUpon>FrmRS.cs</DependentUpon>
