@@ -57,7 +57,7 @@ namespace GSB_GIRLS
             else { tbEtat.Text = "Fiche non créée"; }
 
             var LQuery = Modele.MaConnexion.LigneFraisForfait.ToList()
-                .Where(x => x.idVisiteur == Modele.MonVisiteur1.idVisiteur && x.idFraisForfait == x.FraisForfait.id && x.mois == cbMois.Text)
+                .Where(x => x.idVisiteur == Modele.MonVisiteur.idVisiteur && x.idFraisForfait == x.FraisForfait.id && x.mois == cbMois.Text)
                 .Select(x => new { x.FraisForfait.libelle, x.idFraisForfait, x.quantite, x.FraisForfait.montant, test = x.quantite * x.FraisForfait.montant, x.fichefrais.idEtat });
 
             bsFraisForfaitaires.DataSource = LQuery;
