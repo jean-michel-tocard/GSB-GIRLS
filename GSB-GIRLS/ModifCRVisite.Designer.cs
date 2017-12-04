@@ -137,7 +137,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(441, 341);
+            this.button2.Location = new System.Drawing.Point(472, 341);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(59, 23);
             this.button2.TabIndex = 14;
@@ -146,7 +146,7 @@
             // 
             // Modif
             // 
-            this.Modif.Location = new System.Drawing.Point(153, 341);
+            this.Modif.Location = new System.Drawing.Point(205, 341);
             this.Modif.Name = "Modif";
             this.Modif.Size = new System.Drawing.Size(70, 23);
             this.Modif.TabIndex = 16;
@@ -189,6 +189,7 @@
             this.cbNom.Size = new System.Drawing.Size(156, 21);
             this.cbNom.TabIndex = 23;
             this.cbNom.TabStop = false;
+            this.cbNom.SelectedIndexChanged += new System.EventHandler(this.cbNom_SelectedIndexChanged_1);
             // 
             // ModifCRVisite
             // 

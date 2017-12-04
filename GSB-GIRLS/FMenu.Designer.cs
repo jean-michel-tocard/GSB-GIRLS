@@ -44,13 +44,13 @@
             this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lesFichesDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_util = new System.Windows.Forms.DataGridView();
             this.lbTitre = new System.Windows.Forms.Label();
             this.lbInformations = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lesFichesDeFraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -159,6 +159,7 @@
             this.mesFichesDeFraisToolStripMenuItem.Name = "mesFichesDeFraisToolStripMenuItem";
             this.mesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
             this.mesFichesDeFraisToolStripMenuItem.Text = "Mes Fiches de frais";
+            this.mesFichesDeFraisToolStripMenuItem.Click += new System.EventHandler(this.mesFichesDeFraisToolStripMenuItem_Click);
             // 
             // rapportToolStripMenuItem
             // 
@@ -166,6 +167,7 @@
             this.visualiserToolStripMenuItem,
             this.modifierToolStripMenuItem,
             this.ajouterToolStripMenuItem});
+            this.rapportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
             this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
             this.rapportToolStripMenuItem.Text = "Rapport";
@@ -190,6 +192,30 @@
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // comptableToolStripMenuItem
+            // 
+            this.comptableToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lesFichesDeFraisToolStripMenuItem,
+            this.editionToolStripMenuItem});
+            this.comptableToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.comptableToolStripMenuItem.Name = "comptableToolStripMenuItem";
+            this.comptableToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
+            this.comptableToolStripMenuItem.Text = "Comptable";
+            // 
+            // lesFichesDeFraisToolStripMenuItem
+            // 
+            this.lesFichesDeFraisToolStripMenuItem.Name = "lesFichesDeFraisToolStripMenuItem";
+            this.lesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
+            this.lesFichesDeFraisToolStripMenuItem.Text = "Les fiches de frais";
+            this.lesFichesDeFraisToolStripMenuItem.Click += new System.EventHandler(this.lesFichesDeFraisToolStripMenuItem_Click);
+            // 
+            // editionToolStripMenuItem
+            // 
+            this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
+            this.editionToolStripMenuItem.Text = "Edition";
+            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
             // dgv_util
             // 
@@ -233,29 +259,6 @@
             this.button1.Text = "Déconnexion";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comptableToolStripMenuItem
-            // 
-            this.comptableToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lesFichesDeFraisToolStripMenuItem,
-            this.editionToolStripMenuItem});
-            this.comptableToolStripMenuItem.Name = "comptableToolStripMenuItem";
-            this.comptableToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
-            this.comptableToolStripMenuItem.Text = "Comptable";
-            // 
-            // lesFichesDeFraisToolStripMenuItem
-            // 
-            this.lesFichesDeFraisToolStripMenuItem.Name = "lesFichesDeFraisToolStripMenuItem";
-            this.lesFichesDeFraisToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
-            this.lesFichesDeFraisToolStripMenuItem.Text = "Les fiches de frais";
-            this.lesFichesDeFraisToolStripMenuItem.Click += new System.EventHandler(this.lesFichesDeFraisToolStripMenuItem_Click);
-            // 
-            // editionToolStripMenuItem
-            // 
-            this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
-            this.editionToolStripMenuItem.Text = "Edition";
-            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
             // FMenu
             // 

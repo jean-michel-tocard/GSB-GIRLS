@@ -15,7 +15,7 @@ namespace GSB_GIRLS
     {
         private GSBgirls maConnexion;
         private Visiteur levisiteur;
-        // creation des proprietés nessecaire a la création d'un Rapport 
+        // creation des proprietés necessaire a la création d'un Rapport 
         MOTIF leMotif;
         RAPPORT leRapport;
         MEDECIN leMedecin;
@@ -38,7 +38,7 @@ namespace GSB_GIRLS
 
             var reqmedi = from M in maConnexion.MEDICAMENT
                           select M;
-            // recuperation des requete effectuer et affectation du champ selectionner dans la combobox
+            // recuperation des requetes effectuées et affectation du champ selectionné dans la combobox
             this.cbMedecin.DisplayMember = "nomPrenom";
             //cbMedecin.DataSource = ((ObjectQuery)(reqMedecin));
             cbMedecin.DataSource = reqMedecin.ToList();

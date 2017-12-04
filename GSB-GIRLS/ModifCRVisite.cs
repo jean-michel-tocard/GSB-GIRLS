@@ -293,5 +293,10 @@ namespace GSB_GIRLS
             rtxtBilan.Text = bilan;
 
         }
+
+        private void cbNom_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

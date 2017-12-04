@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace GSB_GIRLS
 {
-    partial class Visiteur
+   public partial class MEDECIN
     {
         public string nomPrenom
         {
             get
             {
-                return nom.Trim() + prenom.Trim();
+                return nom.Trim() +" "+ prenom.Trim();
             }
         }
 
@@ -20,7 +20,7 @@ namespace GSB_GIRLS
         {
             get
             {
-                return this.nom + this.prenom;
+                return this.nom +" "+ this.prenom;
             }
         }
     }
