@@ -12,22 +12,15 @@ using System.Data.Objects;
 
 namespace GSB_GIRLS
 {
-    public partial class FMenu : Accueil
+    public partial class FrmMenu : Accueil
     {
         private Visiteur levisiteur;
         private GSBgirls maConnexion;
-        public FMenu(GSBgirls MaConnexion, Visiteur Levisiteur)
+        public FrmMenu(GSBgirls MaConnexion, Visiteur Levisiteur)
         {
             InitializeComponent();
             maConnexion = MaConnexion;
             levisiteur = Levisiteur;
-        }
-
-        private void informationsRégionsEtSecteursToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmRS rs = new FrmRS();
-            rs.Show();
-            this.Hide();
         }
 
         private void gestionCompte_Click(object sender, EventArgs e)
@@ -35,34 +28,21 @@ namespace GSB_GIRLS
 
         }
 
-        private void gestionVisiteur_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void laboratoireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FLabo labo = new FLabo();
+            FrmLabo labo = new FrmLabo();
             //menu.MdiParent = this;
             labo.Show();
-            this.Hide();
         }
 
         private void regionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRegion region = new FRegion();
+            FrmRegion region = new FrmRegion();
             //menu.MdiParent = this;
             region.Show();
-            this.Hide();
+
         }
 
-        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FModif modif= new FModif();
-            //menu.MdiParent = this;
-            modif.Show();
-            this.Hide();
-        }
 
         private void msDonnées_Click(object sender, EventArgs e)
         {
@@ -134,13 +114,18 @@ namespace GSB_GIRLS
             // On cache le menu gestion utilisateur si l'utilisateur a le DROIT a 1
             if (levisiteur.droit == 0)
             {
-               
+
+                modif.Visible = false;
                 msGestionUser.Visible = false;
-                ficheDeFrais.Visible = false;
+                //ficheDeFrais.Visible = false;
             }
+            else
+            {
                 dgv_util.Hide();
                 //msRapportVisite.Visible = false;
                 msProfil.Visible = true;
+                tous.Visible = false;
+            }
             
         }
 
@@ -149,7 +134,7 @@ namespace GSB_GIRLS
             GestionCompte gc = new GestionCompte();
             //menu.MdiParent = this;
             gc.Show();
-            this.Hide();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -183,7 +168,7 @@ namespace GSB_GIRLS
         {
             FMesFrais gc = new FMesFrais();
             gc.Show();
-            this.Hide();
+
         }
 
         private void visualiserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,6 +187,27 @@ namespace GSB_GIRLS
         {
             CreationRapport rv = new CreationRapport(maConnexion, levisiteur);
             rv.Show();
+        }
+
+        private void parSecteurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSecteur secteur = new FrmSecteur();
+            secteur.Show();
+
+        }
+
+        private void tousLesVisiteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmtvisiteur visiteurt = new Frmtvisiteur();
+            visiteurt.Show();
+
+        }
+
+        private void modif_Click(object sender, EventArgs e)
+        {
+            FrmModif modif = new FrmModif();
+            modif.Show();
+
         }
     }
 }

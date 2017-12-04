@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace GSB_GIRLS
 {
-    public partial class FModifVisiteur : Accueil
+    public partial class FrmModifVisiteur : Accueil
     {
         private Visiteur vVisiteur;
         private GSBgirls maConnexion;
 
-        public FModifVisiteur(Visiteur visite)
+        public FrmModifVisiteur(Visiteur visite)
         {
             InitializeComponent();
             vVisiteur = visite;
@@ -38,7 +38,7 @@ namespace GSB_GIRLS
                 Modele.MaConnexion.SaveChanges();
                 MessageBox.Show("Modification réussie", "Action");
 
-                FModif modif = new FModif();
+                FrmModif modif = new FrmModif();
                 modif.Show();
                 this.Hide();
             }
@@ -53,7 +53,7 @@ namespace GSB_GIRLS
         {
             if (MessageBox.Show("Voulez-vous vraiment annuler les modifications ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FModif modif = new FModif();
+                FrmModif modif = new FrmModif();
                 modif.Show();
                 this.Hide();
             }

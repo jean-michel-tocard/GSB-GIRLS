@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FMenu
+    partial class FrmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -33,19 +33,20 @@
             this.laboratoire = new System.Windows.Forms.ToolStripMenuItem();
             this.regionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modif = new System.Windows.Forms.ToolStripMenuItem();
+            this.tous = new System.Windows.Forms.ToolStripMenuItem();
             this.msProfil = new System.Windows.Forms.ToolStripMenuItem();
             this.msGestionUser = new System.Windows.Forms.ToolStripMenuItem();
             this.msDonnées = new System.Windows.Forms.ToolStripMenuItem();
             this.ficheDeFrais = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgv_util = new System.Windows.Forms.DataGridView();
-            this.lbTitre = new System.Windows.Forms.Label();
-            this.lbInformations = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgv_util = new System.Windows.Forms.DataGridView();
+            this.lbTitre = new System.Windows.Forms.Label();
+            this.lbInformations = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_util)).BeginInit();
             this.SuspendLayout();
@@ -71,12 +72,12 @@
             this.laboratoire,
             this.regionsToolStripMenuItem,
             this.parSecteurToolStripMenuItem,
-            this.modificationToolStripMenuItem});
+            this.modif,
+            this.tous});
             this.gestionVisiteur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gestionVisiteur.Name = "gestionVisiteur";
             this.gestionVisiteur.Size = new System.Drawing.Size(91, 27);
             this.gestionVisiteur.Text = "Visiteurs";
-            this.gestionVisiteur.Click += new System.EventHandler(this.gestionVisiteur_Click);
             // 
             // laboratoire
             // 
@@ -97,13 +98,21 @@
             this.parSecteurToolStripMenuItem.Name = "parSecteurToolStripMenuItem";
             this.parSecteurToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
             this.parSecteurToolStripMenuItem.Text = "Par secteur";
+            this.parSecteurToolStripMenuItem.Click += new System.EventHandler(this.parSecteurToolStripMenuItem_Click);
             // 
-            // modificationToolStripMenuItem
+            // modif
             // 
-            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(221, 28);
-            this.modificationToolStripMenuItem.Text = "Tous les visiteurs";
-            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
+            this.modif.Name = "modif";
+            this.modif.Size = new System.Drawing.Size(221, 28);
+            this.modif.Text = "Tous les visiteurs";
+            this.modif.Click += new System.EventHandler(this.modif_Click);
+            // 
+            // tous
+            // 
+            this.tous.Name = "tous";
+            this.tous.Size = new System.Drawing.Size(221, 28);
+            this.tous.Text = "Tous les visiteurs";
+            this.tous.Click += new System.EventHandler(this.tousLesVisiteursToolStripMenuItem_Click);
             // 
             // msProfil
             // 
@@ -136,7 +145,38 @@
             this.ficheDeFrais.Name = "ficheDeFrais";
             this.ficheDeFrais.Size = new System.Drawing.Size(134, 27);
             this.ficheDeFrais.Text = "Fiche de frais";
-            this.ficheDeFrais.Click += new System.EventHandler(this.ficheDeFraisToolStripMenuItem_Click);
+            // 
+            // rapportToolStripMenuItem
+            // 
+            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualiserToolStripMenuItem,
+            this.modifierToolStripMenuItem,
+            this.ajouterToolStripMenuItem});
+            this.rapportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
+            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
+            this.rapportToolStripMenuItem.Text = "Rapport";
+            // 
+            // visualiserToolStripMenuItem
+            // 
+            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
+            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.visualiserToolStripMenuItem.Text = "Visualiser";
+            this.visualiserToolStripMenuItem.Click += new System.EventHandler(this.visualiserToolStripMenuItem_Click);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // dgv_util
             // 
@@ -181,37 +221,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // rapportToolStripMenuItem
-            // 
-            this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualiserToolStripMenuItem,
-            this.modifierToolStripMenuItem,
-            this.ajouterToolStripMenuItem});
-            this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
-            this.rapportToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
-            this.rapportToolStripMenuItem.Text = "Rapport";
-            // 
-            // visualiserToolStripMenuItem
-            // 
-            this.visualiserToolStripMenuItem.Name = "visualiserToolStripMenuItem";
-            this.visualiserToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.visualiserToolStripMenuItem.Text = "Visualiser";
-            this.visualiserToolStripMenuItem.Click += new System.EventHandler(this.visualiserToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.modifierToolStripMenuItem.Text = "Modifier";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +256,7 @@
         private System.Windows.Forms.ToolStripMenuItem laboratoire;
         private System.Windows.Forms.ToolStripMenuItem regionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parSecteurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modif;
         private System.Windows.Forms.DataGridView dgv_util;
         private System.Windows.Forms.ToolStripMenuItem msGestionUser;
         private System.Windows.Forms.ToolStripMenuItem msDonnées;
@@ -259,5 +268,6 @@
         private System.Windows.Forms.ToolStripMenuItem visualiserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tous;
     }
 }

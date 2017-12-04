@@ -77,7 +77,7 @@ namespace GSB_GIRLS
                         //btnOK.Visible = true;
 
                         this.Hide();
-                        FMenu fMenu = new FMenu(maConnexion, levisiteur);
+                        FrmMenu fMenu = new FrmMenu(maConnexion, levisiteur);
                         fMenu.ShowDialog();
 
                     }

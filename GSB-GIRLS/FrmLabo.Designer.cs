@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FLabo
+    partial class FrmLabo
     {
         /// <summary>
         /// Required designer variable.

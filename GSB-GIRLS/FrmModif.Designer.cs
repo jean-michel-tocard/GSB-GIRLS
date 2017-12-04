@@ -1,6 +1,6 @@
 ﻿namespace GSB_GIRLS
 {
-    partial class FModif
+    partial class FrmModif
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvVisiteurs = new System.Windows.Forms.DataGridView();
             this.btnModif = new System.Windows.Forms.Button();
-            this.retour = new System.Windows.Forms.Button();
+            this.retour2 = new System.Windows.Forms.Button();
             this.btnajouter = new System.Windows.Forms.Button();
             this.btnSupp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).BeginInit();
@@ -75,17 +75,17 @@
             this.btnModif.UseVisualStyleBackColor = false;
             this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
-            // retour
+            // retour2
             // 
-            this.retour.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retour.Location = new System.Drawing.Point(12, 365);
-            this.retour.Name = "retour";
-            this.retour.Size = new System.Drawing.Size(77, 26);
-            this.retour.TabIndex = 8;
-            this.retour.Text = "Retour";
-            this.retour.UseVisualStyleBackColor = false;
-            this.retour.Click += new System.EventHandler(this.retour_Click);
+            this.retour2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retour2.Location = new System.Drawing.Point(12, 365);
+            this.retour2.Name = "retour2";
+            this.retour2.Size = new System.Drawing.Size(77, 26);
+            this.retour2.TabIndex = 8;
+            this.retour2.Text = "Retour";
+            this.retour2.UseVisualStyleBackColor = false;
+            this.retour2.Click += new System.EventHandler(this.retour_Click);
             // 
             // btnajouter
             // 
@@ -109,7 +109,8 @@
             this.btnSupp.TabIndex = 10;
             this.btnSupp.Text = "Supprimer";
             this.btnSupp.UseVisualStyleBackColor = false;
-            this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
+            this.btnSupp.Visible = false;
+            //this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
             // 
             // FModif
             // 
@@ -118,7 +119,7 @@
             this.ClientSize = new System.Drawing.Size(783, 403);
             this.Controls.Add(this.btnSupp);
             this.Controls.Add(this.btnajouter);
-            this.Controls.Add(this.retour);
+            this.Controls.Add(this.retour2);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.dgvVisiteurs);
             this.Controls.Add(this.label2);
@@ -129,7 +130,7 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.dgvVisiteurs, 0);
             this.Controls.SetChildIndex(this.btnModif, 0);
-            this.Controls.SetChildIndex(this.retour, 0);
+            this.Controls.SetChildIndex(this.retour2, 0);
             this.Controls.SetChildIndex(this.btnajouter, 0);
             this.Controls.SetChildIndex(this.btnSupp, 0);
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteurs)).EndInit();
@@ -144,7 +145,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvVisiteurs;
         private System.Windows.Forms.Button btnModif;
-        private System.Windows.Forms.Button retour;
+        private System.Windows.Forms.Button retour2;
         private System.Windows.Forms.Button btnajouter;
         private System.Windows.Forms.Button btnSupp;
     }
